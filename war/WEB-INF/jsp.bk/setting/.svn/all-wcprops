@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/csms/!svn/ver/2/csms/war/WEB-INF/jsp/setting
+END
+setNotice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/csms/!svn/ver/2/csms/war/WEB-INF/jsp/setting/setNotice.jsp
+END
+setPosition.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/csms/!svn/ver/2/csms/war/WEB-INF/jsp/setting/setPosition.jsp
+END
+setPrivilege.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/csms/!svn/ver/2/csms/war/WEB-INF/jsp/setting/setPrivilege.jsp
+END

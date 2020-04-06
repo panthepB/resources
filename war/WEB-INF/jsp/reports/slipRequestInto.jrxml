@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Untitled_report_2" columnCount="4" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="NoPages" columnWidth="200" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6017eb0c-cef9-4633-868e-ffbfc593d62d">
+	<property name="ireport.scriptlethandling" value="2"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0245201830476058"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<parameter name="SCHOOL_NAME" class="java.lang.String"/>
+	<parameter name="SCHOOL_LOGO" class="java.awt.Image"/>
+	<field name="dateIn" class="java.lang.String"/>
+	<field name="classRoom" class="java.lang.String"/>
+	<field name="timeIn" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="reason" class="java.lang.String"/>
+	<detail>
+		<band height="520" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="128" width="186" height="26" uuid="3f08edc9-0834-4b6c-9f65-667b059f78af"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="AngsanaUPC" size="20" isBold="true" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SCHOOL_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="167" width="197" height="35" uuid="344022e0-713d-42c6-bee5-35ebf6ce86b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="AngsanaUPC" size="26" isBold="true" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[?????????????????????]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="202" width="31" height="29" uuid="deffcfb5-8fb0-4789-ab26-bc18e8efd7b9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="AngsanaUPC" size="21" isBold="true" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[????]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="38" y="202" width="155" height="29" uuid="aa5baea1-2df4-43f4-955b-0c88813c405f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="AngsanaUPC" size="20" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="231" width="31" height="29" uuid="7c3707c5-3557-46d3-8ecc-d78b31adf070"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="AngsanaUPC" size="21" isBold="true" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[????]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="38" y="231" width="155" height="29" uuid="dee77636-926b-45b5-a1c9-84fbb286cd43"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="AngsanaUPC" size="20" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{classRoom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="348" width="186" height="37" uuid="efd00326-8f43-4e3f-b290-4506a1a4981b"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="AngsanaUPC" size="28" isBold="true" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[????????]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="7" y="369" width="186" height="78" uuid="e4674660-13d7-4516-bbdf-41cae6ccf2ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="AngsanaUPC" size="54" isBold="true" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{timeIn}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="485" width="186" height="21" uuid="d6c3095d-a494-43cd-844d-8bb2fb69c89a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="AngsanaUPC" size="16" isBold="true" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[???????..........................???????]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="7" y="427" width="186" height="34" uuid="bfbd3751-01e2-4790-b7eb-bcf6ca1bfd15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="AngsanaUPC" size="22" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateIn}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="197" y="0" width="1" height="520" uuid="e4260e96-4b96-4a17-8eca-03717d631cae"/>
+			</line>
+			<image scaleImage="RealHeight" hAlign="Center" vAlign="Middle" isUsingCache="false">
+				<reportElement stretchType="RelativeToTallestObject" x="7" y="0" width="186" height="128" uuid="c4ca2404-3fd4-44b6-8911-52a079d0c616"/>
+				<imageExpression><![CDATA[$P{SCHOOL_LOGO}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="7" y="289" width="186" height="45" uuid="3fac3677-dab0-4e33-bfb1-b52129706d42"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="AngsanaUPC" size="21" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reason}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="260" width="56" height="29" uuid="97dc5e71-b6b0-4daa-8473-7cfe6dac1dd9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="AngsanaUPC" size="21" isBold="true" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[??????]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

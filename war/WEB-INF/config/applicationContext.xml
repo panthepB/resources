@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>/WEB-INF/config/jdbc.properties</value>
+				<value>/WEB-INF/config/upload.properties</value>
+				<value>/WEB-INF/config/image.properties</value>
+				<value>/WEB-INF/config/serverip.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="mySessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.distar.dtwr.common.domain.Nation</value>
+				<value>com.distar.dtwr.common.domain.Origin</value>
+				<value>com.distar.dtwr.common.domain.Prefix</value>
+				<value>com.distar.dtwr.common.domain.Province</value>
+				<value>com.distar.dtwr.common.domain.Religion</value>
+
+				<value>com.distar.dtwr.company.domain.Position</value>
+				<value>com.distar.dtwr.company.domain.User</value>
+				<value>com.distar.dtwr.company.domain.Notice</value>
+				<value>com.distar.dtwr.company.domain.EmpData</value>
+				<value>com.distar.dtwr.system.domain.Group</value>
+				<value>com.distar.dtwr.system.domain.Module</value>
+				<value>com.distar.dtwr.system.domain.Company</value>
+				<value>com.distar.dtwr.system.domain.Task</value>
+				<value>distar.project.DLT.domain.VehicleRegisterType</value>
+				<value>distar.project.DLT.domain.ProvinceDLT</value>
+				<value>distar.project.DLT.domain.MasterFile</value>
+				<value>distar.project.DLT.domain.APIMasterfile</value>
+				<value>distar.project.DLT.domain.RealtimeStatus</value>
+				<value>distar.project.DLT.domain.ExcelImport</value>
+				<value>distar.project.DLT.domain.GpsBackup</value>
+				<value>distar.project.DLT.domain.LTYUnitId</value>
+				<value>distar.project.DLT.domain.MALog</value>
+
+			</list>
+		</property>
+		<property name="namingStrategy">
+			<bean class="org.hibernate.cfg.ImprovedNamingStrategy" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+
+	</bean>
+
+
+	<bean id="myDevAlarmDAO" class="distar.project.DLT.repository.DevAlarmDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="myDevStatusDAO" class="distar.project.DLT.repository.DevStatusDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="myRealtimeStatusDAO" class="distar.project.DLT.repository.RealtimeStatusDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="myDriverLogDAO" class="distar.project.DLT.repository.DriverLogDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="myProvinceDLTDAO" class="distar.project.DLT.repository.ProvinceDLTDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="myVehicleRegisterTypeDAO"
+		class="distar.project.DLT.repository.VehicleRegisterTypeDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="myMasterFileDAO" class="distar.project.DLT.repository.MasterFileDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="myExcelImportDAO" class="distar.project.DLT.repository.ExcelImportDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="cacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="/WEB-INF/config/ehcache.xml" />
+		<property name="shared" value="true" />
+	</bean>
+	<bean id="myCompanyDAO" class="com.distar.dtwr.system.repository.CompanyDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="myUserDAO" class="com.distar.dtwr.company.repository.UserDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="myPositionDAO" class="com.distar.dtwr.company.repository.PositionDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="myTaskDAO" class="com.distar.dtwr.system.repository.TaskDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="myGroupDAO" class="com.distar.dtwr.system.repository.GroupDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="myNoticeDAO" class="com.distar.dtwr.company.repository.NoticeDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	
+	<bean id="myLTYUnitIdDAO" class="distar.project.DLT.repository.LTYUnitIdDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	
+	<bean id="myMALogDAO" class="distar.project.DLT.repository.MALogDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+		<bean id="myApiMasterfileDAO" class="distar.project.DLT.repository.APIMasterfileDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+
+
+	<bean id="myDataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="mySessionFactory" />
+		<property name="dataSource" ref="myDataSource" />
+
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean id="paramImage" class="distar.project.service.ParamImage">
+		<property name="path" value="${image.path}" />
+		<property name="sliderDir" value="${image.slider.dir}" />
+		<property name="header" value="${image.header.file}" />
+		<property name="bg" value="${image.bg.file}" />
+		<property name="empDir" value="${image.emp.dir}" />
+	</bean>
+
+	<bean id="uploadFileHolder" class="distar.project.service.UploadFileHolder">
+		<property name="paramImage" ref="paramImage" />
+		<property name="limitSize" value="100000" />
+		<property name="content" value="image/jpeg,image/pjpeg" />
+	</bean>
+	
+
+	<bean id="serverIP" class="distar.project.service.ServerIP">
+		<property name="userPassGPS" value="${serverip.userPassGPS}" />
+		<property name="userPassMaster" value="${serverip.userPassMaster}" />
+		<property name="urlMesterFile" value="${serverip.urlMesterFile}" />
+		<property name="urlRealTime" value="${serverip.urlRealTime}" />
+		<property name="server" value="${serverip.server}" />
+		<property name="mdvrServer" value="${serverip.mdvrServer}" />
+		<property name="mdvrServer2" value="${serverip.mdvrServer2}" />
+		<property name="mhdServer" value="${serverip.mhdServer}" />
+		<property name="trackingServer" value="${serverip.trackingServer}" />
+		<property name="bmtaServer" value="${serverip.bmtaServer}" />
+		<property name="mysql" value="${serverip.mysql}" />
+		<property name="urlThaipost" value="${serverip.urlThaipost}" />
+		<property name="userPassThaipost" value="${serverip.userPassThaipost}" />
+		<property name="urlSCG" value="${serverip.urlSCG}" />
+		<property name="userPassSCG" value="${serverip.userPassSCG}" />
+		<property name="status" value="${serverip.status}" />
+		<property name="skip" value="${serverip.skip}" />
+		<property name="take" value="${serverip.take}" />
+
+	</bean>
+
+	<bean
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+</beans>

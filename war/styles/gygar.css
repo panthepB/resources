@@ -1,0 +1,130 @@
+.isPointer{
+	cursor: pointer;
+}
+.HeadTable{
+	color: #FFFFFF;
+	background-color: #4E9FC7;
+}
+.subHeadTable{
+	color: #000000;
+	background-color: #D0E6F0;
+}
+.subTable{
+	color: #000000;
+	background-color: #EFEFEF;
+}
+.subTable_button{
+	color: #000000;
+	background-color: #EFEFEF;
+	padding:4px 0 4px 0;
+	text-align:center;
+}
+.borderTable{
+	border-style:solid;
+	border-width:1px;
+	border-color:#B1BADF;
+}
+.borderTopTable{
+	border-style:solid;
+	border-width:1px 1px 0 1px;
+	border-color:#B1BADF;
+}
+.borderBottomTable{
+	border-style:solid;
+	border-width:0 1px 1px 1px;
+	border-color:#B1BADF;
+}
+.borderCornerLeftBottom{
+	border-style:solid;
+	border-width:0 0 1px 1px;
+	border-color:#666666;
+}
+.styleNewMessage{
+	font-weight: bolder;
+}
+.styleButton{
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	color:#000000;
+	font-size:12px;
+	background-color: #DCDCBA;
+}
+.styleButton:hover{
+	border-style:dashed;
+	border-width:1px;
+	border-color:#000000;
+	color:#000000;
+	font-size:12px;
+	background-color: #DCDCBA;
+}
+.styleButton[disabled="disabled"]{
+	border-style:solid;
+	border-width:1px;
+	border-color:#999999;
+	color:#666666;
+	font-size:12px;
+	background-color: #E7E7CF;
+}
+.styleStatus_1{
+	background-color: #E8FFE8;
+	color:#000000;
+}
+.styleStatus_2{
+	background-color: #FDE9D5;
+	color:#000000;
+}
+.styleStatus_3{
+	background-color: #FFA8A8;
+	color:#000000;
+}
+.styleStatus_4{
+	background-color: #EBE1F4;
+	color:#000000;
+}
+
+/*Start Sub*/
+.sub_active {
+	background-image: url(../images/minus2.gif);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding-left: 20px;
+	padding-top: 3px;
+}
+.sub_unactive{
+	background-image: url(../images/plus2.gif);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding-left: 20px;
+	padding-top: 3px;
+}
+.subtext_active {
+	cursor: pointer;
+}
+.subtext_unactive{
+	cursor: pointer;
+}
+/*End Sub*/
+
+/*Start Tab*/
+.tab {
+	color: #000000;
+	background-color: #AAAAAA;
+	height:30px;
+	text-align:center;
+}
+.tab_active {
+	color: #000000;
+	background-color: #4E9FC7;
+	height:30px;
+	text-align:center;
+}
+.tab:hover {
+	color: #FFFFFF;
+	background-color: #2F7495;
+}
+.tab_active:hover {
+	color: #FFFFFF;
+	background-color: #2F7495;
+}
+/*End Tab*/
