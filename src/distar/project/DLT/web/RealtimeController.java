@@ -2245,7 +2245,7 @@ public class RealtimeController extends UsableController {
 
 								int min = 60000;
 
-								if (((Math.abs((Math.abs(df.parse(df.format(new Date())).getTime()) - Math.abs(df.parse(utc_ts).getTime())) / min)) <= 10)) {
+								if (((Math.abs((Math.abs(df.parse(df.format(new Date())).getTime()) - Math.abs(df.parse(utc_ts).getTime())) / min)) <= 3)) {
 
 									json = "{ \"driver_id\": \"" + driverId + "\", \"unit_id\": \"" + unitId + "\", \"seq\": 0, \"utc_ts\": \"" + utc_ts + "\", \"recv_utc_ts\": \"" + recv_utc
 											+ "\", \"lat\": " + lat + ", \"lon\": " + lon + ", \"alt\": " + altitude + ", \"speed\": " + speed + ", \"engine_status\": " + engine_status + ", \"fix\": "

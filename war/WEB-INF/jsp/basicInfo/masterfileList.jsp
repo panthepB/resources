@@ -12,7 +12,23 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+</style>
 
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function() {
@@ -57,9 +73,12 @@ $(document).ready(function() {
 			<div class="panel-heading">
 			
 			<form:form method="POST" commandName="masterFileForm" action="addMasterFileForm.htm">
-					<input type="submit" value="เพิ่มข้อมูล" class="btn btn-primary" style="float: right; " />
-				</form:form>
+<!-- 					<input type="submit" value="เพิ่มข้อมูล" class="btn btn-primary" style="float: right; " /> -->
+					<a href="addMasterFileForm.htm" class="btn" style="float: right;">
+					<img border="0" alt="Edit" src="../img/add.png" width="36" height="36"> เพิ่มข้อมูล</a>
 			
+				</form:form>
+				
 			</div>
 			<div class="panel-body">
 
@@ -104,8 +123,8 @@ $(document).ready(function() {
 												<td width="8%"><c:out value="${listMasterFile.customerName}" /></td>
 												<td width="10%"><c:out value="${listMasterFile.installDate}" /></td>
 												<td width="7%" align="center">
-												<a href="editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="blue">
-													<img border="0" alt="Edit" src="../img/edit-property-96.png" width="48" height="48"></a> 
+												<a href="editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="btn">
+													<img border="0" alt="Edit" src="../img/edit-property-96.png" width="36" height="36">แก้ไขข้อมูล</a> 
 												</td>
 
 										</tr>

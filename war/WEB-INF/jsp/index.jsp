@@ -13,7 +13,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Distar Tracking Web Report</title>
+    <title>Distar Master file management</title>
+    <link rel="icon" href="img/icons8-transfer-96.png">
     <link href="styles/login_assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles/login_assets/css/nook.css" rel="stylesheet">
     <link href="styles/login_assets/css/plugins/owl.carousel.css" rel="stylesheet">
@@ -23,6 +24,12 @@
     <link href="styles/login_assets/css/plugins/magnific-popup.css" rel="stylesheet">
     <link href="styles/login_assets/css/plugins/jquery.mb.YTPlayer.min.css" rel="stylesheet">
     <link href="styles/login_assets/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css" />
+<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
+<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
+<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -262,255 +269,255 @@
                 </div>
             </section>
 
-            <section id="team" class="team content-section">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-md-12">
-                            <h2>ทีมอัศวิน</h2>
-                            <h3 class="caption gray">นี่คือส่วนหนึ่งของทีมอัศวิน</h3>
-                        </div>
+<%--             <section id="team" class="team content-section"> --%>
+<!--                 <div class="container"> -->
+<!--                     <div class="row text-center"> -->
+<!--                         <div class="col-md-12"> -->
+<!--                             <h2>ทีมอัศวิน</h2> -->
+<!--                             <h3 class="caption gray">นี่คือส่วนหนึ่งของทีมอัศวิน</h3> -->
+<!--                         </div> -->
 
-                        <div class="container">
-                            <div class="row">
+<!--                         <div class="container"> -->
+<!--                             <div class="row"> -->
 
-                                <div class="col-md-4">
-                                    <div class="team-member">
-                                        <figure>
-                                            <img src="styles/login_assets/images/Nook.JPG" alt="" class="img-responsive">
-                                        </figure>
-                                        <h4>Chavalid pungna</h4>
-                                        <p>Developer</p>
-                                    </div>
-                                </div>
+<!--                                 <div class="col-md-4"> -->
+<!--                                     <div class="team-member"> -->
+<!--                                         <figure> -->
+<!--                                             <img src="styles/login_assets/images/Nook.JPG" alt="" class="img-responsive"> -->
+<!--                                         </figure> -->
+<!--                                         <h4>Chavalid pungna</h4> -->
+<!--                                         <p>Developer</p> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
 
-                                <div class="col-md-4">
-                                    <div class="team-member">
-                                        <figure>
-                                            <img src="styles/login_assets/images/Benz.JPG" alt="" class="img-responsive">
-                                        </figure>
-                                        <h4>Panthep Nuchnoi</h4>
-                                        <p>Developer</p>
-                                    </div>
-                                </div>
+<!--                                 <div class="col-md-4"> -->
+<!--                                     <div class="team-member"> -->
+<!--                                         <figure> -->
+<!--                                             <img src="styles/login_assets/images/Benz.JPG" alt="" class="img-responsive"> -->
+<!--                                         </figure> -->
+<!--                                         <h4>Panthep Nuchnoi</h4> -->
+<!--                                         <p>Developer</p> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
 
-                                <div class="col-md-4">
-                                    <div class="team-member">
-                                        <figure>
-                                            <img src="styles/login_assets/images/Top.JPG" alt="" class="img-responsive">
-                                        </figure>
-                                        <h4>Kornthawat pornpipat</h4>
-                                        <p>Developer</p>
-                                    </div>
-                                </div>
+<!--                                 <div class="col-md-4"> -->
+<!--                                     <div class="team-member"> -->
+<!--                                         <figure> -->
+<!--                                             <img src="styles/login_assets/images/Top.JPG" alt="" class="img-responsive"> -->
+<!--                                         </figure> -->
+<!--                                         <h4>Kornthawat pornpipat</h4> -->
+<!--                                         <p>Developer</p> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
 
 
-                                 <div class="col-md-4">
-                                    <div class="team-member">
-                                        <figure>
-                                            <img src="styles/login_assets/images/Chay.JPG" alt="" class="img-responsive">
-                                        </figure>
-                                        <h4>Manit ngosorn</h4>
-                                        <p>IT Support</p>
-                                    </div>
-                                </div>
+<!--                                  <div class="col-md-4"> -->
+<!--                                     <div class="team-member"> -->
+<!--                                         <figure> -->
+<!--                                             <img src="styles/login_assets/images/Chay.JPG" alt="" class="img-responsive"> -->
+<!--                                         </figure> -->
+<!--                                         <h4>Manit ngosorn</h4> -->
+<!--                                         <p>IT Support</p> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
 
-                                <div class="col-md-4">
-                                    <div class="team-member">
-                                        <figure>
-                                            <img src="styles/login_assets/images/Champ.JPG" alt="" class="img-responsive">
-                                        </figure>
-                                        <h4>Ammales atikomrungsarit</h4>
-                                        <p>IT Support</p>
-                                    </div>
-                                </div>
+<!--                                 <div class="col-md-4"> -->
+<!--                                     <div class="team-member"> -->
+<!--                                         <figure> -->
+<!--                                             <img src="styles/login_assets/images/Champ.JPG" alt="" class="img-responsive"> -->
+<!--                                         </figure> -->
+<!--                                         <h4>Ammales atikomrungsarit</h4> -->
+<!--                                         <p>IT Support</p> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
 
-                                <div class="col-md-4">
-                                    <div class="team-member">
-                                        <figure>
-                                            <img src="styles/login_assets/images/P.JPG" alt="" class="img-responsive">
-                                        </figure>
-                                        <h4>ยังมีอีกหลายท่าน</h4>
-                                        <p>ที่พร้อมให้การบริการท่านอยู่ตลอด 24 ชั่วโมง</p>
-                                    </div>
-                                </div>
+<!--                                 <div class="col-md-4"> -->
+<!--                                     <div class="team-member"> -->
+<!--                                         <figure> -->
+<!--                                             <img src="styles/login_assets/images/P.JPG" alt="" class="img-responsive"> -->
+<!--                                         </figure> -->
+<!--                                         <h4>ยังมีอีกหลายท่าน</h4> -->
+<!--                                         <p>ที่พร้อมให้การบริการท่านอยู่ตลอด 24 ชั่วโมง</p> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
 
-                            </div>
-                        </div>
+<!--                             </div> -->
+<!--                         </div> -->
 
-                    </div>
-                </div>
-            </section>
+<!--                     </div> -->
+<!--                 </div> -->
+<%--             </section> --%>
 
-            <section id="portfolio" class="portfolio content-section">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-md-12">
-                            <h2>ภาพต่างๆของระบบ</h2>
-                            <h3 class="caption white"></h3>
-                        </div>
-                    </div>
-                </div>
+<%--             <section id="portfolio" class="portfolio content-section"> --%>
+<!--                 <div class="container"> -->
+<!--                     <div class="row text-center"> -->
+<!--                         <div class="col-md-12"> -->
+<!--                             <h2>ภาพต่างๆของระบบ</h2> -->
+<!--                             <h3 class="caption white"></h3> -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!--                 </div> -->
 
-                <div class="container project-container text-center">
-                    <div class="recent-project-carousel owl-carousel owl-theme popup-gallery">
-                        <div class="item recent-project">
-                            <img src="styles/login_assets/images/gallery/gellery-01.JPG" alt="">
-                        </div>
+<!--                 <div class="container project-container text-center"> -->
+<!--                     <div class="recent-project-carousel owl-carousel owl-theme popup-gallery"> -->
+<!--                         <div class="item recent-project"> -->
+<!--                             <img src="styles/login_assets/images/gallery/gellery-01.JPG" alt=""> -->
+<!--                         </div> -->
 
-                        <div class="item recent-project">
-                            <img src="styles/login_assets/images/gallery/gellery-01.JPG" alt="">
-                        </div>
+<!--                         <div class="item recent-project"> -->
+<!--                             <img src="styles/login_assets/images/gallery/gellery-01.JPG" alt=""> -->
+<!--                         </div> -->
 
-                        <div class="item recent-project">
-                            <img src="styles/login_assets/images/gallery/gellery-01.JPG" alt="">
-                        </div>
+<!--                         <div class="item recent-project"> -->
+<!--                             <img src="styles/login_assets/images/gallery/gellery-01.JPG" alt=""> -->
+<!--                         </div> -->
 
-                    </div>
+<!--                     </div> -->
 
-                    <div class="customNavigation project-navigation text-center">
-                        <a class="btn-prev"><i class="fa fa-angle-left fa-2x"></i></a>
-                        <a class="btn-next"><i class="fa fa-angle-right fa-2x"></i></a>
-                    </div>
+<!--                     <div class="customNavigation project-navigation text-center"> -->
+<!--                         <a class="btn-prev"><i class="fa fa-angle-left fa-2x"></i></a> -->
+<!--                         <a class="btn-next"><i class="fa fa-angle-right fa-2x"></i></a> -->
+<!--                     </div> -->
 
-                </div>
-            </section>
+<!--                 </div> -->
+<%--             </section> --%>
 
-            <section id="clients" class="our-clients content-section text-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2>ลูกค้าที่ไว้วางใจให้เราดูแล</h2>
-                            <h3 class="caption white">นี่คือลูกค้าส่วนหนึ่งของเราที่ให้ระบบของ Distar Tracking </h3>
-                        </div>
-                    </div>
+<%--             <section id="clients" class="our-clients content-section text-center"> --%>
+<!--                 <div class="container"> -->
+<!--                     <div class="row"> -->
+<!--                         <div class="col-md-12"> -->
+<!--                             <h2>ลูกค้าที่ไว้วางใจให้เราดูแล</h2> -->
+<!--                             <h3 class="caption white">นี่คือลูกค้าส่วนหนึ่งของเราที่ให้ระบบของ Distar Tracking </h3> -->
+<!--                         </div> -->
+<!--                     </div> -->
 
-                    <div class="row client-slider">
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                     <div class="row client-slider"> -->
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                        <div class="item col-xs-4 col-md-2 i">
-                            <a href="#" title="#">
-                                <img src="styles/login_assets/images/customer-logo.png" class="img-responsive">
-                            </a>
-                        </div>
+<!--                         <div class="item col-xs-4 col-md-2 i"> -->
+<!--                             <a href="#" title="#"> -->
+<!--                                 <img src="styles/login_assets/images/customer-logo.png" class="img-responsive"> -->
+<!--                             </a> -->
+<!--                         </div> -->
 
-                    </div>
+<!--                     </div> -->
 
-                </div>
-            </section>
+<!--                 </div> -->
+<%--             </section> --%>
 
-            <section class="testimonials content-section">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-md-12">
-                            <h2>การตอบรับจากลูกค้า</h2>
-                            <h3 class="caption gray">นี่คือสิ่งที่ลูกค้าพูดถึงเรา</h3>
-                        </div>
+<%--             <section class="testimonials content-section"> --%>
+<!--                 <div class="container"> -->
+<!--                     <div class="row text-center"> -->
+<!--                         <div class="col-md-12"> -->
+<!--                             <h2>การตอบรับจากลูกค้า</h2> -->
+<!--                             <h3 class="caption gray">นี่คือสิ่งที่ลูกค้าพูดถึงเรา</h3> -->
+<!--                         </div> -->
 
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-8 col-md-offset-2">
-                                    <div class="client-testimonials owl-carousel owl-theme">
+<!--                         <div class="container"> -->
+<!--                             <div class="row"> -->
+<!--                                 <div class="col-md-8 col-md-offset-2"> -->
+<!--                                     <div class="client-testimonials owl-carousel owl-theme"> -->
 
-                                        <div class="item">
-                                            <p class="speech">รายงานดูเป็นมาตรฐานดีครับ เหมาะกับการทำรายงานให้เจ้านายดูมากๆ สวยครับ</p>
-                                            <div class="client-info">
-                                                <img src="styles/login_assets/images/customer-01.JPG" />
-                                                <h4>SAM</h4>
-                                                <span>แอดมิน</span>
-                                            </div>
-                                        </div>
+<!--                                         <div class="item"> -->
+<!--                                             <p class="speech">รายงานดูเป็นมาตรฐานดีครับ เหมาะกับการทำรายงานให้เจ้านายดูมากๆ สวยครับ</p> -->
+<!--                                             <div class="client-info"> -->
+<!--                                                 <img src="styles/login_assets/images/customer-01.JPG" /> -->
+<!--                                                 <h4>SAM</h4> -->
+<!--                                                 <span>แอดมิน</span> -->
+<!--                                             </div> -->
+<!--                                         </div> -->
 
-                                        <div class="item">
-                                            <p class="speech">เยี่ยมเลยครับเรามาสามารถดึงข้อมูลให้นายดูได้หลากหลายครับ นายชอบมากเลยครับ</p>
-                                            <div class="client-info">
-                                                <img src="styles/login_assets/images/customer-01.JPG" />
-                                                <h4>Johe</h4>
-                                                <span>แอดมิน</span>
-                                            </div>
-                                        </div>
+<!--                                         <div class="item"> -->
+<!--                                             <p class="speech">เยี่ยมเลยครับเรามาสามารถดึงข้อมูลให้นายดูได้หลากหลายครับ นายชอบมากเลยครับ</p> -->
+<!--                                             <div class="client-info"> -->
+<!--                                                 <img src="styles/login_assets/images/customer-01.JPG" /> -->
+<!--                                                 <h4>Johe</h4> -->
+<!--                                                 <span>แอดมิน</span> -->
+<!--                                             </div> -->
+<!--                                         </div> -->
 
-                                        <div class="item">
-                                            <p class="speech">รายงานแสดงผลในรูปแบบที่ดูง่ายครับ ชอบครับ</p>
-                                            <div class="client-info">
-                                                <img src="styles/login_assets/images/customer-01.JPG" />
-                                                <h4>คุณแชมป์</h4>
-                                                <span>ผู้ดูแลระบบ Tracking</span>
-                                            </div>
-                                        </div>
+<!--                                         <div class="item"> -->
+<!--                                             <p class="speech">รายงานแสดงผลในรูปแบบที่ดูง่ายครับ ชอบครับ</p> -->
+<!--                                             <div class="client-info"> -->
+<!--                                                 <img src="styles/login_assets/images/customer-01.JPG" /> -->
+<!--                                                 <h4>คุณแชมป์</h4> -->
+<!--                                                 <span>ผู้ดูแลระบบ Tracking</span> -->
+<!--                                             </div> -->
+<!--                                         </div> -->
 
-                                    </div>
-                                </div>
+<!--                                     </div> -->
+<!--                                 </div> -->
 
-                            </div>
-                        </div>
+<!--                             </div> -->
+<!--                         </div> -->
 
-                    </div>
-                </div>
-            </section>
+<!--                     </div> -->
+<!--                 </div> -->
+<%--             </section> --%>
 
             <section class="cta-one-section content-section alt-bg-light">
                 <div class="container">
@@ -561,7 +568,7 @@
                             <p>www.distartracking.com และ www.distargps.com</p>
                         </div>
                         <div class="col-sm-3">
-                            <a href="http://www.distartracking.com" class="btn btn-overcolor">เข้าสู่ระบบ</a>
+                            <a href="http://www.distargps.com" class="btn btn-overcolor">เข้าสู่ระบบ</a>
                         </div>
                     </div>
                 </div>
@@ -618,15 +625,54 @@
                     </div>
                 </div>
 
-                <div class="container-fluid buffer-forty-top">
-                    <div class="row">
-                        <section id="cd-google-map no-bottom-pad">
-                            <div id="google-container"></div>
-                            <div id="cd-zoom-in"></div>
-                            <div id="cd-zoom-out"></div>
-                        </section>
-                    </div>
-                </div>
+<!--                 <div class="container-fluid buffer-forty-top"> -->
+<!--                     <div class="row"> -->
+<%--                         <section id="cd-google-map no-bottom-pad"> --%>
+<!--                             <div id="google-container"></div> -->
+<!--                             <div id="cd-zoom-in"></div> -->
+<!--                             <div id="cd-zoom-out"></div> -->
+<%--                         </section> --%>
+<!--                     </div> -->
+<!--                 </div> -->
+
+<div   id="map2" style="width: 100%; height: 500px; background: white;  padding: 40px"  /></div>
+				<script type="text/javascript" charset="UTF-8">
+    
+ 					function addMarkersToMap(map) {
+					
+ 					  var pointMarker = new H.map.Marker({lat:13.8748746, lng:100.4276403});
+ 					  map.addObject(pointMarker);
+ 					}
+
+ 					var platform = new H.service.Platform({
+ 					  app_id: 'AO0TSLtcxmb58ny1UwOH',
+ 					  app_code: '3aJwPn3AGDNS-0xAArtSAg',
+ 					  useCIT: true,
+ 					  useHTTPS: true
+//  					 language: "fr-fr"
+ 					});
+ 					var defaultLayers = platform.createDefaultLayers();
+
+ 					var map = new H.Map(document.getElementById('map2'),
+ 					  defaultLayers.normal.map,{
+ 					  center: {lat:13.8748746, lng:100.4276403},
+ 					  zoom: 18
+					});
+					
+ 					var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+					
+ 					var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+ 					
+ 					  // Remove not needed settings control
+//  					  ui.removeControl('mapsettings');
+ 					  
+//  					var ui = H.ui.UI.createDefault(map, defaultLayers);
+//  					var ui = H.ui.UI.createDefault(map, defaultLayers, 'th-TH');
+					
+ 					addMarkersToMap(map);
+   </script> 
+
 
             <footer>
                 <div class="container">
@@ -644,9 +690,9 @@
                     <div class="row text-center">
                         <div class="col-md-12 social segment">
                             <h4></h4>
-                            <a href="www.facebook.com/distartechthailand"><i class="fa fa-facebook fa-3x"></i></a>
-                            <a href="www.youtube.com/user/DistarTechThailand"><i class="fa fa-youtube fa-3x"></i></a>
-                            <a href="www.instagram.com/distartechthailand/"><i class="fa fa-instagram fa-3x"></i></a>
+                            <a href="//www.facebook.com/distarthailand"><i class="fa fa-facebook fa-3x"></i></a>
+                            <a href="//www.youtube.com/channel/UCPZWTOoYbZIDtjxkd1e5CQA"><i class="fa fa-youtube fa-3x"></i></a>
+                            <a href="//www.instagram.com/distartechthailand/"><i class="fa fa-instagram fa-3x"></i></a>
                         </div>
                     </div>
 

@@ -78,7 +78,7 @@
 	<script src="../styles/dashboard_assets/vendors/datatables.net-keytable/js/dataTables.keyTable.js"></script>
 	<script src="../styles/dashboard_assets/vendors/datatables.net-responsive/js/dataTables.responsive.js"></script>
 	<script src="../styles/dashboard_assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-	<script src="../styles/dashboard_assets/vendors/datatables.net-scroller/js/datatables.scroller.js"></script>
+<!-- 	<script src="../styles/dashboard_assets/vendors/datatables.net-scroller/js/datatables.scroller.js"></script> -->
 	<script src="../styles/dashboard_assets/vendors/jszip/dist/jszip.js"></script>
 	<script src="../styles/dashboard_assets/vendors/pdfmake/build/pdfmake.js"></script>
 	<script src="../styles/dashboard_assets/vendors/pdfmake/build/vfs_fonts.js"></script>

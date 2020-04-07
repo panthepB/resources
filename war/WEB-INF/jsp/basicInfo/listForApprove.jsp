@@ -12,7 +12,23 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+</style>
 
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function() {
@@ -65,7 +81,7 @@ $(document).ready(function() {
 
 				<div class="table-responsive">
 				
-					<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					<table id="example" class="table table-striped table-bordered" cellspacing="0" width="120%">
 						<thead>
 							<tr>
 								<th align="center">ลำดับ</th>
@@ -78,10 +94,11 @@ $(document).ready(function() {
 								<th align="center">ยี่ห้อรถ</th>
 								<th align="center">ประเภทรถ </th>
 								<th align="center">ชื่อลูกค้า</th>
+								<th align="center">ชื่อผู้ขาย</th>
 								<th align="center">วันที่ติดตั้ง</th>
 
 
-								<th align="center"></th>
+								<th align="center">Actions</th>
 
 							</tr>
 						</thead>
@@ -93,21 +110,22 @@ $(document).ready(function() {
 										<tr>
 
 									            <td width="3%" align="right">${n.count}</td>
-									            <td width="10%"><c:out value="${listMasterFile.unitId}" /></td>
-									            <td width="10%"> <c:out value="${listMasterFile.imei}" /></td>
-									            <td width="8%"><c:out value="${listMasterFile.trackerSimNumber}" /></td>
-												<td width="10%"><c:out value="${listMasterFile.vehicleChassisNo}" /></td>
-												<td width="10%"><c:out value="${listMasterFile.vehicleId}" /></td>
-												<td width="10%"><c:out value="${listMasterFile.provinceCode.provinceName}" /></td>
-												<td width="7%" align="center"><c:out value="${listMasterFile.vehicleType}" /></td>
+									            <td width="7%"><c:out value="${listMasterFile.unitId}" /></td>
+									            <td width="7%"> <c:out value="${listMasterFile.imei}" /></td>
+									            <td width="5%"><c:out value="${listMasterFile.trackerSimNumber}" /></td>
+												<td width="6%"><c:out value="${listMasterFile.vehicleChassisNo}" /></td>
+												<td width="5%"><c:out value="${listMasterFile.vehicleId}" /></td>
+												<td width="5%"><c:out value="${listMasterFile.provinceCode.provinceName}" /></td>
+												<td width="5%" align="center"><c:out value="${listMasterFile.vehicleType}" /></td>
 												<td width="10%" align="center"><c:out value="${listMasterFile.vehicleRegisterType.decription}" /></td>
-												<td width="8%"><c:out value="${listMasterFile.customerName}" /></td>
-												<td width="10%"><c:out value="${listMasterFile.installDate}" /></td>
+												<td width="5%"><c:out value="${listMasterFile.customerName}" /></td>
+												<td width="5%"><c:out value="${listMasterFile.saleName}" /></td>
+												<td width="5%"><c:out value="${listMasterFile.installDate}" /></td>
 												<td width="7%" align="center">
 <%-- 												<a href="editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="blue" > --%>
 <!-- 													<img border="0" alt="Edit" src="../img/edit-file-96.png" width="32" height="32" ></a>  -->
-												<a href="../masterfile/editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="blue" title="ตรวจสอบรายละเอียด">
-													<img border="0" alt="Edit" src="../img/check-all-96.png" width="48" height="48"></a> 
+												<a href="../masterfile/editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="btn" title="ตรวจสอบรายละเอียด">
+													<img border="0" alt="Edit" src="../img/check-all-96.png" width="30" height="30"> อนุมัติ</a> 
 												</td>
 
 										</tr>

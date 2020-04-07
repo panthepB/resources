@@ -861,6 +861,8 @@ public class MasterfileController extends UsableController {
 				masterFile.setRemark(masterFileForm.getRemark());
 				masterFile.setRemark2(masterFileForm.getRemark2());
 				masterFileDAO.merge(masterFile);
+				
+				
 
 				String query = "UPDATE master_file SET province_code = '" + provinceCode + "',vehicle_register_type = '"
 						+ vehicleRegisterType + "',unit_dummy = '" + dummyCode + "',code_gen = '" + sCode
@@ -1266,12 +1268,20 @@ public class MasterfileController extends UsableController {
 
 							DBCursor cursor2 = collection.find(searchQuery2);
 							
-			                BasicDBObject newDocument = new BasicDBObject();
-			                newDocument.put("unit_id", "");
-							BasicDBObject updateObj = new BasicDBObject();
-							updateObj.put("$set", newDocument);
+//			                BasicDBObject newDocument = new BasicDBObject();
+//			                newDocument.put("unit_id", "");
+//							BasicDBObject updateObj = new BasicDBObject();
+//							updateObj.put("$set", newDocument);
+							
+							BasicDBObject newDocument = new BasicDBObject();
+//			                newDocument.put("unit_id", "");
+			                newDocument.append("$unset",new BasicDBObject("unit_id", ""));
+//							BasicDBObject searchQuery  = new BasicDBObject();
+//							searchQuery.put("_id", current.get("_id"));
+			                System.out.println("Removed");
+							collection.update(searchQuery2, newDocument);
 
-							collection.update(searchQuery2, updateObj);
+//							collection.update(searchQuery2, updateObj);
 
 						}
 
@@ -1365,12 +1375,20 @@ public class MasterfileController extends UsableController {
 
 						DBCursor cursor2 = collection.find(searchQuery2);
 						
-		                BasicDBObject newDocument = new BasicDBObject();
-		                newDocument.put("unit_id", "");
-						BasicDBObject updateObj = new BasicDBObject();
-						updateObj.put("$set", newDocument);
-
-						collection.update(searchQuery2, updateObj);
+//		                BasicDBObject newDocument = new BasicDBObject();
+//		                newDocument.put("unit_id", "");
+//						BasicDBObject updateObj = new BasicDBObject();
+//						updateObj.put("$set", newDocument);
+//
+//						collection.update(searchQuery2, updateObj);
+						
+						BasicDBObject newDocument = new BasicDBObject();
+//		                newDocument.put("unit_id", "");
+		                newDocument.append("$unset",new BasicDBObject("unit_id", ""));
+//						BasicDBObject searchQuery  = new BasicDBObject();
+//						searchQuery.put("_id", current.get("_id"));
+		                System.out.println("Removed");
+						collection.update(searchQuery2, newDocument);
 
 						return new ModelAndView("redirect:/masterfile/rmvMasterFile.htm?unitId=" + unitId);
 					}

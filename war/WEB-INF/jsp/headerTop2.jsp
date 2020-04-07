@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="../js/jquery.datetimepicker.js"></script>
 	<script type="text/javascript" src="../js/jszip.js"></script>
 	<script type="text/javascript" src="../js/vfs_fonts.js"></script>
-	<script type="text/javascript" src="../js/pdfmake.minjs"></script>
+<!-- 	<script type="text/javascript" src="../js/pdfmake.minjs"></script> -->
 
 <!--     <link href="../styles/datetimepicker.css" rel="stylesheet"> -->
 <!--     Bootstrap -->
