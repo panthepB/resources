@@ -958,11 +958,11 @@ public class ThaiPOSTController extends UsableController {
 						
 						byte[] vehicle_id  = objNode.get("vehicle_id").toString().getBytes();
 						
-						//System.out.println("ทดสอบภาษาไทย : " + new String(vehicle_id,"UTF-8"));
+//						System.out.println("ทดสอบภาษาไทย : " + new String(vehicle_id,"UTF-8"));
 						
 						row.add(objNode.get("unit_id").getTextValue());
 						row.add(objNode.get("vehicle_chassis_no").getTextValue());
-						row.add(new String(vehicle_id,"UTF-8").replace("\"", ""));
+						row.add(new String(vehicle_id,"UTF-8").replace("-", ""));
 						row.add(objNode.get("vehicle_type").getTextValue());
 						row.add(objNode.get("vehicle_register_type"));
 						row.add(objNode.get("province_code"));
