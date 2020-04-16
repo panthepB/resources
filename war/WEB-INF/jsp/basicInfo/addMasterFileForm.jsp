@@ -41,13 +41,41 @@
 	</div>
 	<div class="clearfix"></div>
 
-	<form:form method="POST" commandName="masterFileForm" action="addMasterFile.htm">
+	<form:form method="POST" onsubmit="myFunction()" commandName="masterFileForm" action="addMasterFile.htm">
 
 		<div class="panel panel-info">
 
 			<div class="panel-heading">ข้อมูลมาสเตอร์ไฟล์</div>
 			<div class="panel-body">
-			
+			<script>
+				function myFunction() {
+					 Swal.fire({
+						    title: 'กำลังบันทึกข้อมูล',
+						    timer: 5000,
+						    timerProgressBar: true,
+						    onBeforeOpen: () => {
+						      Swal.showLoading()
+						      timerInterval = setInterval(() => {
+						        const content = Swal.getContent()
+						        if (content) {
+						          const b = content.querySelector('b')
+						          if (b) {
+						            b.textContent = Swal.getTimerLeft()
+						          }
+						        }
+						      }, 100)
+						    },
+						    onClose: () => {
+						      clearInterval(timerInterval)
+						    }
+						  }).then((result) => {
+						    /* Read more about handling dismissals below */
+						    if (result.dismiss === Swal.DismissReason.timer) {
+						      console.log('I was closed by the timer')
+						    }
+						  })
+				}
+			</script>
 			<c:if test="${messageCode == 200}">
 				<!-- Update driver log service started!! -->
 					<script type="text/javascript">
@@ -75,6 +103,24 @@
 							  'มีหมายเลขตัวถังนี้แล้วในระบบ \n โปรดตรวจสอบข้อมูลอีกครั้ง',
 							  ' ',
 							  'error'
+							)
+					</script>
+			</c:if>
+			<c:if test="${messageCode == 103}">				
+				<script type="text/javascript">
+							Swal.fire(
+							  'กรุณาระบุรุ่น GPS \n โปรดตรวจสอบข้อมูลอีกครั้ง',
+							  ' ',
+							  'error'
+							)
+					</script>
+			</c:if>
+			<c:if test="${messageCode == 104}">				
+				<script type="text/javascript">
+							Swal.fire(
+							  'มีข้อมูล IMEI และ หมายเลขตัวถัง นี้แล้วในระบบ \n โปรดตรวจสอบข้อมูลอีกครั้ง',
+							  ' ',
+							  'warning'
 							)
 					</script>
 			</c:if>
@@ -150,21 +196,36 @@
 <!-- 					</div> -->
 					
 					
-					
+					<div class="form-group">
+						<label>ชื่อผู้ขาย</label>
+						<form:input path="saleName" id="sales" autocomplete="on" maxlength="50" cssClass="form-control" />
+					</div>
 					<div class="form-group">
 						<label>ชื่อลูกค้า</label>
 <!-- 						<input id="tags" class="form-control"> -->
 						<form:input path="customerName" id="customers" autocomplete="on" maxlength="50" cssClass="form-control" />
 					</div>
 					<div class="form-group">
+						<label>ที่อยู่</label>
+						<form:input path="remark2" cssClass="form-control" />
+					</div>
+					<div class="form-group">
 						<label>เบอร์ติดต่อลูกค้า</label>
 						<form:input path="customerTel" id="customerTel"  onkeyup="checkTel();" maxlength="10" cssClass="form-control" />
 					</div>
-					<div class="form-group">
-						<label>ชื่อผู้ขาย</label>
-						<form:input path="saleName" id="sales" autocomplete="on" maxlength="50" cssClass="form-control" />
-					</div>
 
+					<div class="form-group">
+						<label>รุ่น GPS</label>
+						<form:select path="gpsModel" cssClass="form-control">
+							<form:option value="0" label="กรุณาเลือก" />
+							<form:option value="0430003" label="DTK-3G100T" />
+							<form:option value="0430013" label="MHD-C8AG (HDD)" />
+							<form:option value="0430014" label="MHD-C8SG (SD Card)" />
+							<form:option value="0430015" label="TDF-422F" />
+							<form:option value="0430016" label="GT06E" />
+							<form:option value="0430018" label="TD2-F211" />
+						</form:select>
+					</div>
 					<div class="form-group">
 						<label>IMEI</label>
 						<form:input path="imei" maxlength="20" id="imei" onkeyup="checkIMEI();" cssClass="form-control" />
@@ -174,8 +235,7 @@
 						<label>เบอร์โทรของซิมที่ใช้กับอุปกรณ์</label>
 						<form:input path="tracker_sim_number" id="tracker_sim_number"  onkeyup="checkTrackTel();" maxlength="10" cssClass="form-control" />
 					</div>
-					
-					<div class="form-group">
+					<div class="form-group" hidden="true">
 					<label>สถานะการย้ายเครื่อง</label>
 					</br>
 					<label class="checkbox-inline">
@@ -199,20 +259,6 @@
 						<form:input path="vehicleId" id="vehicleId" maxlength="7" cssClass="form-control" />
 					</div>
 					<div class="form-group">
-						<label>ยี่ห้อรถ</label>
-						<form:input path="vehicleType" id="vehicleTypes"  autocomplete="on"maxlength="20" cssClass="form-control" />
-					</div>
-					<div class="form-group">
-						<label>หมายเลขตัวถัง</label>
-						<form:input path="vehicleChassisNo" maxlength="25" id="vehicleChassisNo" onkeyup="checkChassisNo();" cssClass="form-control" />
-					</div>
-					<div class="form-group">
-						<label>ประเภทรถ</label>
-						<form:select path="vehicleRegisterType" cssClass="form-control">
-							<form:options items="${listVehicle}" itemValue="vehicleRegisterType"  itemLabel="decription" />
-						</form:select>
-					</div>
-					<div class="form-group">
 						<label>จังหวัด</label>
 						<form:select path="provinceCode" cssClass="form-control">
 							<form:option value="0" label="กรุณาเลือก" />
@@ -220,16 +266,24 @@
 						</form:select>
 					</div>
 					<div class="form-group">
-						<label>รุ่น GPS</label>
-						<form:select path="gpsModel" cssClass="form-control">
-							<form:option value="0" label="กรุณาเลือก" />
-							<form:option value="0430003" label="DTK-3G100T" />
-							<form:option value="0430013" label="MHD-C8AG (HDD)" />
-							<form:option value="0430014" label="MHD-C8SG (SD Card)" />
-							<form:option value="0430015" label="TDF-422F" />
-							<form:option value="0430016" label="GT06E" />
-							<form:option value="0430018" label="TD2-F211" />
+						<label>หมายเลขตัวถัง</label>
+						<form:input path="vehicleChassisNo" maxlength="25" id="vehicleChassisNo" onkeyup="checkChassisNo();" cssClass="form-control" />
+					</div>
+					<div class="form-group">
+						<label>ยี่ห้อรถ</label>
+						<form:input path="vehicleType" id="vehicleTypes"  autocomplete="on"maxlength="20" cssClass="form-control" />
+					</div>
+					
+					<div class="form-group">
+						<label>ประเภทรถ</label>
+						<form:select path="vehicleRegisterType" cssClass="form-control">
+							<form:options items="${listVehicle}" itemValue="vehicleRegisterType"  itemLabel="decription" />
 						</form:select>
+					</div>
+					
+					<div class="form-group">
+						<label>วันที่ติดตั้ง</label>
+						<form:input path="installDate" id="dateInstall"  cssClass="form-control" />
 					</div>
 
 					<div class="form-group">
@@ -248,10 +302,7 @@
 					
 					</div>
 					
-					<div class="form-group">
-						<label>วันที่ติดตั้ง</label>
-						<form:input path="installDate" id="dateInstall"  cssClass="form-control" />
-					</div>
+					
 					<div class="form-group">
 					<label>ส่งข้อมูลเข้าขนส่ง</label>
 					</br>
@@ -272,10 +323,7 @@
 						<form:input path="remark" cssClass="form-control" />
 					</div>
 					
-					<div class="form-group">
-						<label>บันทึกเพิ่มเติม</label>
-						<form:input path="remark2" cssClass="form-control" />
-					</div>
+
 
 					<script>
 							$('#dateInstall').datetimepicker({
@@ -290,8 +338,9 @@
 					</br>
 					</br>
 
-
-					<input type="submit" value="ยืนยัน" class="btn btn-success" /> <input type="reset" class="btn btn-danger" value="ล้างข้อมูล" class="styleButton" />
+					<button onclick="confirmFunction()" id="rvmBt" class="btn btn-success" title="ยืนยัน" ><i class="fa fa-check"></i> ยืนยัน</button>
+<!-- 					<input type="submit" value="ยืนยัน" class="btn btn-success" /> <i class="fa fa-trash"></i> -->
+					<a	onclick="return confirm('Are you sure?')" id="rvmBt" href="masterfileList.htm"  class="btn btn-danger" title="ยกเลิกทำรายการ" ><i class="fa fa-undo"></i> ยกเลิก</a>
 				</form>
 			</div>
 		</div>

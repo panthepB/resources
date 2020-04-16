@@ -53,7 +53,35 @@ $(document).ready(function() {
     } );
 } );
 </script>
+		<script>
 
+					 Swal.fire({
+						    title: 'กำลังโหลดข้อมูล',
+						    timer: 30000,
+						    timerProgressBar: true,
+						    onBeforeOpen: () => {
+						      Swal.showLoading()
+						      timerInterval = setInterval(() => {
+						        const content = Swal.getContent()
+						        if (content) {
+						          const b = content.querySelector('b')
+						          if (b) {
+						            b.textContent = Swal.getTimerLeft()
+						          }
+						        }
+						      }, 100)
+						    },
+						    onClose: () => {
+						      clearInterval(timerInterval)
+						    }
+						  }).then((result) => {
+						    /* Read more about handling dismissals below */
+						    if (result.dismiss === Swal.DismissReason.timer) {
+						      console.log('I was closed by the timer')
+						    }
+						  })
+				
+			</script>
 
 <!-- /top navigation -->
 
@@ -65,7 +93,6 @@ $(document).ready(function() {
 		</div>
 	</div>
 	<div class="clearfix"></div>
-
 
 	<div class="panel panel-info">
 

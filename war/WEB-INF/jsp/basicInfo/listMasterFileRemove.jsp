@@ -131,7 +131,7 @@ $(document).ready(function() {
 				<div class="table-responsive">
 
 					<table id="example" class="table table-striped table-bordered"
-						cellspacing="0" width="130%">
+						cellspacing="0" width="120%">
 						<thead>
 							<tr>
 								<th align="center">ลำดับ</th>
@@ -180,12 +180,8 @@ $(document).ready(function() {
 									<td width="5%"><c:out
 											value="${listMasterFile.installDate}" /></td>
 									<td width="7%" align="center">
-									<div class="btn-group btn-group">
-											<a	href="../masterfile/editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="btn btn-success" title="อนุมัติข้อมูล"><i class="fa fa-check-square-o"></i> อนุมัติ</a>
-											<a	onclick="return confirm('Are you sure?')" id="rvmBt" href="rmvMasterFile.htm?unitId=${listMasterFile.unitId}"  class="btn btn-danger" title="ลบข้อมูล" ><i class="fa fa-trash"></i> ลบ</a>
-
-<%-- 											<button onclick="confirmFunction()" id="rvmBt" class="btn btn-danger" title="ลบข้อมูล" value="${listMasterFile.unitId}" name="${listMasterFile.unitId}"><i class="fa fa-trash"></i> ลบ</button> --%>
-									</div>
+												<a href="editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="btn btn-primary">
+													<i class="fa fa-pencil-square-o"></i> แก้ไขข้อมูล</a>  
 									</td>
 
 								</tr>

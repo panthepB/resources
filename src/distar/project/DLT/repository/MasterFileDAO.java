@@ -33,13 +33,15 @@ public interface MasterFileDAO extends GenericDAO<MasterFile, Long> {
 
 	public List<MasterFile> findByStatus(int status);
 
-	public List<MasterFile> findByStatusAndUser(int status, User userId);
-
 	public MasterFile findByImeiAndChass(String imei, String chass);
 
 	public MasterFile findByChass(String chass);
 
 	public MasterFile findByUIDAndChass(String imei, String chass);
+
+	public List<MasterFile> findByStatus(int status, int delStatus);
+
+	public List<MasterFile> findByStatusAndUser(int status, User userId, int delStatus);
 
 
 }

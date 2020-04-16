@@ -14,21 +14,6 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style>
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 8px 12px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: RoyalBlue;
-}
-</style>
 
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function() {
@@ -74,8 +59,8 @@ $(document).ready(function() {
 			
 			<form:form method="POST" commandName="masterFileForm" action="addMasterFileForm.htm">
 <!-- 					<input type="submit" value="เพิ่มข้อมูล" class="btn btn-primary" style="float: right; " /> -->
-					<a href="addMasterFileForm.htm" class="btn" style="float: right;">
-					<img border="0" alt="Edit" src="../img/add.png" width="36" height="36"> เพิ่มข้อมูล</a>
+					<a href="addMasterFileForm.htm" class="btn btn-primary btn-lg" style="float: right;">
+					<i class="fa fa-plus-square"></i> เพิ่มข้อมูล</a>
 			
 				</form:form>
 				
@@ -84,7 +69,7 @@ $(document).ready(function() {
 
 				<div class="table-responsive">
 				
-					<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					<table id="example" class="table table-striped table-bordered" cellspacing="0" width="120%">
 						<thead>
 							<tr>
 								<th align="center">ลำดับ</th>
@@ -123,8 +108,8 @@ $(document).ready(function() {
 												<td width="8%"><c:out value="${listMasterFile.customerName}" /></td>
 												<td width="10%"><c:out value="${listMasterFile.installDate}" /></td>
 												<td width="7%" align="center">
-												<a href="editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="btn">
-													<img border="0" alt="Edit" src="../img/edit-property-96.png" width="36" height="36">แก้ไขข้อมูล</a> 
+												<a href="editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="btn btn-primary">
+													<i class="fa fa-pencil-square-o"></i> แก้ไขข้อมูล</a> 
 												</td>
 
 										</tr>

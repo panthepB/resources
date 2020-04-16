@@ -27,7 +27,7 @@ public class MasterFileDAOImpl extends GenericHibernateDAO<MasterFile, Long> imp
 	public MasterFile findByIMEI(String imei) {
 		DetachedCriteria criteria = this.createDetachedCriteria();
 		criteria.add((Criterion) Restrictions.eq("imei", imei));
-		criteria.add((Criterion) Restrictions.eq("dltStatus", 1));
+//		criteria.add((Criterion) Restrictions.eq("dltStatus", 1));
 		List masterFiles = this.findByCriteria(criteria);
 		if (masterFiles.size() > 0) {
 			return (MasterFile) masterFiles.get(0);
@@ -104,6 +104,14 @@ public class MasterFileDAOImpl extends GenericHibernateDAO<MasterFile, Long> imp
 	}
 	
 	@Override
+	public List<MasterFile> findByStatus(int status,int delStatus) {
+		DetachedCriteria criteria = createDetachedCriteria();
+		criteria.add((Criterion) Restrictions.eq("status", status));
+		criteria.add((Criterion) Restrictions.eq("deleteStatus", delStatus));
+		return findByCriteria(criteria);
+	}
+	
+	@Override
 	public List<MasterFile> findByStatus(int status) {
 		DetachedCriteria criteria = createDetachedCriteria();
 		criteria.add((Criterion) Restrictions.eq("status", status));
@@ -111,8 +119,9 @@ public class MasterFileDAOImpl extends GenericHibernateDAO<MasterFile, Long> imp
 	}
 	
 	@Override
-	public List<MasterFile> findByStatusAndUser(int status,User userId) {
+	public List<MasterFile> findByStatusAndUser(int status,User userId,int delStatus) {
 		DetachedCriteria criteria = createDetachedCriteria();
+		criteria.add((Criterion) Restrictions.eq("deleteStatus", delStatus));
 		criteria.add((Criterion) Restrictions.eq("status", status));
 		criteria.add((Criterion) Restrictions.eq("userCreate", userId));
 		return findByCriteria(criteria);
@@ -124,7 +133,7 @@ public class MasterFileDAOImpl extends GenericHibernateDAO<MasterFile, Long> imp
 		DetachedCriteria criteria = this.createDetachedCriteria();
 		criteria.add((Criterion) Restrictions.eq("imei", imei));
 		criteria.add((Criterion) Restrictions.eq("vehicleChassisNo", chass));
-		criteria.add((Criterion) Restrictions.eq("dltStatus", 1));
+//		criteria.add((Criterion) Restrictions.eq("dltStatus", 1));
 		List masterFiles = this.findByCriteria(criteria);
 		if (masterFiles.size() > 0) {
 			return (MasterFile) masterFiles.get(0);
@@ -136,7 +145,7 @@ public class MasterFileDAOImpl extends GenericHibernateDAO<MasterFile, Long> imp
 	public MasterFile findByChass(String chass) {
 		DetachedCriteria criteria = this.createDetachedCriteria();
 		criteria.add((Criterion) Restrictions.eq("vehicleChassisNo", chass));
-		criteria.add((Criterion) Restrictions.eq("dltStatus", 1));
+//		criteria.add((Criterion) Restrictions.eq("dltStatus", 1));
 		List masterFiles = this.findByCriteria(criteria);
 		if (masterFiles.size() > 0) {
 			return (MasterFile) masterFiles.get(0);
@@ -149,7 +158,7 @@ public class MasterFileDAOImpl extends GenericHibernateDAO<MasterFile, Long> imp
 		DetachedCriteria criteria = this.createDetachedCriteria();
 		criteria.add((Criterion) Restrictions.eq("unitId", uid));
 		criteria.add((Criterion) Restrictions.eq("vehicleChassisNo", chass));
-		criteria.add((Criterion) Restrictions.eq("dltStatus", 1));
+//		criteria.add((Criterion) Restrictions.eq("dltStatus", 1));
 		List masterFiles = this.findByCriteria(criteria);
 		if (masterFiles.size() > 0) {
 			return (MasterFile) masterFiles.get(0);
