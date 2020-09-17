@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
-	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
 
@@ -62,22 +64,27 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	</bean>
 
 
-	<bean id="myDevAlarmDAO" class="distar.project.DLT.repository.DevAlarmDAOImpl">
+	<bean id="myDevAlarmDAO"
+		class="distar.project.DLT.repository.DevAlarmDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
-	<bean id="myDevStatusDAO" class="distar.project.DLT.repository.DevStatusDAOImpl">
+	<bean id="myDevStatusDAO"
+		class="distar.project.DLT.repository.DevStatusDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
-	<bean id="myRealtimeStatusDAO" class="distar.project.DLT.repository.RealtimeStatusDAOImpl">
+	<bean id="myRealtimeStatusDAO"
+		class="distar.project.DLT.repository.RealtimeStatusDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-	<bean id="myDriverLogDAO" class="distar.project.DLT.repository.DriverLogDAOImpl">
+	<bean id="myDriverLogDAO"
+		class="distar.project.DLT.repository.DriverLogDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
-	<bean id="myProvinceDLTDAO" class="distar.project.DLT.repository.ProvinceDLTDAOImpl">
+	<bean id="myProvinceDLTDAO"
+		class="distar.project.DLT.repository.ProvinceDLTDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
@@ -86,45 +93,57 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
-	<bean id="myMasterFileDAO" class="distar.project.DLT.repository.MasterFileDAOImpl">
+	<bean id="myMasterFileDAO"
+		class="distar.project.DLT.repository.MasterFileDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-	<bean id="myExcelImportDAO" class="distar.project.DLT.repository.ExcelImportDAOImpl">
+	<bean id="myExcelImportDAO"
+		class="distar.project.DLT.repository.ExcelImportDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
 	<bean id="cacheManager"
 		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
-		<property name="configLocation" value="/WEB-INF/config/ehcache.xml" />
+		<property name="configLocation"
+			value="/WEB-INF/config/ehcache.xml" />
 		<property name="shared" value="true" />
 	</bean>
-	<bean id="myCompanyDAO" class="com.distar.dtwr.system.repository.CompanyDAOImpl">
+	<bean id="myCompanyDAO"
+		class="com.distar.dtwr.system.repository.CompanyDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-	<bean id="myUserDAO" class="com.distar.dtwr.company.repository.UserDAOImpl">
+	<bean id="myUserDAO"
+		class="com.distar.dtwr.company.repository.UserDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-	<bean id="myPositionDAO" class="com.distar.dtwr.company.repository.PositionDAOImpl">
+	<bean id="myPositionDAO"
+		class="com.distar.dtwr.company.repository.PositionDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-	<bean id="myTaskDAO" class="com.distar.dtwr.system.repository.TaskDAOImpl">
+	<bean id="myTaskDAO"
+		class="com.distar.dtwr.system.repository.TaskDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-	<bean id="myGroupDAO" class="com.distar.dtwr.system.repository.GroupDAOImpl">
+	<bean id="myGroupDAO"
+		class="com.distar.dtwr.system.repository.GroupDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-	<bean id="myNoticeDAO" class="com.distar.dtwr.company.repository.NoticeDAOImpl">
+	<bean id="myNoticeDAO"
+		class="com.distar.dtwr.company.repository.NoticeDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-	
-	<bean id="myLTYUnitIdDAO" class="distar.project.DLT.repository.LTYUnitIdDAOImpl">
+
+	<bean id="myLTYUnitIdDAO"
+		class="distar.project.DLT.repository.LTYUnitIdDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-	
-	<bean id="myMALogDAO" class="distar.project.DLT.repository.MALogDAOImpl">
+
+	<bean id="myMALogDAO"
+		class="distar.project.DLT.repository.MALogDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-		<bean id="myApiMasterfileDAO" class="distar.project.DLT.repository.APIMasterfileDAOImpl">
+	<bean id="myApiMasterfileDAO"
+		class="distar.project.DLT.repository.APIMasterfileDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
@@ -132,7 +151,8 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 
 	<bean id="myDataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="driverClassName"
+			value="${jdbc.driverClassName}" />
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
@@ -145,7 +165,8 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 
 	</bean>
 
-	<tx:annotation-driven transaction-manager="transactionManager" />
+	<tx:annotation-driven
+		transaction-manager="transactionManager" />
 
 	<bean id="paramImage" class="distar.project.service.ParamImage">
 		<property name="path" value="${image.path}" />
@@ -155,27 +176,32 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		<property name="empDir" value="${image.emp.dir}" />
 	</bean>
 
-	<bean id="uploadFileHolder" class="distar.project.service.UploadFileHolder">
+	<bean id="uploadFileHolder"
+		class="distar.project.service.UploadFileHolder">
 		<property name="paramImage" ref="paramImage" />
 		<property name="limitSize" value="100000" />
 		<property name="content" value="image/jpeg,image/pjpeg" />
 	</bean>
-	
+
 
 	<bean id="serverIP" class="distar.project.service.ServerIP">
 		<property name="userPassGPS" value="${serverip.userPassGPS}" />
-		<property name="userPassMaster" value="${serverip.userPassMaster}" />
-		<property name="urlMesterFile" value="${serverip.urlMesterFile}" />
+		<property name="userPassMaster"
+			value="${serverip.userPassMaster}" />
+		<property name="urlMesterFile"
+			value="${serverip.urlMesterFile}" />
 		<property name="urlRealTime" value="${serverip.urlRealTime}" />
 		<property name="server" value="${serverip.server}" />
 		<property name="mdvrServer" value="${serverip.mdvrServer}" />
 		<property name="mdvrServer2" value="${serverip.mdvrServer2}" />
 		<property name="mhdServer" value="${serverip.mhdServer}" />
-		<property name="trackingServer" value="${serverip.trackingServer}" />
+		<property name="trackingServer"
+			value="${serverip.trackingServer}" />
 		<property name="bmtaServer" value="${serverip.bmtaServer}" />
 		<property name="mysql" value="${serverip.mysql}" />
 		<property name="urlThaipost" value="${serverip.urlThaipost}" />
-		<property name="userPassThaipost" value="${serverip.userPassThaipost}" />
+		<property name="userPassThaipost"
+			value="${serverip.userPassThaipost}" />
 		<property name="urlSCG" value="${serverip.urlSCG}" />
 		<property name="userPassSCG" value="${serverip.userPassSCG}" />
 		<property name="status" value="${serverip.status}" />

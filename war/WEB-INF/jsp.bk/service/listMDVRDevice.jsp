@@ -2,12 +2,17 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/jsp/headerTop2.jsp"%>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
-<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
 
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.jqueryui.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.10.12/js/dataTables.jqueryui.min.js"></script>
 
 
 <script type="text/javascript" charset="utf-8">
@@ -32,7 +37,8 @@
 		<div class="panel-body">
 			<!-- Update driver log service started!! -->
 			<div class="alert alert-success alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">×</button>
 				Realtime mdvr service started!!
 			</div>
 		</div>
@@ -41,7 +47,8 @@
 		<div class="panel-body">
 			<!-- Update driver log service started!! -->
 			<div class="alert alert-success alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">×</button>
 				Update driver log service started!!
 			</div>
 		</div>
@@ -50,7 +57,8 @@
 		<div class="panel-body">
 			<!-- Update driver log service started!! -->
 			<div class="alert alert-success alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">×</button>
 				Location backup send to server
 			</div>
 		</div>
@@ -64,7 +72,8 @@
 			<div class="panel-heading">List master file</div>
 			<div class="panel-body">
 				<div class="table-responsive">
-					<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					<table id="example" class="table table-striped table-bordered"
+						cellspacing="0" width="100%">
 						<thead>
 							<tr>
 								<th align="center">ลำดับ</th>
@@ -86,19 +95,17 @@
 
 										<tr>
 											<td width="5%" align="right">${table[j.index]}</td>
-											<td width="12%" >${table[j.index+1]}</td>
+											<td width="12%">${table[j.index+1]}</td>
 											<td width="27%"><c:out value="${table[j.index+2]}" /></td>
 											<td width="20%"><c:out value="${table[j.index+3]}" /></td>
 											<td width="10%"><c:out value="${table[j.index+4]}" /></td>
-											<td width="5%" align="center">
-											<c:if test="${table[j.index+5] == 0}">
-												<font color="red">ล็อกเอาท์</font>
-											</c:if>
-											<c:if test="${table[j.index+5] == 1}">
-												<font color="green">ล็อกอิน</font>
-											</c:if>
-<%-- 											<c:out value="${table[j.index+5]}" /></td> --%>
-											<td width="20%" ><c:out value="${table[j.index+6]}" /></td>
+											<td width="5%" align="center"><c:if
+													test="${table[j.index+5] == 0}">
+													<font color="red">ล็อกเอาท์</font>
+												</c:if> <c:if test="${table[j.index+5] == 1}">
+													<font color="green">ล็อกอิน</font>
+												</c:if> <%-- 											<c:out value="${table[j.index+5]}" /></td> --%>
+											<td width="20%"><c:out value="${table[j.index+6]}" /></td>
 										</tr>
 									</c:if>
 								</c:forEach>
@@ -118,7 +125,8 @@
 	<!-- footer content -->
 	<footer>
 		<div class="pull-right">
-			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech co.,LTD</a>
+			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech
+				co.,LTD</a>
 		</div>
 		<div class="clearfix"></div>
 	</footer>

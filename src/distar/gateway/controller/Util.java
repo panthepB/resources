@@ -112,7 +112,7 @@ public class Util {
 		Date dateNow = new Date();
 
 		calBe.setTime(dateNow);
-		calBe.add(Calendar.MINUTE, -10);
+		calBe.add(Calendar.MINUTE, -5);
 		Date dtBefore = calBe.getTime();
 
 		BasicDBObject query = new BasicDBObject();
@@ -141,7 +141,7 @@ public class Util {
 		Date dateNow = new Date();
 
 		calBe.setTime(dateNow);
-		calBe.add(Calendar.MINUTE, -10);
+		calBe.add(Calendar.MINUTE, -5);
 		Date dtBefore = calBe.getTime();
 
 		BasicDBObject query = new BasicDBObject();

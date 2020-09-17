@@ -23,7 +23,7 @@
 	href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 
 <script type="text/javascript">
 	function confirmFunction() {
@@ -180,12 +180,18 @@ $(document).ready(function() {
 									<td width="5%"><c:out
 											value="${listMasterFile.installDate}" /></td>
 									<td width="7%" align="center">
-									<div class="btn-group btn-group">
-											<a	href="../masterfile/editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="btn btn-success" title="อนุมัติข้อมูล"><i class="fa fa-check-square-o"></i> อนุมัติ</a>
-											<a	onclick="return confirm('Are you sure?')" id="rvmBt" href="rmvMasterFile.htm?unitId=${listMasterFile.unitId}"  class="btn btn-danger" title="ลบข้อมูล" ><i class="fa fa-trash"></i> ลบ</a>
+										<div class="btn-group btn-group">
+											<a
+												href="../masterfile/editMasterFileForm.htm?unitId=${listMasterFile.unitId}"
+												class="btn btn-success" title="อนุมัติข้อมูล"><i
+												class="fa fa-check-square-o"></i> อนุมัติ</a> <a
+												onclick="return confirm('Are you sure?')" id="rvmBt"
+												href="rmvMasterFile.htm?unitId=${listMasterFile.unitId}"
+												class="btn btn-danger" title="ลบข้อมูล"><i
+												class="fa fa-trash"></i> ลบ</a>
 
-<%-- 											<button onclick="confirmFunction()" id="rvmBt" class="btn btn-danger" title="ลบข้อมูล" value="${listMasterFile.unitId}" name="${listMasterFile.unitId}"><i class="fa fa-trash"></i> ลบ</button> --%>
-									</div>
+											<%-- 											<button onclick="confirmFunction()" id="rvmBt" class="btn btn-danger" title="ลบข้อมูล" value="${listMasterFile.unitId}" name="${listMasterFile.unitId}"><i class="fa fa-trash"></i> ลบ</button> --%>
+										</div>
 									</td>
 
 								</tr>

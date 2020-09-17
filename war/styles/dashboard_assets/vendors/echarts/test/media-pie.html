@@ -1,34 +1,35 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="esl.js"></script>
-        <script src="config.js"></script>
-        <script src="lib/jquery.min.js"></script>
-        <script src="lib/draggable.js"></script>
-        <link rel="stylesheet" href="reset.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        <style>
-            body {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-            #main {
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                width: 700px;
-                height: 650px;
-                background: #fff;
-            }
-        </style>
-        <div id="main"></div>
+<head>
+<meta charset="utf-8">
+<script src="esl.js"></script>
+<script src="config.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/draggable.js"></script>
+<link rel="stylesheet" href="reset.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<style>
+body {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
 
-        <script src="data/timelineGDP.js"></script>
+#main {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 700px;
+	height: 650px;
+	background: #fff;
+}
+</style>
+	<div id="main"></div>
 
-        <script>
+	<script src="data/timelineGDP.js"></script>
+
+	<script>
 
 
             require([
@@ -233,5 +234,5 @@
                 window.onresize = chart.resize;
             });
         </script>
-    </body>
+</body>
 </html>

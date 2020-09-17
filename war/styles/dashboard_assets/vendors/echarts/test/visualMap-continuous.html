@@ -1,40 +1,41 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="esl.js"></script>
-        <script src="config.js"></script>
-        <link rel="stylesheet" href="reset.css" />
-    </head>
-    <body>
-        <style>
-            .split {
-                line-height: 60px;
-                height: 60px;
-                background: #ddd;
-                text-align: center;
-                font-weight: bold;
-                font-size: 20px;
-            }
-            .main {
-                height: 80%;
-            }
-        </style>
+<head>
+<meta charset="utf-8">
+<script src="esl.js"></script>
+<script src="config.js"></script>
+<link rel="stylesheet" href="reset.css" />
+</head>
+<body>
+	<style>
+.split {
+	line-height: 60px;
+	height: 60px;
+	background: #ddd;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
 
-        <div class="split">Color Hue</div>
-        <div id="main1" class="main"></div>
-        <div class="split">Color List</div>
-        <div id="main2" class="main"></div>
-        <div class="split">Map</div>
-        <div id="main3" class="main"></div>
-        <div class="split">Stacked Bar (and inversed)</div>
-        <div id="main4" class="main"></div>
+.main {
+	height: 80%;
+}
+</style>
 
-
-
+	<div class="split">Color Hue</div>
+	<div id="main1" class="main"></div>
+	<div class="split">Color List</div>
+	<div id="main2" class="main"></div>
+	<div class="split">Map</div>
+	<div id="main3" class="main"></div>
+	<div class="split">Stacked Bar (and inversed)</div>
+	<div id="main4" class="main"></div>
 
 
 
-        <script type="text/javascript">
+
+
+
+	<script type="text/javascript">
             require([
                 'echarts',
                 'echarts/chart/bar',
@@ -138,7 +139,7 @@
 
 
 
-        <script type="text/javascript">
+	<script type="text/javascript">
             require([
                 'echarts',
                 'echarts/chart/scatter',
@@ -268,7 +269,7 @@
 
 
 
-        <script type="text/javascript">
+	<script type="text/javascript">
             require([
                 'echarts',
                 'echarts/chart/map',
@@ -530,7 +531,7 @@
 
 
 
-        <script type="text/javascript">
+	<script type="text/javascript">
 
             require([
                 'echarts',
@@ -659,5 +660,5 @@
         </script>
 
 
-    </body>
+</body>
 </html>

@@ -1,21 +1,23 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="esl.js"></script>
-        <script src="config.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="reset.css">
-    </head>
-    <body>
-        <style>
-        </style>
-        <div>
-            <input type="button" value="exchangeXY" onclick="go.exchangeXY();">
-            <input type="button" value="illegal use getModel.option" onclick="go.illegal();">
-            <input type="button" value="dataZoom restore (error if view changed)" onclick="go.dataZoomRestore();">
-        </div>
-        <div id="main"></div>
-        <script>
+<head>
+<meta charset="utf-8">
+<script src="esl.js"></script>
+<script src="config.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="reset.css">
+</head>
+<body>
+	<style>
+</style>
+	<div>
+		<input type="button" value="exchangeXY" onclick="go.exchangeXY();">
+		<input type="button" value="illegal use getModel.option"
+			onclick="go.illegal();"> <input type="button"
+			value="dataZoom restore (error if view changed)"
+			onclick="go.dataZoomRestore();">
+	</div>
+	<div id="main"></div>
+	<script>
 
             var chart;
             var myChart;
@@ -141,5 +143,5 @@
             });
 
         </script>
-    </body>
+</body>
 </html>

@@ -1,73 +1,81 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="esl.js"></script>
-        <script src="config.js"></script>
-    </head>
-    <body>
-        <style>
-            #main {
-                position: relative;
-                text-align: center;
-                margin-right: 200px;
-            }
-            .title {
-                display: block;
-                cursor: pointer;
-                text-decoration: none;
-                clear: both;
-                text-align: center;
-                margin: 0;
-                background: #eef;
-                line-height: 22px;
-            }
-            .block {
-                display: inline-block;
-                *display: inline;
-                *zoom: 1;
-                vertical-align: top;
-                margin: 30px 0 30px 50px;
-            }
-            .block .ec {
-                width: 800px;
-                height: 240px;
-            }
-            .block .info {
-                display: block;
-                text-align: left;
-                background: #eee;
-                border-radius: 3px;
-                font-size: 12px;
-                line-height: 18px;
-                padding: 0 5px;
-            }
-            .block .info td {
-                font-size: 12px;
-                border: 1px solid #bbb;
-                padding: 1px 3px;
-            }
-            .code-panel {
-                width: 200px;
-                position: fixed;
-                top: 0;
-                right: 0;
-                border: 2px solid #aaa;
-            }
-            .code-line {
-                margin: 15px 5px;
-                font-size: 12px;
-            }
-            .code-line textarea{
-                width: 190px;
-                height: 180px;
-                margin-bottom: 5px;
-            }
-        </style>
-        <div id="main"></div>
+<head>
+<meta charset="utf-8">
+<script src="esl.js"></script>
+<script src="config.js"></script>
+</head>
+<body>
+	<style>
+#main {
+	position: relative;
+	text-align: center;
+	margin-right: 200px;
+}
 
-        <div class="code-panel">
-            <div class="code-line">
-                <textarea id="code1">
+.title {
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
+	clear: both;
+	text-align: center;
+	margin: 0;
+	background: #eef;
+	line-height: 22px;
+}
+
+.block {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: top;
+	margin: 30px 0 30px 50px;
+}
+
+.block .ec {
+	width: 800px;
+	height: 240px;
+}
+
+.block .info {
+	display: block;
+	text-align: left;
+	background: #eee;
+	border-radius: 3px;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 0 5px;
+}
+
+.block .info td {
+	font-size: 12px;
+	border: 1px solid #bbb;
+	padding: 1px 3px;
+}
+
+.code-panel {
+	width: 200px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	border: 2px solid #aaa;
+}
+
+.code-line {
+	margin: 15px 5px;
+	font-size: 12px;
+}
+
+.code-line textarea {
+	width: 190px;
+	height: 180px;
+	margin-bottom: 5px;
+}
+</style>
+	<div id="main"></div>
+
+	<div class="code-panel">
+		<div class="code-line">
+			<textarea id="code1">
 chart.setOption({
     dataZoom: [
         {
@@ -78,12 +86,12 @@ chart.setOption({
     ]
 });
                 </textarea>
-                chartIndex: <input id="chartIndex1" type="text" value="1"/>
-                <input type="button" value="run" onclick="runCode(1);"/>
-            </div>
+			chartIndex: <input id="chartIndex1" type="text" value="1" /> <input
+				type="button" value="run" onclick="runCode(1);" />
+		</div>
 
-            <div class="code-line">
-                <textarea id="code2">
+		<div class="code-line">
+			<textarea id="code2">
 chart.setOption({
     dataZoom: [
         {
@@ -94,15 +102,15 @@ chart.setOption({
     ]
 });
                 </textarea>
-                chartIndex: <input id="chartIndex2" type="text" value="2"/>
-                <input type="button" value="run" onclick="runCode(2);"/>
-            </div>
-        </div>
+			chartIndex: <input id="chartIndex2" type="text" value="2" /> <input
+				type="button" value="run" onclick="runCode(2);" />
+		</div>
+	</div>
 
 
 
 
-        <script>
+	<script>
 
             var echarts;
             var zrUtil;
@@ -317,7 +325,7 @@ chart.setOption({
         </script>
 
 
-        <script type="text/javascript">
+	<script type="text/javascript">
             function runCode(num) {
                 var id = 'code' + num;
                 var textarea = document.getElementById(id);
@@ -330,5 +338,5 @@ chart.setOption({
             }
         </script>
 
-    </body>
+</body>
 </html>

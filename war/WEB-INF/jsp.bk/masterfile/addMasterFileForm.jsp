@@ -4,15 +4,22 @@
 <%@ include file="../script.jsp"%>
 <!-- /top navigation -->
 
-<link rel="stylesheet" type="text/css" href="http://sysapp.itoffside.com/datetimepicker/jquery.datetimepicker.css">
-<script type="text/javascript" src="http://sysapp.itoffside.com/datetimepicker/jquery.js"></script>
-<script type="text/javascript" src="http://sysapp.itoffside.com/datetimepicker/jquery.datetimepicker.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="http://sysapp.itoffside.com/datetimepicker/jquery.datetimepicker.css">
+<script type="text/javascript"
+	src="http://sysapp.itoffside.com/datetimepicker/jquery.js"></script>
+<script type="text/javascript"
+	src="http://sysapp.itoffside.com/datetimepicker/jquery.datetimepicker.js"></script>
 
-<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<link
+	href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"
+	rel="stylesheet">
+<script
+	src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
 
@@ -43,7 +50,8 @@
 	</div>
 	<div class="clearfix"></div>
 
-	<form:form method="POST" commandName="masterFileForm" action="addMasterFile.htm">
+	<form:form method="POST" commandName="masterFileForm"
+		action="addMasterFile.htm">
 
 		<div class="panel panel-info">
 
@@ -71,54 +79,65 @@
 						}
 					</script>
 
-<!-- 					<div class="form-group"> -->
-<!-- 						<label for="tags">Tags: </label> <input id="tags" class="form-control"> -->
-<!-- 					</div> -->
-					
+					<!-- 					<div class="form-group"> -->
+					<!-- 						<label for="tags">Tags: </label> <input id="tags" class="form-control"> -->
+					<!-- 					</div> -->
+
 					<div class="form-group">
 						<label>ชื่อลูกค้า</label>
-<!-- 						<input id="tags" class="form-control"> -->
-						<form:input path="customerName" id="customers" autocomplete="on" maxlength="50" cssClass="form-control" />
+						<!-- 						<input id="tags" class="form-control"> -->
+						<form:input path="customerName" id="customers" autocomplete="on"
+							maxlength="50" cssClass="form-control" />
 					</div>
 					<div class="form-group">
 						<label>ชื่อผู้ขาย</label>
-						<form:input path="saleName" id="sales" autocomplete="on" maxlength="50" cssClass="form-control" />
+						<form:input path="saleName" id="sales" autocomplete="on"
+							maxlength="50" cssClass="form-control" />
 					</div>
 					<div class="form-group">
 						<label>IMEI</label>
-						<form:input path="imei" maxlength="20" id="imei" onkeyup="checkIMEI();" cssClass="form-control" />
+						<form:input path="imei" maxlength="20" id="imei"
+							onkeyup="checkIMEI();" cssClass="form-control" />
 					</div>
 					<div class="form-group">
 						<label>unitID</label>
-						<form:input path="unitId" maxlength="50" cssClass="form-control" readonly="true"/>
+						<form:input path="unitId" maxlength="50" cssClass="form-control"
+							readonly="true" />
 					</div>
 					<div class="form-group">
 						<label>Device Number (MDVR)</label>
-						<form:input path="devNum" maxlength="20" id="devNum"  cssClass="form-control" />
+						<form:input path="devNum" maxlength="20" id="devNum"
+							cssClass="form-control" />
 					</div>
 					<div class="form-group">
 						<label>ทะเบียนรถ</label>
-						<form:input path="vehicleId" id="vehicleId" maxlength="7" cssClass="form-control" />
+						<form:input path="vehicleId" id="vehicleId" maxlength="7"
+							cssClass="form-control" />
 					</div>
 					<div class="form-group">
 						<label>ยี่ห้อรถ</label>
-						<form:input path="vehicleType" maxlength="20" cssClass="form-control" />
+						<form:input path="vehicleType" maxlength="20"
+							cssClass="form-control" />
 					</div>
 					<div class="form-group">
 						<label>หมายเลขตัวถัง</label>
-						<form:input path="vehicleChassisNo" maxlength="25" id="vehicleChassisNo" onkeyup="checkChassisNo();" cssClass="form-control" />
+						<form:input path="vehicleChassisNo" maxlength="25"
+							id="vehicleChassisNo" onkeyup="checkChassisNo();"
+							cssClass="form-control" />
 					</div>
 					<div class="form-group">
 						<label>ประเภทรถ</label>
 						<form:select path="vehicleRegisterType" cssClass="form-control">
-							<form:options items="${listVehicle}" itemValue="vehicleRegisterType" itemLabel="decription" />
+							<form:options items="${listVehicle}"
+								itemValue="vehicleRegisterType" itemLabel="decription" />
 						</form:select>
 					</div>
 					<div class="form-group">
 						<label>จังหวัด</label>
 						<form:select path="provinceCode" cssClass="form-control">
 							<form:option value="0" label="กรุณาเลือก" />
-							<form:options items="${listProvince}" itemValue="provinceCode" itemLabel="provinceName" />
+							<form:options items="${listProvince}" itemValue="provinceCode"
+								itemLabel="provinceName" />
 						</form:select>
 					</div>
 					<div class="form-group">
@@ -137,45 +156,48 @@
 					</div>
 
 					<div class="form-group">
-					<label>เครื่องรูดบัตร</label>
-					</br>
-					<label class="checkbox-inline">
+						<label>เครื่องรูดบัตร</label> </br> <label class="checkbox-inline">
 
-						<c:if test="${masterFileForm.cardReader eq '1'}">
-							<input type="checkbox" id="cardReader" name="cardReader" checked data-toggle="toggle" data-on="มี" data-off="ไม่มี" data-onstyle="success" data-offstyle="danger">
-						</c:if>
-						<c:if test="${masterFileForm.cardReader eq '0'}">
-							<input type="checkbox" id="cardReader" name="cardReader" data-toggle="toggle" data-on="ส่ง" data-off="ไม่ส่ง" data-onstyle="success" data-offstyle="danger">
-						</c:if>					
-					
-					</label>
-					
+							<c:if test="${masterFileForm.cardReader eq '1'}">
+								<input type="checkbox" id="cardReader" name="cardReader" checked
+									data-toggle="toggle" data-on="มี" data-off="ไม่มี"
+									data-onstyle="success" data-offstyle="danger">
+							</c:if> <c:if test="${masterFileForm.cardReader eq '0'}">
+								<input type="checkbox" id="cardReader" name="cardReader"
+									data-toggle="toggle" data-on="ส่ง" data-off="ไม่ส่ง"
+									data-onstyle="success" data-offstyle="danger">
+							</c:if>
+
+						</label>
+
 					</div>
 
 					<div class="form-group">
 						<label>วันที่ติดตั้ง</label>
-						<form:input path="dateInstall" id="dateInstall"  cssClass="form-control" />
+						<form:input path="dateInstall" id="dateInstall"
+							cssClass="form-control" />
 					</div>
 					<div class="form-group">
-					<label>ส่งข้อมูลเข้าขนส่ง</label>
-					</br>
-					<label class="checkbox-inline">
-						<c:if test="${masterFileForm.dltStatus eq '1'}">
-							<input type="checkbox" id="dltStatus" name="dltStatus" checked data-toggle="toggle" data-on="ส่ง" data-off="ไม่ส่ง" data-onstyle="success" data-offstyle="danger">
-						</c:if>
-						<c:if test="${masterFileForm.dltStatus eq '0'}">
-							<input type="checkbox" id="dltStatus" name="dltStatus" data-toggle="toggle" data-on="ส่ง" data-off="ไม่ส่ง" data-onstyle="success" data-offstyle="danger">
-						</c:if>					
-					
-					</label>
-					
+						<label>ส่งข้อมูลเข้าขนส่ง</label> </br> <label class="checkbox-inline">
+							<c:if test="${masterFileForm.dltStatus eq '1'}">
+								<input type="checkbox" id="dltStatus" name="dltStatus" checked
+									data-toggle="toggle" data-on="ส่ง" data-off="ไม่ส่ง"
+									data-onstyle="success" data-offstyle="danger">
+							</c:if> <c:if test="${masterFileForm.dltStatus eq '0'}">
+								<input type="checkbox" id="dltStatus" name="dltStatus"
+									data-toggle="toggle" data-on="ส่ง" data-off="ไม่ส่ง"
+									data-onstyle="success" data-offstyle="danger">
+							</c:if>
+
+						</label>
+
 					</div>
-					
+
 					<div class="form-group">
 						<label>หมายเหตุ</label>
 						<form:input path="remark" cssClass="form-control" />
 					</div>
-					
+
 					<div class="form-group">
 						<label>บันทึกเพิ่มเติม</label>
 						<form:input path="remark2" cssClass="form-control" />
@@ -189,12 +211,9 @@
 							format : 'Y-m-d'
 						});
 					</script>
-					</br>
-					</br>
-					</br>
-
-
-					<input type="submit" value="ยืนยัน" class="btn btn-success" /> <input type="reset" class="btn btn-danger" value="ล้างข้อมูล" class="styleButton" />
+					</br> </br> </br> <input type="submit" value="ยืนยัน" class="btn btn-success" />
+					<input type="reset" class="btn btn-danger" value="ล้างข้อมูล"
+						class="styleButton" />
 				</form>
 			</div>
 		</div>
@@ -205,7 +224,8 @@
 	<!-- footer content -->
 	<footer>
 		<div class="pull-right">
-			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech co.,LTD</a>
+			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech
+				co.,LTD</a>
 		</div>
 		<div class="clearfix"></div>
 	</footer>

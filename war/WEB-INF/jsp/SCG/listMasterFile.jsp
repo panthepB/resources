@@ -2,16 +2,25 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/jsp/headerTop2.jsp"%>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
-<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
 
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.jqueryui.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" />
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.10.12/js/dataTables.jqueryui.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" />
 
 
 <script type="text/javascript" charset="utf-8">
@@ -53,7 +62,8 @@ $(document).ready(function() {
 		<div class="panel-body">
 			<!-- Update driver log service started!! -->
 			<div class="alert alert-success alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">×</button>
 				Realtime mdvr service started!!
 			</div>
 		</div>
@@ -62,7 +72,8 @@ $(document).ready(function() {
 		<div class="panel-body">
 			<!-- Update driver log service started!! -->
 			<div class="alert alert-success alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">×</button>
 				Update driver log service started!!
 			</div>
 		</div>
@@ -71,7 +82,8 @@ $(document).ready(function() {
 		<div class="panel-body">
 			<!-- Update driver log service started!! -->
 			<div class="alert alert-success alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">×</button>
 				Location backup send to server
 			</div>
 		</div>
@@ -85,7 +97,8 @@ $(document).ready(function() {
 			<div class="panel-heading">List master file</div>
 			<div class="panel-body">
 				<div class="table-responsive">
-					<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					<table id="example" class="table table-striped table-bordered"
+						cellspacing="0" width="100%">
 						<thead>
 							<tr>
 								<th align="center">ลำดับ</th>
@@ -115,16 +128,18 @@ $(document).ready(function() {
 											<td width="15%"><c:out value="${table[j.index+1]}" /></td>
 											<td width="10%"><c:out value="${table[j.index+2]}" /></td>
 											<%-- 													<td width="5%"><c:out value="${table[j.index+3]}" /></td> --%>
-											<td width="10%" align="center"><c:out value="${table[j.index+3]}" /></td>
+											<td width="10%" align="center"><c:out
+													value="${table[j.index+3]}" /></td>
 											<td width="10%"><c:out value="${table[j.index+4]}" /></td>
 											<td width="10%"><c:out value="${table[j.index+5]}" /></td>
 											<td width="20%"><c:out value="${table[j.index+6]}" /></td>
-<%-- 											<td width="13%"><c:out value="${table[j.index+7]}" /></td> --%>
-											<td width="10%">
-											<a href="editMasterFileForm.htm?unitId=${table[j.index]}" class="blue">
-												<img border="0" alt="Edit" src="../img/edit-file-icon.png" width="24" height="24"></a> 
-												
-												</td>
+											<%-- 											<td width="13%"><c:out value="${table[j.index+7]}" /></td> --%>
+											<td width="10%"><a
+												href="editMasterFileForm.htm?unitId=${table[j.index]}"
+												class="blue"> <img border="0" alt="Edit"
+													src="../img/edit-file-icon.png" width="24" height="24"></a>
+
+											</td>
 										</tr>
 									</c:if>
 								</c:forEach>

@@ -1,76 +1,80 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="esl.js"></script>
-        <script src="config.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        <style>
-            html, body, #main {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            .controller {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                background: #fff;
-                border-bottom: 1px solid #ccc;
-                line-height: 30px;
-                z-index: 100;
-            }
-            .controller label {
-                margin-right: 10px;
-            }
-            .item-title {
-                font-weight: bold;
-            }
-            .controller .item {
-                margin-right: 20px;
-                padding-right: 10px;
-                border-right: 1px solid #ccc;
-            }
-            .tooltip-title {
-                color: yellow;
-                font-size: 16px;
-                margin-bottom: 5px;
-            }
-        </style>
-        <div class="controller">
-            <span class="item">
-                <span class="item-title">childrenVisibleMin:</span>
-                <input type="radio" id="childrenVisibleMin-0" name="childrenVisibleMin" onclick="childrenVisibleMinChange(0);" checked="checked"/>
-                <label for="childrenVisibleMin-0">0</label>
-                <input type="radio" id="childrenVisibleMin-1" name="childrenVisibleMin" onclick="childrenVisibleMinChange(1000000);"/>
-                <label for="childrenVisibleMin-1">1000000</label>
-            </span>
-            <span class="item">
-                <span class="item-title">colorMapping:</span>
-                <input type="radio" id="colorMapping-0" name="colorMapping" onclick="colorMappingChange('index');" checked="checked"/>
-                <label for="colorMapping-0">byIndex</label>
-                <input type="radio" id="colorMapping-1" name="colorMapping" onclick="colorMappingChange('value');"/>
-                <label for="colorMapping-1">byValue</label>
-            </span>
-            <span class="item">
-                <span class="item-title">leafDepth:</span>
-                <input type="radio" id="leafDepth-0" name="leafDepth" onclick="leafDepthChange(null);" checked="checked"/>
-                <label for="leafDepth-0">Not set</label>
-                <input type="radio" id="leafDepth-1" name="leafDepth" onclick="leafDepthChange(1);"/>
-                <label for="leafDepth-1">Set to 1</label>
-                <input type="radio" id="leafDepth-2" name="leafDepth" onclick="leafDepthChange(2);"/>
-                <label for="leafDepth-1">Set to 2</label>
-            </span>
-        </div>
+<head>
+<meta charset="utf-8">
+<script src="esl.js"></script>
+<script src="config.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<style>
+html, body, #main {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
 
-        <div id="main"></div>
+.controller {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	line-height: 30px;
+	z-index: 100;
+}
 
-        <script src="data/disk.tree.js"></script>
+.controller label {
+	margin-right: 10px;
+}
 
-        <script>
+.item-title {
+	font-weight: bold;
+}
+
+.controller .item {
+	margin-right: 20px;
+	padding-right: 10px;
+	border-right: 1px solid #ccc;
+}
+
+.tooltip-title {
+	color: yellow;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+</style>
+	<div class="controller">
+		<span class="item"> <span class="item-title">childrenVisibleMin:</span>
+			<input type="radio" id="childrenVisibleMin-0"
+			name="childrenVisibleMin" onclick="childrenVisibleMinChange(0);"
+			checked="checked" /> <label for="childrenVisibleMin-0">0</label> <input
+			type="radio" id="childrenVisibleMin-1" name="childrenVisibleMin"
+			onclick="childrenVisibleMinChange(1000000);" /> <label
+			for="childrenVisibleMin-1">1000000</label>
+		</span> <span class="item"> <span class="item-title">colorMapping:</span>
+			<input type="radio" id="colorMapping-0" name="colorMapping"
+			onclick="colorMappingChange('index');" checked="checked" /> <label
+			for="colorMapping-0">byIndex</label> <input type="radio"
+			id="colorMapping-1" name="colorMapping"
+			onclick="colorMappingChange('value');" /> <label for="colorMapping-1">byValue</label>
+		</span> <span class="item"> <span class="item-title">leafDepth:</span>
+			<input type="radio" id="leafDepth-0" name="leafDepth"
+			onclick="leafDepthChange(null);" checked="checked" /> <label
+			for="leafDepth-0">Not set</label> <input type="radio"
+			id="leafDepth-1" name="leafDepth" onclick="leafDepthChange(1);" /> <label
+			for="leafDepth-1">Set to 1</label> <input type="radio"
+			id="leafDepth-2" name="leafDepth" onclick="leafDepthChange(2);" /> <label
+			for="leafDepth-1">Set to 2</label>
+		</span>
+	</div>
+
+	<div id="main"></div>
+
+	<script src="data/disk.tree.js"></script>
+
+	<script>
 
             var chart;
             var formatUtil;
@@ -205,5 +209,5 @@
             }
 
         </script>
-    </body>
+</body>
 </html>

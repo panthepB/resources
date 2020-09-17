@@ -1,512 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Distar Tracking Web Report</title>
+<title>Distar Tracking Web Report</title>
 
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="../vendors/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Font Awesome -->
+<link href="../vendors/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet">
+<!-- NProgress -->
+<link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+<!-- bootstrap-progressbar -->
+<link
+	href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css"
+	rel="stylesheet">
+<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+<!-- Custom Theme Style -->
+<link href="../build/css/custom.css" rel="stylesheet">
 
 
-    <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- bootstrap-wysiwyg -->
-    <link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
-    <!-- Select2 -->
-    <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
-    <!-- Switchery -->
-    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
-    <!-- starrr -->
-    <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
-    <!-- Datatables -->
-    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-  </head>
+<!-- iCheck -->
+<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+<!-- bootstrap-wysiwyg -->
+<link href="../vendors/google-code-prettify/bin/prettify.min.css"
+	rel="stylesheet">
+<!-- Select2 -->
+<link href="../vendors/select2/dist/css/select2.min.css"
+	rel="stylesheet">
+<!-- Switchery -->
+<link href="../vendors/switchery/dist/switchery.min.css"
+	rel="stylesheet">
+<!-- starrr -->
+<link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+<!-- Datatables -->
+<link
+	href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css"
+	rel="stylesheet">
+</head>
 
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><span>Web Report</span></a>
-            </div>
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-3 left_col">
+				<div class="left_col scroll-view">
+					<div class="navbar nav_title" style="border: 0;">
+						<a href="index.html" class="site_title"><span>Web
+								Report</span></a>
+					</div>
 
-            <div class="clearfix"></div>
+					<div class="clearfix"></div>
 
-            <!-- menu profile quick info -->
-            <div class="profile">
-              <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>ยินดีต้อนรับ,</span>
-                <h2>Chavalid</h2>
-              </div>
-            </div>
-            <!-- /menu profile quick info -->
+					<!-- menu profile quick info -->
+					<div class="profile">
+						<div class="profile_pic">
+							<img src="images/img.jpg" alt="..."
+								class="img-circle profile_img">
+						</div>
+						<div class="profile_info">
+							<span>ยินดีต้อนรับ,</span>
+							<h2>Chavalid</h2>
+						</div>
+					</div>
+					<!-- /menu profile quick info -->
 
-            <br />
+					<br />
 
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>สถานะ</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> หน้าหลัก <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-road"></i> รายงานระยะทาง <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">ประวัติการเดินทาง</a></li>
-                      <li><a href="index.html">รายงสนการเดินทาง</a></li>
-                      <li><a href="index.html">สถิติไมล์สะสม</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-tachometer"></i> รายงานความเร็ว <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">รายงานการเตือนความเร็ว</a></li>
-                      <li><a href="index.html">วิเคราะห์ความเร็ว</a></li>
-                      <li><a href="index.html">สรุปเตือนความเร็ว</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-exchange"></i> รายงานสถานะ I/O <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">สรุปเตือน IO</a></li>
-                      <li><a href="index.html">รายการเตือน IO</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-hdd-o"></i> รายงานอุปกรณ์ <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">สถานะออนไลน์ประจำวัน</a></li>
-                      <li><a href="index.html">สรุปออนไลน์อุปกรณ์ทั้งหมด</a></li>
-                      <li><a href="index.html">รายการอุปกรณ์ที่ออนไลน์</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-fire"></i> รายงานด้านน้ำมัน <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="report_fule.html">รายงานอัตราบริโภคน้ำมัน</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-exclamation-triangle"></i> รายงานการแจ้งเตือน <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">รายงานการแจ้งเตือนการเปิด-ปิดกุญแจ</a></li>
-                      <li><a href="index.html">รายการเตือนสัญญาณ GPS สูญหาย</a></li>
-                      <li><a href="index.html">รายการเตือนปุ่มฉุกเฉิน</a></li>
-                      <li><a href="index.html">รายการเตือนเปิดประตู</a></li>
-                      <li><a href="index.html">สรุปการแจ้งเตือน</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-car"></i> รายงานจอด <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">รายละเอียดการจอด</a></li>
-                      <li><a href="index.html">สรุปพาหนะไม่ทำงาน</a></li>
-                      <li><a href="index.html">รายละเอียดรถไม่ทำงาน</a></li>
-                      <li><a href="index.html">สรุปการจอด</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-cogs"></i> จัดการระบบ <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">กำหนดตำแหน่งในระบบ</a></li>
-                      <li><a href="index.html">กำหนดสิทธิการใช้งาน</a></li>
-                      <li><a href="index.html">กำหนดประกาศบริษัท</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+					<!-- sidebar menu -->
+					<div id="sidebar-menu"
+						class="main_menu_side hidden-print main_menu">
+						<div class="menu_section">
+							<h3>สถานะ</h3>
+							<ul class="nav side-menu">
+								<li><a><i class="fa fa-home"></i> หน้าหลัก <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index.html">Dashboard</a></li>
+									</ul></li>
+								<li><a><i class="fa fa-road"></i> รายงานระยะทาง <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index.html">ประวัติการเดินทาง</a></li>
+										<li><a href="index.html">รายงสนการเดินทาง</a></li>
+										<li><a href="index.html">สถิติไมล์สะสม</a></li>
+									</ul></li>
+								<li><a><i class="fa fa-tachometer"></i> รายงานความเร็ว
+										<span class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index.html">รายงานการเตือนความเร็ว</a></li>
+										<li><a href="index.html">วิเคราะห์ความเร็ว</a></li>
+										<li><a href="index.html">สรุปเตือนความเร็ว</a></li>
+									</ul></li>
+								<li><a><i class="fa fa-exchange"></i> รายงานสถานะ I/O <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index.html">สรุปเตือน IO</a></li>
+										<li><a href="index.html">รายการเตือน IO</a></li>
+									</ul></li>
+								<li><a><i class="fa fa-hdd-o"></i> รายงานอุปกรณ์ <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index.html">สถานะออนไลน์ประจำวัน</a></li>
+										<li><a href="index.html">สรุปออนไลน์อุปกรณ์ทั้งหมด</a></li>
+										<li><a href="index.html">รายการอุปกรณ์ที่ออนไลน์</a></li>
+									</ul></li>
+								<li><a><i class="fa fa-fire"></i> รายงานด้านน้ำมัน <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="report_fule.html">รายงานอัตราบริโภคน้ำมัน</a></li>
+									</ul></li>
+								<li><a><i class="fa fa-exclamation-triangle"></i>
+										รายงานการแจ้งเตือน <span class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index.html">รายงานการแจ้งเตือนการเปิด-ปิดกุญแจ</a></li>
+										<li><a href="index.html">รายการเตือนสัญญาณ GPS สูญหาย</a></li>
+										<li><a href="index.html">รายการเตือนปุ่มฉุกเฉิน</a></li>
+										<li><a href="index.html">รายการเตือนเปิดประตู</a></li>
+										<li><a href="index.html">สรุปการแจ้งเตือน</a></li>
+									</ul></li>
+								<li><a><i class="fa fa-car"></i> รายงานจอด <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index.html">รายละเอียดการจอด</a></li>
+										<li><a href="index.html">สรุปพาหนะไม่ทำงาน</a></li>
+										<li><a href="index.html">รายละเอียดรถไม่ทำงาน</a></li>
+										<li><a href="index.html">สรุปการจอด</a></li>
+									</ul></li>
+								<li><a><i class="fa fa-cogs"></i> จัดการระบบ <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index.html">กำหนดตำแหน่งในระบบ</a></li>
+										<li><a href="index.html">กำหนดสิทธิการใช้งาน</a></li>
+										<li><a href="index.html">กำหนดประกาศบริษัท</a></li>
+									</ul></li>
+							</ul>
+						</div>
 
-            </div>
-            <!-- /sidebar menu -->
-          </div>
-        </div>
+					</div>
+					<!-- /sidebar menu -->
+				</div>
+			</div>
 
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
+			<!-- top navigation -->
+			<div class="top_nav">
+				<div class="nav_menu">
+					<nav>
+						<div class="nav toggle">
+							<a id="menu_toggle"><i class="fa fa-bars"></i></a>
+						</div>
 
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">Chavalid
-                    <span class=" fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> แสดงโปรไฟล์</a></li>
-                    <!--<li>
+						<ul class="nav navbar-nav navbar-right">
+							<li class=""><a href="javascript:;"
+								class="user-profile dropdown-toggle" data-toggle="dropdown"
+								aria-expanded="false"> <img src="images/img.jpg" alt="">Chavalid
+									<span class=" fa fa-angle-down"></span>
+							</a>
+								<ul class="dropdown-menu dropdown-usermenu pull-right">
+									<li><a href="javascript:;"> แสดงโปรไฟล์</a></li>
+									<!--<li>
                       <a href="javascript:;">
                         <span class="badge bg-red pull-right">50%</span>
                         <span>Settings</span>
                       </a>
                     </li>-->
-                    <li><a href="javascript:;">แก้ไขโปรไฟล์</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> ออกจากระบบ</a></li>
-                  </ul>
-                </li>
+									<li><a href="javascript:;">แก้ไขโปรไฟล์</a></li>
+									<li><a href="login.html"><i
+											class="fa fa-sign-out pull-right"></i> ออกจากระบบ</a></li>
+								</ul></li>
 
-                <li role="presentation" class="dropdown">
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">3</span>
-                  </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>ผู้ดูแลระบบ</span>
-                          <span class="time">19/08/2016</span>
-                        </span>
-                        <span class="message">
-                          มีการเพิ่มรายงานการแจ้งเตือนความเร็วสามารถเข้าดูได้ที่ ....>.....>......
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>ผู้ดูแลระบบ</span>
-                          <span class="time">19/08/2016</span>
-                        </span>
-                        <span class="message">
-                          มีการเพิ่มรายงานการแจ้งเตือนความเร็วสามารถเข้าดูได้ที่ ....>.....>......
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>ผู้ดูแลระบบ</span>
-                          <span class="time">19/08/2016</span>
-                        </span>
-                        <span class="message">
-                          มีการเพิ่มรายงานการแจ้งเตือนความเร็วสามารถเข้าดูได้ที่ ....>.....>......
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>ปิด</strong>
-                          <i class="fa fa-close"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- /top navigation -->
+							<li role="presentation" class="dropdown"><a
+								href="javascript:;" class="dropdown-toggle info-number"
+								data-toggle="dropdown" aria-expanded="false"> <i
+									class="fa fa-envelope-o"></i> <span class="badge bg-green">3</span>
+							</a>
+								<ul id="menu1" class="dropdown-menu list-unstyled msg_list"
+									role="menu">
+									<li><a> <span class="image"><img
+												src="images/img.jpg" alt="Profile Image" /></span> <span> <span>ผู้ดูแลระบบ</span>
+												<span class="time">19/08/2016</span>
+										</span> <span class="message">
+												มีการเพิ่มรายงานการแจ้งเตือนความเร็วสามารถเข้าดูได้ที่
+												....>.....>...... </span>
+									</a></li>
+									<li><a> <span class="image"><img
+												src="images/img.jpg" alt="Profile Image" /></span> <span> <span>ผู้ดูแลระบบ</span>
+												<span class="time">19/08/2016</span>
+										</span> <span class="message">
+												มีการเพิ่มรายงานการแจ้งเตือนความเร็วสามารถเข้าดูได้ที่
+												....>.....>...... </span>
+									</a></li>
+									<li><a> <span class="image"><img
+												src="images/img.jpg" alt="Profile Image" /></span> <span> <span>ผู้ดูแลระบบ</span>
+												<span class="time">19/08/2016</span>
+										</span> <span class="message">
+												มีการเพิ่มรายงานการแจ้งเตือนความเร็วสามารถเข้าดูได้ที่
+												....>.....>...... </span>
+									</a></li>
+									<li>
+										<div class="text-center">
+											<a> <strong>ปิด</strong> <i class="fa fa-close"></i>
+											</a>
+										</div>
+									</li>
+								</ul></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- /top navigation -->
 
-        <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="page-title">
-            <div class="title_left">
-              <h3>รายงานแสดงการใช้งานน้ำมัน</h3>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>ฟอร์มขอทราบข้อมูล <small><font color="red">* หมายถึง ข้อมูลที่จำเป็น</font></small></h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+			<div class="right_col" role="main">
+				<!-- top tiles -->
+				<div class="page-title">
+					<div class="title_left">
+						<h3>รายงานแสดงการใช้งานน้ำมัน</h3>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>
+									ฟอร์มขอทราบข้อมูล <small><font color="red">*
+											หมายถึง ข้อมูลที่จำเป็น</font></small>
+								</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i
+											class="fa fa-chevron-up"></i></a></li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<br />
+								<form id="demo-form2" data-parsley-validate
+									class="form-horizontal form-label-left">
 
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <br />
-                  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+									<div class="form-group">
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">เครื่องติดตาม<span
+											class="required"><font color="red">*</font></span></label>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<select class="select2_single form-control" tabindex="-1">
+												<option></option>
+												<option value="1">DTKNOOK0001</option>
+												<option value="2">DTKNOOK0002</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3 col-sm-3 col-xs-12"
+											for="last-name">วันเริ่มต้น <span class="required"><font
+												color="red">*</font></span>
+										</label>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<input id="start-date"
+												class="date-picker form-control col-md-7 col-xs-12"
+												required="required" type="text">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="middle-name"
+											class="control-label col-md-3 col-sm-3 col-xs-12">วันสิ้นสุด<span
+											class="required"><font color="red">*</font></span></label>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<input id="end-date" class="form-control col-md-7 col-xs-12"
+												type="text" name="middle-name">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">ระยะ
+											<span class="required"><font color="red">*</font></span>
+										</label>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<input id="middle-name"
+												class="form-control col-md-7 col-xs-12" type="text"
+												name="middle-name">
+										</div>
+									</div>
+									<div class="ln_solid"></div>
+									<div class="form-group">
+										<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+											<button type="submit" class="btn btn-primary">ยกเลิก</button>
+											<button type="submit" class="btn btn-success">ยืนยัน</button>
+										</div>
+									</div>
 
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12">เครื่องติดตาม<span class="required"><font color="red">*</font></span></label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select class="select2_single form-control" tabindex="-1">
-                          <option></option>
-                          <option value="1">DTKNOOK0001</option>
-                          <option value="2">DTKNOOK0002</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">วันเริ่มต้น <span class="required"><font color="red">*</font></span>
-                      </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="start-date" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">วันสิ้นสุด<span class="required"><font color="red">*</font></span></label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="end-date" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12">ระยะ <span class="required"><font color="red">*</font></span>
-                      </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
-                      </div>
-                    </div>
-                    <div class="ln_solid"></div>
-                    <div class="form-group">
-                      <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                        <button type="submit" class="btn btn-primary">ยกเลิก</button>
-                        <button type="submit" class="btn btn-success">ยืนยัน</button>
-                      </div>
-                    </div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /top tiles -->
 
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /top tiles -->
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="x_panel">
+							<div class="x_title">
+								<div class="col-md-6">
+									<h2>
+										กราฟแสดงข้อมูล <small>การใช้น้ำมัน</small>
+									</h2>
+								</div>
+								<div class="col-md-6">
+									<div id="reportrange" class="pull-right"
+										style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+										<i class="glyphicon glyphicon-calendar fa fa-calendar"></i> <span>December
+											1, 2016 - December 28, 2016</span> <b class="caret"></b>
+									</div>
+									<ul class="nav navbar-right panel_toolbox">
+										<li><a class="collapse-link"><i
+												class="fa fa-chevron-up"></i></a></li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
 
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <div class="col-md-6">
-                    <h2>กราฟแสดงข้อมูล <small>การใช้น้ำมัน</small></h2>
-                  </div>
-                  <div class="col-md-6">
-                    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-                      <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                      <span>December 1, 2016 - December 28, 2016</span> <b class="caret"></b>
-                    </div>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<canvas id="lineChart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br />
 
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="x_panel">
+							<div class="x_title">
+								<div class="col-md-6">
+									<h3>
+										ตารางแสดงข้อมูล <small>การใช้น้ำมัน</small>
+									</h3>
+								</div>
+								<div class="col-md-6">
+									<div id="reportrange" class="pull-right"
+										style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+										<i class="glyphicon glyphicon-calendar fa fa-calendar"></i> <span>December
+											1, 2016 - December 28, 2016</span> <b class="caret"></b>
+									</div>
+									<ul class="nav navbar-right panel_toolbox">
+										<li><a class="collapse-link"><i
+												class="fa fa-chevron-up"></i></a></li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<table id="datatable-buttons"
+									class="table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>No.</th>
+											<th>วันที่ - เวลา</th>
+											<th>ระดับน้ำมัน(%)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1/7/2016 - 00:01:12</td>
+											<td>100%</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>1/7/2016 - 00:11:12</td>
+											<td>99%</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>1/7/2016 - 00:21:12</td>
+											<td>98%</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>1/7/2016 - 00:31:12</td>
+											<td>97%</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>1/7/2016 - 00:41:12</td>
+											<td>96%</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>1/7/2016 - 00:51:12</td>
+											<td>95%</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>1/7/2016 - 01:01:12</td>
+											<td>94%</td>
+										</tr>
 
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <canvas id="lineChart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br />
+										<tr>
+											<td>8</td>
+											<td>1/7/2016 - 01:11:12</td>
+											<td>93%</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row"></div>
+			</div>
+			<!-- /page content -->
 
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <div class="col-md-6">
-                    <h3>ตารางแสดงข้อมูล <small>การใช้น้ำมัน</small></h3>
-                  </div>
-                  <div class="col-md-6">
-                    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-                      <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                      <span>December 1, 2016 - December 28, 2016</span> <b class="caret"></b>
-                    </div>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+			<!-- footer content -->
+			<footer>
+				<div class="pull-right">
+					Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech
+						co.,LTD</a>
+				</div>
+				<div class="clearfix"></div>
+			</footer>
+			<!-- /footer content -->
+		</div>
+	</div>
 
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <table id="datatable-buttons" class="table table-striped table-bordered">
-                    <thead>
-                      <tr>
-                        <th>No.</th>
-                        <th>วันที่ - เวลา</th>
-                        <th>ระดับน้ำมัน(%)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>1/7/2016 - 00:01:12</td>
-                        <td>100%</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>1/7/2016 - 00:11:12</td>
-                        <td>99%</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>1/7/2016 - 00:21:12</td>
-                        <td>98%</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>1/7/2016 - 00:31:12</td>
-                        <td>97%</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>1/7/2016 - 00:41:12</td>
-                        <td>96%</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>1/7/2016 - 00:51:12</td>
-                        <td>95%</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>1/7/2016 - 01:01:12</td>
-                        <td>94%</td>
-                      </tr>
+	<!-- jQuery -->
+	<script src="../vendors/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- FastClick -->
+	<script src="../vendors/fastclick/lib/fastclick.js"></script>
+	<!-- NProgress -->
+	<script src="../vendors/nprogress/nprogress.js"></script>
+	<!-- bootstrap-progressbar -->
+	<script
+		src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+	<!-- iCheck -->
+	<script src="../vendors/iCheck/icheck.min.js"></script>
+	<!-- bootstrap-daterangepicker -->
+	<script src="js/moment/moment.min.js"></script>
+	<script src="js/datepicker/daterangepicker.js"></script>
+	<!-- bootstrap-wysiwyg -->
+	<script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+	<script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+	<script src="../vendors/google-code-prettify/src/prettify.js"></script>
+	<!-- jQuery Tags Input -->
+	<script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+	<!-- Switchery -->
+	<script src="../vendors/switchery/dist/switchery.min.js"></script>
+	<!-- Select2 -->
+	<script src="../vendors/select2/dist/js/select2.full.min.js"></script>
+	<!-- Parsley -->
+	<script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
+	<!-- Autosize -->
+	<script src="../vendors/autosize/dist/autosize.min.js"></script>
+	<!-- jQuery autocomplete -->
+	<script
+		src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+	<!-- starrr -->
+	<script src="../vendors/starrr/dist/starrr.js"></script>
 
-                      <tr>
-                        <td>8</td>
-                        <td>1/7/2016 - 01:11:12</td>
-                        <td>93%</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-          </div>
-        </div>
-        <!-- /page content -->
+	<script src="../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech co.,LTD</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
-    </div>
+	<!-- Flot plugins -->
+	<script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+	<script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+	<script src="../vendors/flot.curvedlines/curvedLines.js"></script>
 
-        <!-- jQuery -->
-        <script src="../vendors/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- FastClick -->
-        <script src="../vendors/fastclick/lib/fastclick.js"></script>
-        <!-- NProgress -->
-        <script src="../vendors/nprogress/nprogress.js"></script>
-        <!-- bootstrap-progressbar -->
-        <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-        <!-- iCheck -->
-        <script src="../vendors/iCheck/icheck.min.js"></script>
-        <!-- bootstrap-daterangepicker -->
-        <script src="js/moment/moment.min.js"></script>
-        <script src="js/datepicker/daterangepicker.js"></script>
-        <!-- bootstrap-wysiwyg -->
-        <script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-        <script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-        <script src="../vendors/google-code-prettify/src/prettify.js"></script>
-        <!-- jQuery Tags Input -->
-        <script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-        <!-- Switchery -->
-        <script src="../vendors/switchery/dist/switchery.min.js"></script>
-        <!-- Select2 -->
-        <script src="../vendors/select2/dist/js/select2.full.min.js"></script>
-        <!-- Parsley -->
-        <script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
-        <!-- Autosize -->
-        <script src="../vendors/autosize/dist/autosize.min.js"></script>
-        <!-- jQuery autocomplete -->
-        <script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
-        <!-- starrr -->
-        <script src="../vendors/starrr/dist/starrr.js"></script>
+	<!-- Flot -->
+	<script src="../vendors/Flot/jquery.flot.js"></script>
+	<script src="../vendors/Flot/jquery.flot.pie.js"></script>
+	<script src="../vendors/Flot/jquery.flot.time.js"></script>
+	<script src="../vendors/Flot/jquery.flot.stack.js"></script>
+	<script src="../vendors/Flot/jquery.flot.resize.js"></script>
 
-        <script src="../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+	<!-- Custom Theme Scripts -->
+	<script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+	<!-- jQuery Sparklines -->
+	<script src="../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+	<!-- morris.js -->
+	<script src="../vendors/raphael/raphael.min.js"></script>
+	<script src="../vendors/morris.js/morris.min.js"></script>
+	<!-- gauge.js -->
+	<script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+	<!-- Flot plugins -->
+	<script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+	<script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+	<script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+	<!-- DateJS -->
+	<script src="../vendors/DateJS/build/date.js"></script>
+	<script src="../build/js/custom.min.js"></script>
 
-        <!-- Flot plugins -->
-        <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-        <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-        <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+	<!-- Datatables -->
+	<script src="../vendors/datatables.net/js/jquery.dataTables.js"></script>
+	<script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+	<script
+		src="../vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
+	<script
+		src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
+	<script src="../vendors/datatables.net-buttons/js/buttons.flash.js"></script>
+	<script src="../vendors/datatables.net-buttons/js/buttons.html5.js"></script>
+	<script src="../vendors/datatables.net-buttons/js/buttons.print.js"></script>
+	<script
+		src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.js"></script>
+	<script
+		src="../vendors/datatables.net-keytable/js/dataTables.keyTable.js"></script>
+	<script
+		src="../vendors/datatables.net-responsive/js/dataTables.responsive.js"></script>
+	<script
+		src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+	<script
+		src="../vendors/datatables.net-scroller/js/datatables.scroller.js"></script>
+	<script src="../vendors/jszip/dist/jszip.js"></script>
+	<script src="../vendors/pdfmake/build/pdfmake.js"></script>
+	<script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
-        <!-- Flot -->
-        <script src="../vendors/Flot/jquery.flot.js"></script>
-        <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-        <script src="../vendors/Flot/jquery.flot.time.js"></script>
-        <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-        <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+	<!-- JQVMap -->
+	<script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+	<script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+	<script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+	<!-- Chart.js -->
 
-        <!-- Custom Theme Scripts -->
-        <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-        <!-- jQuery Sparklines -->
-        <script src="../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-        <!-- morris.js -->
-        <script src="../vendors/raphael/raphael.min.js"></script>
-        <script src="../vendors/morris.js/morris.min.js"></script>
-        <!-- gauge.js -->
-        <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-        <!-- Flot plugins -->
-        <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-        <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-        <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
-        <!-- DateJS -->
-        <script src="../vendors/DateJS/build/date.js"></script>
-        <script src="../build/js/custom.min.js"></script>
-
-        <!-- Datatables -->
-        <script src="../vendors/datatables.net/js/jquery.dataTables.js"></script>
-        <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
-        <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
-        <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
-        <script src="../vendors/datatables.net-buttons/js/buttons.flash.js"></script>
-        <script src="../vendors/datatables.net-buttons/js/buttons.html5.js"></script>
-        <script src="../vendors/datatables.net-buttons/js/buttons.print.js"></script>
-        <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.js"></script>
-        <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.js"></script>
-        <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.js"></script>
-        <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-        <script src="../vendors/datatables.net-scroller/js/datatables.scroller.js"></script>
-        <script src="../vendors/jszip/dist/jszip.js"></script>
-        <script src="../vendors/pdfmake/build/pdfmake.js"></script>
-        <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
-
-        <!-- JQVMap -->
-        <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-        <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-        <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-        <!-- Chart.js -->
-
-        <script>
+	<script>
           Chart.defaults.global.legend = {
             enabled: false
           };
@@ -533,8 +564,8 @@
           </script>
 
 
-          <!-- bootstrap-daterangepicker -->
-          <script>
+	<!-- bootstrap-daterangepicker -->
+	<script>
             $(document).ready(function() {
               $('#start-date').daterangepicker({
                 singleDatePicker: true,
@@ -543,9 +574,9 @@
               });
             });
           </script>
-          <!-- /bootstrap-daterangepicker -->
-          <!-- bootstrap-daterangepicker -->
-          <script>
+	<!-- /bootstrap-daterangepicker -->
+	<!-- bootstrap-daterangepicker -->
+	<script>
             $(document).ready(function() {
               $('#end-date').daterangepicker({
                 singleDatePicker: true,
@@ -556,10 +587,10 @@
               });
             });
           </script>
-          <!-- /bootstrap-daterangepicker -->
+	<!-- /bootstrap-daterangepicker -->
 
-          <!-- bootstrap-wysiwyg -->
-          <script>
+	<!-- bootstrap-wysiwyg -->
+	<script>
             $(document).ready(function() {
               function initToolbarBootstrapBindings() {
                 var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
@@ -623,10 +654,10 @@
               prettyPrint();
             });
           </script>
-          <!-- /bootstrap-wysiwyg -->
+	<!-- /bootstrap-wysiwyg -->
 
-          <!-- Select2 -->
-          <script>
+	<!-- Select2 -->
+	<script>
             $(document).ready(function() {
               $(".select2_single").select2({
                 placeholder: "กรุณาเลือกเครื่องติดตาม",
@@ -640,10 +671,10 @@
               });
             });
           </script>
-          <!-- /Select2 -->
+	<!-- /Select2 -->
 
-          <!-- jQuery Tags Input -->
-          <script>
+	<!-- jQuery Tags Input -->
+	<script>
             function onAddTag(tag) {
               alert("Added a tag: " + tag);
             }
@@ -662,10 +693,10 @@
               });
             });
           </script>
-          <!-- /jQuery Tags Input -->
+	<!-- /jQuery Tags Input -->
 
-          <!-- Parsley -->
-          <script>
+	<!-- Parsley -->
+	<script>
             $(document).ready(function() {
               $.listen('parsley:field:validate', function() {
                 validateFront();
@@ -707,18 +738,18 @@
               hljs.initHighlightingOnLoad();
             } catch (err) {}
           </script>
-          <!-- /Parsley -->
+	<!-- /Parsley -->
 
-          <!-- Autosize -->
-          <script>
+	<!-- Autosize -->
+	<script>
             $(document).ready(function() {
               autosize($('.resizable_textarea'));
             });
           </script>
-          <!-- /Autosize -->
+	<!-- /Autosize -->
 
-          <!-- jQuery autocomplete -->
-          <script>
+	<!-- jQuery autocomplete -->
+	<script>
             $(document).ready(function() {
               var countries = { AD:"Andorra",A2:"Andorra Test",AE:"United Arab Emirates",AF:"Afghanistan",AG:"Antigua and Barbuda",AI:"Anguilla",AL:"Albania",AM:"Armenia",AN:"Netherlands Antilles",AO:"Angola",AQ:"Antarctica",AR:"Argentina",AS:"American Samoa",AT:"Austria",AU:"Australia",AW:"Aruba",AX:"Åland Islands",AZ:"Azerbaijan",BA:"Bosnia and Herzegovina",BB:"Barbados",BD:"Bangladesh",BE:"Belgium",BF:"Burkina Faso",BG:"Bulgaria",BH:"Bahrain",BI:"Burundi",BJ:"Benin",BL:"Saint Barthélemy",BM:"Bermuda",BN:"Brunei",BO:"Bolivia",BQ:"British Antarctic Territory",BR:"Brazil",BS:"Bahamas",BT:"Bhutan",BV:"Bouvet Island",BW:"Botswana",BY:"Belarus",BZ:"Belize",CA:"Canada",CC:"Cocos [Keeling] Islands",CD:"Congo - Kinshasa",CF:"Central African Republic",CG:"Congo - Brazzaville",CH:"Switzerland",CI:"Côte d’Ivoire",CK:"Cook Islands",CL:"Chile",CM:"Cameroon",CN:"China",CO:"Colombia",CR:"Costa Rica",CS:"Serbia and Montenegro",CT:"Canton and Enderbury Islands",CU:"Cuba",CV:"Cape Verde",CX:"Christmas Island",CY:"Cyprus",CZ:"Czech Republic",DD:"East Germany",DE:"Germany",DJ:"Djibouti",DK:"Denmark",DM:"Dominica",DO:"Dominican Republic",DZ:"Algeria",EC:"Ecuador",EE:"Estonia",EG:"Egypt",EH:"Western Sahara",ER:"Eritrea",ES:"Spain",ET:"Ethiopia",FI:"Finland",FJ:"Fiji",FK:"Falkland Islands",FM:"Micronesia",FO:"Faroe Islands",FQ:"French Southern and Antarctic Territories",FR:"France",FX:"Metropolitan France",GA:"Gabon",GB:"United Kingdom",GD:"Grenada",GE:"Georgia",GF:"French Guiana",GG:"Guernsey",GH:"Ghana",GI:"Gibraltar",GL:"Greenland",GM:"Gambia",GN:"Guinea",GP:"Guadeloupe",GQ:"Equatorial Guinea",GR:"Greece",GS:"South Georgia and the South Sandwich Islands",GT:"Guatemala",GU:"Guam",GW:"Guinea-Bissau",GY:"Guyana",HK:"Hong Kong SAR China",HM:"Heard Island and McDonald Islands",HN:"Honduras",HR:"Croatia",HT:"Haiti",HU:"Hungary",ID:"Indonesia",IE:"Ireland",IL:"Israel",IM:"Isle of Man",IN:"India",IO:"British Indian Ocean Territory",IQ:"Iraq",IR:"Iran",IS:"Iceland",IT:"Italy",JE:"Jersey",JM:"Jamaica",JO:"Jordan",JP:"Japan",JT:"Johnston Island",KE:"Kenya",KG:"Kyrgyzstan",KH:"Cambodia",KI:"Kiribati",KM:"Comoros",KN:"Saint Kitts and Nevis",KP:"North Korea",KR:"South Korea",KW:"Kuwait",KY:"Cayman Islands",KZ:"Kazakhstan",LA:"Laos",LB:"Lebanon",LC:"Saint Lucia",LI:"Liechtenstein",LK:"Sri Lanka",LR:"Liberia",LS:"Lesotho",LT:"Lithuania",LU:"Luxembourg",LV:"Latvia",LY:"Libya",MA:"Morocco",MC:"Monaco",MD:"Moldova",ME:"Montenegro",MF:"Saint Martin",MG:"Madagascar",MH:"Marshall Islands",MI:"Midway Islands",MK:"Macedonia",ML:"Mali",MM:"Myanmar [Burma]",MN:"Mongolia",MO:"Macau SAR China",MP:"Northern Mariana Islands",MQ:"Martinique",MR:"Mauritania",MS:"Montserrat",MT:"Malta",MU:"Mauritius",MV:"Maldives",MW:"Malawi",MX:"Mexico",MY:"Malaysia",MZ:"Mozambique",NA:"Namibia",NC:"New Caledonia",NE:"Niger",NF:"Norfolk Island",NG:"Nigeria",NI:"Nicaragua",NL:"Netherlands",NO:"Norway",NP:"Nepal",NQ:"Dronning Maud Land",NR:"Nauru",NT:"Neutral Zone",NU:"Niue",NZ:"New Zealand",OM:"Oman",PA:"Panama",PC:"Pacific Islands Trust Territory",PE:"Peru",PF:"French Polynesia",PG:"Papua New Guinea",PH:"Philippines",PK:"Pakistan",PL:"Poland",PM:"Saint Pierre and Miquelon",PN:"Pitcairn Islands",PR:"Puerto Rico",PS:"Palestinian Territories",PT:"Portugal",PU:"U.S. Miscellaneous Pacific Islands",PW:"Palau",PY:"Paraguay",PZ:"Panama Canal Zone",QA:"Qatar",RE:"Réunion",RO:"Romania",RS:"Serbia",RU:"Russia",RW:"Rwanda",SA:"Saudi Arabia",SB:"Solomon Islands",SC:"Seychelles",SD:"Sudan",SE:"Sweden",SG:"Singapore",SH:"Saint Helena",SI:"Slovenia",SJ:"Svalbard and Jan Mayen",SK:"Slovakia",SL:"Sierra Leone",SM:"San Marino",SN:"Senegal",SO:"Somalia",SR:"Suriname",ST:"São Tomé and Príncipe",SU:"Union of Soviet Socialist Republics",SV:"El Salvador",SY:"Syria",SZ:"Swaziland",TC:"Turks and Caicos Islands",TD:"Chad",TF:"French Southern Territories",TG:"Togo",TH:"Thailand",TJ:"Tajikistan",TK:"Tokelau",TL:"Timor-Leste",TM:"Turkmenistan",TN:"Tunisia",TO:"Tonga",TR:"Turkey",TT:"Trinidad and Tobago",TV:"Tuvalu",TW:"Taiwan",TZ:"Tanzania",UA:"Ukraine",UG:"Uganda",UM:"U.S. Minor Outlying Islands",US:"United States",UY:"Uruguay",UZ:"Uzbekistan",VA:"Vatican City",VC:"Saint Vincent and the Grenadines",VD:"North Vietnam",VE:"Venezuela",VG:"British Virgin Islands",VI:"U.S. Virgin Islands",VN:"Vietnam",VU:"Vanuatu",WF:"Wallis and Futuna",WK:"Wake Island",WS:"Samoa",YD:"People's Democratic Republic of Yemen",YE:"Yemen",YT:"Mayotte",ZA:"South Africa",ZM:"Zambia",ZW:"Zimbabwe",ZZ:"Unknown or Invalid Region" };
 
@@ -735,10 +766,10 @@
               });
             });
           </script>
-          <!-- /jQuery autocomplete -->
+	<!-- /jQuery autocomplete -->
 
-          <!-- Starrr -->
-          <script>
+	<!-- Starrr -->
+	<script>
             $(document).ready(function() {
               $(".stars").starrr();
 
@@ -755,10 +786,10 @@
               });
             });
           </script>
-          <!-- /Starrr -->
+	<!-- /Starrr -->
 
-        <!-- Datatables -->
-        <script>
+	<!-- Datatables -->
+	<script>
           $(document).ready(function() {
             var handleDataTableButtons = function() {
               if ($("#datatable-buttons").length) {
@@ -837,6 +868,6 @@
             TableManageButtons.init();
           });
         </script>
-        <!-- /Datatables -->
-      </body>
-    </html>
+	<!-- /Datatables -->
+</body>
+</html>

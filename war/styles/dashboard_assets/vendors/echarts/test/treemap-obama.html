@@ -1,88 +1,108 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="esl.js"></script>
-        <script src="config.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        <style>
-            html, body {
-                width: 100%;
-                height: 100%;
-            }
-            html, body, #main {
-                margin: 0;
-                padding: 0;
-            }
-            #main {
-                margin-top: 90px;
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                top: 0;
-            }
-            .controller {
-                font-size: 14px;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                background: #eee;
-                border-bottom: 1px solid #ccc;
-                line-height: 20px;
-                z-index: 100;
-            }
-            .controller label {
-                margin-right: 10px;
-            }
-            .item-title {
-                font-weight: bold;
-            }
-            .controller .mode-title {
-                float: left;
-                width: 60px;
-                vertical-align: middle;
-                padding-left: 10px;
-            }
-            .controller .mode-body {
-                float: left;
-                width: 700px;
-            }
-            .controller .query {
-                margin-left: 800px;
-                padding-top: 10px;
-            }
-            .controller .query #query-input {
-                width: 250px;
-            }
-            .tooltip-title {
-                color: yellow;
-                font-size: 16px;
-                margin-bottom: 5px;
-            }
-        </style>
-        <div class="controller">
-            <div class="mode-title">示例模式<br>(Mode)</div>
-            <div class="mode-body">
-                <input type="radio" id="area-meaning-0" name="area-meaning" onclick="areaMeasureChange(0);" checked="checked"/>
-                <label for="area-meaning-0">面积代表“2012年预算额” (Area represents '2012 Amount)</label><br>
-                <input type="radio" id="area-meaning-2" name="area-meaning" onclick="areaMeasureChange(2);"/>
-                <label for="area-meaning-2">面积代表“2012年预算额”，明暗代表“2011年相比的增长率”<br>&nbsp;&nbsp;&nbsp;&nbsp; (Area represents '2012 Amount' and color-alpha represents 'Change from 2011')</label><br>
-                <input type="radio" id="area-meaning-1" name="area-meaning" onclick="areaMeasureChange(1);"/>
-                <label for="area-meaning-1">面积代表“2011年预算额” (Area represents '2011 Amount')</label>
-            </div>
-            <div class="query">
-                <input id="query-input" type="text" placeholder="请输入节点名 (Please node name)" onkeypress="if (event.keyCode === 13) { query(); return false; }"/>
-                <input type="button" class="query-btn" value="检索节点(query)" onclick="query();" />
-            </div>
-        </div>
-        <div id="main"></div>
+<head>
+<meta charset="utf-8">
+<script src="esl.js"></script>
+<script src="config.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<style>
+html, body {
+	width: 100%;
+	height: 100%;
+}
 
-        <script src="data/obama_budget_proposal_2012.tree.js"></script>
+html, body, #main {
+	margin: 0;
+	padding: 0;
+}
 
-        <script>
+#main {
+	margin-top: 90px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+
+.controller {
+	font-size: 14px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #eee;
+	border-bottom: 1px solid #ccc;
+	line-height: 20px;
+	z-index: 100;
+}
+
+.controller label {
+	margin-right: 10px;
+}
+
+.item-title {
+	font-weight: bold;
+}
+
+.controller .mode-title {
+	float: left;
+	width: 60px;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.controller .mode-body {
+	float: left;
+	width: 700px;
+}
+
+.controller .query {
+	margin-left: 800px;
+	padding-top: 10px;
+}
+
+.controller .query #query-input {
+	width: 250px;
+}
+
+.tooltip-title {
+	color: yellow;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+</style>
+	<div class="controller">
+		<div class="mode-title">
+			示例模式<br>(Mode)
+		</div>
+		<div class="mode-body">
+			<input type="radio" id="area-meaning-0" name="area-meaning"
+				onclick="areaMeasureChange(0);" checked="checked" /> <label
+				for="area-meaning-0">面积代表“2012年预算额” (Area represents '2012
+				Amount)</label><br> <input type="radio" id="area-meaning-2"
+				name="area-meaning" onclick="areaMeasureChange(2);" /> <label
+				for="area-meaning-2">面积代表“2012年预算额”，明暗代表“2011年相比的增长率”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+				(Area represents '2012 Amount' and color-alpha represents 'Change
+				from 2011')
+			</label><br> <input type="radio" id="area-meaning-1" name="area-meaning"
+				onclick="areaMeasureChange(1);" /> <label for="area-meaning-1">面积代表“2011年预算额”
+				(Area represents '2011 Amount')</label>
+		</div>
+		<div class="query">
+			<input id="query-input" type="text"
+				placeholder="请输入节点名 (Please node name)"
+				onkeypress="if (event.keyCode === 13) { query(); return false; }" />
+			<input type="button" class="query-btn" value="检索节点(query)"
+				onclick="query();" />
+		</div>
+	</div>
+	<div id="main"></div>
+
+	<script src="data/obama_budget_proposal_2012.tree.js"></script>
+
+	<script>
 
             var chart;
             var formatUtil;
@@ -316,5 +336,5 @@
             }
 
         </script>
-    </body>
+</body>
 </html>

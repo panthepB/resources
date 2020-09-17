@@ -23,7 +23,7 @@
 	href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 
 <script type="text/javascript">
 	function confirmFunction() {
@@ -179,10 +179,11 @@ $(document).ready(function() {
 									<td width="5%"><c:out value="${listMasterFile.saleName}" /></td>
 									<td width="5%"><c:out
 											value="${listMasterFile.installDate}" /></td>
-									<td width="7%" align="center">
-												<a href="editMasterFileForm.htm?unitId=${listMasterFile.unitId}" class="btn btn-primary">
-													<i class="fa fa-pencil-square-o"></i> แก้ไขข้อมูล</a>  
-									</td>
+									<td width="7%" align="center"><a
+										href="editMasterFileForm.htm?unitId=${listMasterFile.unitId}"
+										class="btn btn-primary"> <i class="fa fa-pencil-square-o"></i>
+											แก้ไขข้อมูล
+									</a></td>
 
 								</tr>
 							</c:forEach>

@@ -1,5 +1,4 @@
-﻿
-/*=============================================================
+﻿/*=============================================================
     Authour URI: www.binarytheme.com
     License: Commons Attribution 3.0
 
@@ -13,28 +12,29 @@
    INVOICE STYLES
  ============================================================ */
 .pad-top-botm {
-    padding-bottom:40px;
-    padding-top:60px;
+	padding-bottom: 40px;
+	padding-top: 60px;
 }
+
 h4 {
-    text-transform:uppercase;
+	text-transform: uppercase;
 }
 
 .contact-info span {
-    font-size:14px;
-    padding:0px 50px 0px 50px;
+	font-size: 14px;
+	padding: 0px 50px 0px 50px;
 }
 
 .contact-info hr {
-    margin-top: 0px;
-margin-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .client-info {
-    font-size:15px;
+	font-size: 15px;
 }
 
 .ttl-amts {
-    text-align:right;
-    padding-right:50px;
+	text-align: right;
+	padding-right: 50px;
 }

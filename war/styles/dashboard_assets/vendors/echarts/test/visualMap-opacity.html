@@ -1,46 +1,50 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="esl.js"></script>
-        <script src="config.js"></script>
-        <link rel="stylesheet" href="reset.css">
-        <script src="lib/jquery.min.js"></script>
-    </head>
-    <body>
-        <style>
-            .main {
-                height: 400px;
-                margin: 10px 0 80px 0;
-            }
-            .label {
-                background: #ddd;
-                line-height: 30px;
-                font-weight: bold;
-                text-align: center;
-            }
-        </style>
-        <div class="label">Color Alpha in scatter (using outOfRange as 'selected')</div>
-        <div class="main" id="main1"></div>
-        <div class="label">Opacity in bar (label color specified)</div>
-        <div class="main" id="main2"></div>
-        <div class="label">Opacity in scatter (label color specified)</div>
-        <div class="main" id="main3"></div>
-        <div class="label">Opacity in graph (label color specified)</div>
-        <div class="main" id="main4"></div>
-        <div class="label">Opacity in heatmap (inactive color default using opacity)</div>
-        <div class="main" id="main5"></div>
-        <div class="label">Opacity in pie (label color and label line color specified)</div>
-        <div class="main" id="main6"></div>
+<head>
+<meta charset="utf-8">
+<script src="esl.js"></script>
+<script src="config.js"></script>
+<link rel="stylesheet" href="reset.css">
+<script src="lib/jquery.min.js"></script>
+</head>
+<body>
+	<style>
+.main {
+	height: 400px;
+	margin: 10px 0 80px 0;
+}
+
+.label {
+	background: #ddd;
+	line-height: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+</style>
+	<div class="label">Color Alpha in scatter (using outOfRange as
+		'selected')</div>
+	<div class="main" id="main1"></div>
+	<div class="label">Opacity in bar (label color specified)</div>
+	<div class="main" id="main2"></div>
+	<div class="label">Opacity in scatter (label color specified)</div>
+	<div class="main" id="main3"></div>
+	<div class="label">Opacity in graph (label color specified)</div>
+	<div class="main" id="main4"></div>
+	<div class="label">Opacity in heatmap (inactive color default
+		using opacity)</div>
+	<div class="main" id="main5"></div>
+	<div class="label">Opacity in pie (label color and label line
+		color specified)</div>
+	<div class="main" id="main6"></div>
 
 
 
 
 
 
-        <!-- ALPHA SCATTER -->
+	<!-- ALPHA SCATTER -->
 
 
-        <script type="text/javascript">
+	<script type="text/javascript">
 
             require([
                 'echarts',
@@ -195,10 +199,10 @@
 
 
 
-        <!-- OPACITY BAR -->
+	<!-- OPACITY BAR -->
 
 
-        <script>
+	<script>
 
             require([
                 'echarts',
@@ -359,10 +363,10 @@
 
 
 
-        <!-- OPACITY SCATTER -->
+	<!-- OPACITY SCATTER -->
 
 
-        <script type="text/javascript">
+	<script type="text/javascript">
 
             require([
                 'echarts',
@@ -470,9 +474,9 @@
 
 
 
-        <!-- OPACITY GRAPH -->
+	<!-- OPACITY GRAPH -->
 
-        <script>
+	<script>
 
             require([
                 'echarts',
@@ -579,9 +583,9 @@
 
 
 
-        <!-- OPACITY HEATMAP -->
+	<!-- OPACITY HEATMAP -->
 
-        <script type="text/javascript">
+	<script type="text/javascript">
 
             require([
                 'echarts',
@@ -669,9 +673,9 @@
 
 
 
-        <!-- OPACITY HEATMAP -->
+	<!-- OPACITY HEATMAP -->
 
-        <script>
+	<script>
             require([
                 'echarts',
                 'echarts/chart/pie',
@@ -734,5 +738,5 @@
             });
         </script>
 
-    </body>
+</body>
 </html>

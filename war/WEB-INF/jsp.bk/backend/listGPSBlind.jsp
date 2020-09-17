@@ -2,29 +2,34 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/jsp/headerTop2.jsp"%>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
-<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
 
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.jqueryui.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.10.12/js/dataTables.jqueryui.min.js"></script>
 
 <style>
 .btn-group2 .button2 {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 11px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    cursor: pointer;
-    float: left;
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 11px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+	float: left;
 }
 
 .btn-group2 .button2:hover {
-    background-color: #3e8e41;
+	background-color: #3e8e41;
 }
 </style>
 
@@ -47,31 +52,33 @@
 		<div class="title_left">
 			<h3>สถิติการถูกบังสัญญาณ GPS</h3>
 		</div>
-		
 
-				
+
+
 	</div>
-	<div  class="clearfix"></div>
-	
-<!-- 			<div style="float: right;" class="btn-group"> -->
-<!-- 			  <button type="button" class="btn btn-primary" onclick="window.location.href='/DLTSendData/backend/checkGPSCut.htm?time=12';">12 ชั่วโมง</button> -->
-<!-- 			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkGPSCut.htm?time=24';">24 ชั่วโมง</button> -->
-<!-- 			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkGPSCut.htm?time=3';">3 วัน</button> -->
-<!-- 			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkGPSCut.htm?time=7';">มากกว่า 7 วัน</button> -->
-<!-- 			</div> -->
+	<div class="clearfix"></div>
+
+	<!-- 			<div style="float: right;" class="btn-group"> -->
+	<!-- 			  <button type="button" class="btn btn-primary" onclick="window.location.href='/DLTSendData/backend/checkGPSCut.htm?time=12';">12 ชั่วโมง</button> -->
+	<!-- 			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkGPSCut.htm?time=24';">24 ชั่วโมง</button> -->
+	<!-- 			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkGPSCut.htm?time=3';">3 วัน</button> -->
+	<!-- 			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkGPSCut.htm?time=7';">มากกว่า 7 วัน</button> -->
+	<!-- 			</div> -->
 
 	<div class="panel panel-info">
 
 		<div class="panel panel-default">
 
 
-			<div class="panel-heading">รายการอุปกรณ์ที่ถูกบังสัญญาณ GPS 3 วันล่าสุด</div>
-			
-				
+			<div class="panel-heading">รายการอุปกรณ์ที่ถูกบังสัญญาณ GPS 3
+				วันล่าสุด</div>
+
+
 
 			<div class="panel-body">
 				<div class="table-responsive">
-					<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					<table id="example" class="table table-striped table-bordered"
+						cellspacing="0" width="100%">
 						<thead>
 							<tr>
 								<th align="center">ลำดับ</th>
@@ -93,13 +100,14 @@
 
 										<tr>
 											<td width="5%" align="right">${table[j.index]}</td>
-											<td width="15%" >${table[j.index+1]}</td>
+											<td width="15%">${table[j.index+1]}</td>
 											<td width="20%"><c:out value="${table[j.index+2]}" /></td>
 											<td width="15%"><c:out value="${table[j.index+3]}" /></td>
 											<td width="20%"><c:out value="${table[j.index+4]}" /></td>
-											<td width="10%" align="center"><c:out value="${table[j.index+5]}" /></td>
+											<td width="10%" align="center"><c:out
+													value="${table[j.index+5]}" /></td>
 											<td width="15%"><c:out value="${table[j.index+6]}" /></td>
-											
+
 										</tr>
 									</c:if>
 								</c:forEach>
@@ -119,7 +127,8 @@
 	<!-- footer content -->
 	<footer>
 		<div class="pull-right">
-			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech co.,LTD</a>
+			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech
+				co.,LTD</a>
 		</div>
 		<div class="clearfix"></div>
 	</footer>

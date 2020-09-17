@@ -10,6 +10,7 @@ form.formular, .validationEngineContainer {
 	width: 300px;
 	margin: 0 auto;
 }
+
 .formular fieldset {
 	margin-top: 20px;
 	padding: 15px;
@@ -25,7 +26,7 @@ form.formular, .validationEngineContainer {
 .formular fieldset label {
 	float: none;
 	text-align: inherit;
-	display:block;
+	display: block;
 	width: auto;
 }
 
@@ -33,8 +34,8 @@ form.formular, .validationEngineContainer {
 	color: #000;
 }
 
-.formular input,.formular select,.formular textarea {
-	display: block;  /* this breaks relative positioning */
+.formular input, .formular select, .formular textarea {
+	display: block; /* this breaks relative positioning */
 	margin-bottom: 5px;
 }
 
@@ -72,7 +73,6 @@ form.formular, .validationEngineContainer {
 }
 
 .formular .submit {
-	
 	border: 1px solid #AAA;
 	padding: 4px;
 	margin-top: 20px;
@@ -111,12 +111,12 @@ form.formular, .validationEngineContainer {
 	min-height: 21px;
 }
 
-.inline-prompts label>span{
+.inline-prompts label>span {
 	display: inline-block;
 	width: 250px;
 }
 
-.inline-prompts .text-input+.formError{
+.inline-prompts .text-input+.formError {
 	margin-left: 10px;
 }
 

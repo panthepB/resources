@@ -16,29 +16,31 @@
 
 	<div class="panel panel-info">
 
-			<form:form method="POST" commandName="searchForm" action="resSearchForm.htm">
+		<form:form method="POST" commandName="searchForm"
+			action="resSearchForm.htm">
 
-					<div class="panel-heading">Search tracker form</div>
-					<div class="panel-body">
-						<form role="form">
+			<div class="panel-heading">Search tracker form</div>
+			<div class="panel-body">
+				<form role="form">
 
-							<div class="form-group">
-								<label>IMEI</label>
-								${status}
-								<form:input path="imei" maxlength="20" cssClass="form-control" />
-							</div>
-							<div class="form-group">
-								<label>Serial number</label>
-								<form:input path="serialNum" id="serialNum" maxlength="20" cssClass="form-control" />
-							</div>
-							
-
-							<input type="submit" value="Search" class="btn btn-success" /> 
-							<input type="reset" class="btn btn-danger" value="Reset" class="styleButton" />
-						</form>
+					<div class="form-group">
+						<label>IMEI</label> ${status}
+						<form:input path="imei" maxlength="20" cssClass="form-control" />
+					</div>
+					<div class="form-group">
+						<label>Serial number</label>
+						<form:input path="serialNum" id="serialNum" maxlength="20"
+							cssClass="form-control" />
 					</div>
 
-			</form:form>
+
+					<input type="submit" value="Search" class="btn btn-success" /> <input
+						type="reset" class="btn btn-danger" value="Reset"
+						class="styleButton" />
+				</form>
+			</div>
+
+		</form:form>
 
 		<!-- /top tiles -->
 

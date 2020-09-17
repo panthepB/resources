@@ -2,13 +2,48 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <style type="text/css" media="screen">
-@import url("<c:url value="/http://fonts.googleapis.com/css?family=Open+Sans"/>");
-@import url("<c:url value="/static/styles/basic.css"/>");
-@import url("<c:url value="/static/styles/font-awesome.css"/>");
-@import url("<c:url value="/static/styles/bootstrap.css"/>");
-@import url("<c:url value="/static/styles/custom.css"/>");
-@import url("<c:url value="/static/styles/styles.css"/>");
-@import url("<c:url value="/static/styles/validationEngine.jquery.css"/>");
+@import
+url(
+"<c:url value="
+/
+http
+://fonts.googleapis.com/css?family=Open+Sans"/>");
+@import
+url(
+"<c:url value="
+/
+static
+/styles/basic.css"/>");
+@import
+url(
+"<c:url value="
+/
+static
+/styles/font-awesome.css"/>");
+@import
+url(
+"<c:url value="
+/
+static
+/styles/bootstrap.css"/>");
+@import
+url(
+"<c:url value="
+/
+static
+/styles/custom.css"/>");
+@import
+url(
+"<c:url value="
+/
+static
+/styles/styles.css"/>");
+@import
+url(
+"<c:url value="
+/
+static
+/styles/validationEngine.jquery.css"/>");
 
 /* 		<script type="text/javascript" src="js/jquery.js"></script> */
 /* <script type="text/javascript" src="js/jquery.validationEngine.js"></script> */

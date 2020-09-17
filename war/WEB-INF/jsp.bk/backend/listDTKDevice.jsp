@@ -2,29 +2,34 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/jsp/headerTop2.jsp"%>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
-<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
 
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.jqueryui.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.10.12/js/dataTables.jqueryui.min.js"></script>
 
 <style>
 .btn-group2 .button2 {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 11px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    cursor: pointer;
-    float: left;
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 11px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+	float: left;
 }
 
 .btn-group2 .button2:hover {
-    background-color: #3e8e41;
+	background-color: #3e8e41;
 }
 </style>
 
@@ -47,20 +52,31 @@
 		<div class="title_left">
 			<h3>รายการรถออฟไลน์</h3>
 		</div>
-		
 
-				
+
+
 	</div>
-	<div  class="clearfix"></div>
-	
-			<div style="float: right;" class="btn-group">
-			  <button type="button" class="btn btn-primary" onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=12';">12 ชั่วโมง</button>
-			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=24';">24 ชั่วโมง</button>
-			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=3';">3 วัน</button>
-			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=5';">5 วัน</button>
-			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=7';">มากกว่า 7 วัน</button>
-			  <button type="button" class="btn btn-primary"onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=0';">ทั้งหมด</button>
-			</div>
+	<div class="clearfix"></div>
+
+	<div style="float: right;" class="btn-group">
+		<button type="button" class="btn btn-primary"
+			onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=12';">12
+			ชั่วโมง</button>
+		<button type="button" class="btn btn-primary"
+			onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=24';">24
+			ชั่วโมง</button>
+		<button type="button" class="btn btn-primary"
+			onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=3';">3
+			วัน</button>
+		<button type="button" class="btn btn-primary"
+			onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=5';">5
+			วัน</button>
+		<button type="button" class="btn btn-primary"
+			onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=7';">มากกว่า
+			7 วัน</button>
+		<button type="button" class="btn btn-primary"
+			onclick="window.location.href='/DLTSendData/backend/checkDTKDevice.htm?time=0';">ทั้งหมด</button>
+	</div>
 
 	<div class="panel panel-info">
 
@@ -68,12 +84,13 @@
 
 
 			<div class="panel-heading">รายการรถออฟไลน์</div>
-			
-				
+
+
 
 			<div class="panel-body">
 				<div class="table-responsive">
-					<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					<table id="example" class="table table-striped table-bordered"
+						cellspacing="0" width="100%">
 						<thead>
 							<tr>
 								<th align="center">ลำดับ</th>
@@ -95,21 +112,26 @@
 
 										<tr>
 											<td width="5%" align="right">${table[j.index]}</td>
-											<td width="15%" >${table[j.index+1]}</td>
+											<td width="15%">${table[j.index+1]}</td>
 											<td width="15%"><c:out value="${table[j.index+2]}" /></td>
 											<td width="15%"><c:out value="${table[j.index+3]}" /></td>
 											<td width="15%"><c:out value="${table[j.index+4]}" /></td>
-											<td width="18%" align="center"><c:out value="${table[j.index+5]}" /></td>
+											<td width="18%" align="center"><c:out
+													value="${table[j.index+5]}" /></td>
 											<td width="10%"><c:out value="${table[j.index+6]}" /></td>
-											<td width="7%" >
-											
-											<a href="/DLTSendData/backend/decriptionForm.htm?imei=${table[j.index+1]}" class="blue">	<img border="0" alt="Edit" src="../img/edit-file-icon.png" width="24" height="24"></a> 
-<%-- 										<a href="/DLTSendData/backend/updateDecription.htm?imei=${table[j.index+1]}" class="blue">	<img border="0" alt="Edit" src="../img/edit-file-icon.png" width="24" height="24"></a>  --%>
- 										<a href="/DLTSendData/backend/rvmDecription.htm?imei=${table[j.index+1]}" class="blue">	<img border="0" alt="Remove" src="../img/delete-file-icon.png" width="24" height="24"></a> 
- 																					
+											<td width="7%"><a
+												href="/DLTSendData/backend/decriptionForm.htm?imei=${table[j.index+1]}"
+												class="blue"> <img border="0" alt="Edit"
+													src="../img/edit-file-icon.png" width="24" height="24"></a>
+												<%-- 										<a href="/DLTSendData/backend/updateDecription.htm?imei=${table[j.index+1]}" class="blue">	<img border="0" alt="Edit" src="../img/edit-file-icon.png" width="24" height="24"></a>  --%>
+												<a
+												href="/DLTSendData/backend/rvmDecription.htm?imei=${table[j.index+1]}"
+												class="blue"> <img border="0" alt="Remove"
+													src="../img/delete-file-icon.png" width="24" height="24"></a>
+
 											</td>
-											
-											
+
+
 										</tr>
 									</c:if>
 								</c:forEach>
@@ -130,7 +152,8 @@
 	<!-- footer content -->
 	<footer>
 		<div class="pull-right">
-			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech co.,LTD</a>
+			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech
+				co.,LTD</a>
 		</div>
 		<div class="clearfix"></div>
 	</footer>

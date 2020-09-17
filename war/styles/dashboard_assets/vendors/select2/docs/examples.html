@@ -1,52 +1,37 @@
----
-layout: default
-title: Examples - Select2
-slug: examples
----
+--- layout: default title: Examples - Select2 slug: examples ---
 
-<script type="text/javascript" src="vendor/js/placeholders.jquery.min.js"></script>
+<script type="text/javascript"
+	src="vendor/js/placeholders.jquery.min.js"></script>
 <script type="text/javascript" src="dist/js/i18n/es.js"></script>
 
 <style type="text/css">
-  .img-flag {
-    height: 15px;
-    width: 18px;
-  }
+.img-flag {
+	height: 15px;
+	width: 18px;
+}
 </style>
 
 <section class="jumbotron">
-  <div class="container">
-    <h1>
-      Examples
-    </h1>
-  </div>
+	<div class="container">
+		<h1>Examples</h1>
+	</div>
 </section>
 
 <div class="container s2-docs-container">
-  <div class="row">
-    <div class="col-md-9" role="main">
-
-      {% include examples/basics.html %}
-      {% include examples/placeholders.html %}
-      {% include examples/data.html %}
-      {% include examples/disabled-mode.html %}
-      {% include examples/disabled-results.html %}
-      {% include examples/multiple-max.html %}
-      {% include examples/hide-search.html %}
-      {% include examples/programmatic-control.html %}
-      {% include examples/tags.html %}
-      {% include examples/tokenizer.html %}
-      {% include examples/matcher.html %}
-      {% include examples/localization-rtl-diacritics.html %}
-      {% include examples/themes-templating-responsive-design.html %}
-
-    </div>
-    <div class="col-md-3" role="complementary">
-
-      {% include nav/examples.html %}
-
-    </div>
-  </div>
+	<div class="row">
+		<div class="col-md-9" role="main">{% include
+			examples/basics.html %} {% include examples/placeholders.html %} {%
+			include examples/data.html %} {% include examples/disabled-mode.html
+			%} {% include examples/disabled-results.html %} {% include
+			examples/multiple-max.html %} {% include examples/hide-search.html %}
+			{% include examples/programmatic-control.html %} {% include
+			examples/tags.html %} {% include examples/tokenizer.html %} {%
+			include examples/matcher.html %} {% include
+			examples/localization-rtl-diacritics.html %} {% include
+			examples/themes-templating-responsive-design.html %}</div>
+		<div class="col-md-3" role="complementary">{% include
+			nav/examples.html %}</div>
+	</div>
 </div>
 
 {% include js-source-states.html %}

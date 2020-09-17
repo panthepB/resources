@@ -8,7 +8,8 @@
 			<div class="col-md-3 left_col">
 				<div class="left_col scroll-view">
 					<div class="navbar nav_title" style="border: 0;">
-						<a href="member.htm" class="site_title"><span>DLT Send data</span></a>
+						<a href="member.htm" class="site_title"><span>DLT Send
+								data</span></a>
 					</div>
 
 					<div class="clearfix"></div>
@@ -20,7 +21,8 @@
 					<br />
 
 					<!-- sidebar menu -->
-					<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+					<div id="sidebar-menu"
+						class="main_menu_side hidden-print main_menu">
 						<div class="menu_section">
 							<h3><%@ include file="/WEB-INF/jsp/text.jsp"%></h3>
 							<ul class="nav side-menu">
@@ -39,12 +41,17 @@
 			<%@ include file="/WEB-INF/jsp/member_sidebar.jsp"%>
 			<!-- /member_sidebar -->
 
-			<li role="presentation" class="dropdown"><a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-envelope-o"></i> <span
+			<li role="presentation" class="dropdown"><a href="javascript:;"
+				class="dropdown-toggle info-number" data-toggle="dropdown"
+				aria-expanded="false"> <i class="fa fa-envelope-o"></i> <span
 					class="badge bg-green">${noticesize}</span>
 			</a>
-				<ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+				<ul id="menu1" class="dropdown-menu list-unstyled msg_list"
+					role="menu">
 					<c:forEach items="${notices}" var="notice" varStatus="n">
-						<li><a> <span class="image"><img src="http://122.155.210.12:88/styles/dashboard_assets/production/images/icon010.png" alt="Profile Image" /></span> <span> <span class="time">${notice.createDate}</span>
+						<li><a> <span class="image"><img
+									src="http://122.155.210.12:88/styles/dashboard_assets/production/images/icon010.png"
+									alt="Profile Image" /></span> <span> <span class="time">${notice.createDate}</span>
 							</span> <span class="message"> ${notice.subject} </span>
 						</a></li>
 					</c:forEach>
@@ -80,64 +87,75 @@
 			<c:if test="${status == 100}">
 				<!-- Update driver log service started!! -->
 				<div class="alert alert-success alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					Realtime mdvr service started!!
 				</div>
 			</c:if>
 			<c:if test="${status == 101}">
 				<!-- Update driver log service started!! -->
 				<div class="alert alert-success alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					Update driver log service started!!
 				</div>
 			</c:if>
 			<c:if test="${status == 102}">
 				<!-- Update driver log service started!! -->
 				<div class="alert alert-success alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					Location backup send to server
 				</div>
 			</c:if>
 			<c:if test="${status == 103}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					มีหมายเลขเครื่องนี้อยู่แล้ว
 				</div>
 			</c:if>
 			<c:if test="${status == 104}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					กรุณาใส่หมายเลขเครื่อง
 				</div>
 			</c:if>
 			<c:if test="${status == 200}">
 				<!-- Update driver log service started!! -->
 				<div class="alert alert-success alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					บันทึกข้อมูลเรียบร้อยแล้ว
 				</div>
 			</c:if>
 			<c:if test="${status == 400}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					รูปแบบข้อมูลไม่ถูกต้อง ไม่สามารถบันทึกได้
 				</div>
 			</c:if>
 			<c:if test="${status == 500}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					บันทึกไม่สำเร็จ (เกิดจากปัญหาภายในระบบ)
 				</div>
 			</c:if>
 			<c:if test="${status == 403}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					ไม่อนุญาตให้เพิ่ม/แก้ไขข้อมูลดังกล่าว เนื่องจากเป็นข้อมูลของผู้ประกอบการท่านอื่น
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
+					ไม่อนุญาตให้เพิ่ม/แก้ไขข้อมูลดังกล่าว
+					เนื่องจากเป็นข้อมูลของผู้ประกอบการท่านอื่น
 				</div>
 			</c:if>
 			<c:if test="${status == 401}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					ล็อกอินไม่ถูกต้อง
 				</div>
 			</c:if>
@@ -153,70 +171,83 @@
 					<div class="list-group">
 						<c:choose>
 							<c:when test="${DTK3GStatus.status == 200}">
-      							<a href="#" class="list-group-item" style="background: #6ED746;">
-    						</c:when>
+								<a href="#" class="list-group-item" style="background: #6ED746;">
+							</c:when>
 							<c:otherwise>
-        						<a href="#" class="list-group-item" style="background: #E9967A;">
-    						</c:otherwise>
+								<a href="#" class="list-group-item" style="background: #E9967A;">
+							</c:otherwise>
 						</c:choose>
-						<i class="fa fa-refresh fa-fw"></i> DTK3G-100T Status : ${DTK3GStatus.status} <span class="pull-right text-muted small"><em>Lastupdate &nbsp;&nbsp;${DTK3GStatus.size}  &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;  ${DTK3GStatus.timeUpdate}</em> </span> 
-						
+						<i class="fa fa-refresh fa-fw"></i> DTK3G-100T Status :
+						${DTK3GStatus.status} <span class="pull-right text-muted small"><em>Lastupdate
+								&nbsp;&nbsp;${DTK3GStatus.size} &nbsp;&nbsp; :
+								&nbsp;&nbsp;&nbsp; ${DTK3GStatus.timeUpdate}</em> </span>
+
 						<c:choose>
 							<c:when test="${MDVRSGWStatus2.status == 200}">
-      							<a href="#" class="list-group-item" style="background: #6ED746;">
-    						</c:when>
+								<a href="#" class="list-group-item" style="background: #6ED746;">
+							</c:when>
 							<c:otherwise>
-        						<a href="#" class="list-group-item" style="background: #E9967A;">
-    						</c:otherwise>
+								<a href="#" class="list-group-item" style="background: #E9967A;">
+							</c:otherwise>
 						</c:choose>
-						<i class="fa fa-refresh fa-fw"></i> MDVR SGW 75 Status : ${MDVRSGWStatus2.status} <span class="pull-right text-muted small"><em>Lastupdate &nbsp;&nbsp;${MDVRSGWStatus2.size}   &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;   ${MDVRSGWStatus2.timeUpdate}</em>
-						</span>
-						
+						<i class="fa fa-refresh fa-fw"></i> MDVR SGW 75 Status :
+						${MDVRSGWStatus2.status} <span class="pull-right text-muted small"><em>Lastupdate
+								&nbsp;&nbsp;${MDVRSGWStatus2.size} &nbsp;&nbsp; :
+								&nbsp;&nbsp;&nbsp; ${MDVRSGWStatus2.timeUpdate}</em> </span>
+
 						<c:choose>
 							<c:when test="${MDVRMHDStatus.status == 200}">
-      							<a href="#" class="list-group-item" style="background: #6ED746;">
-    						</c:when>
+								<a href="#" class="list-group-item" style="background: #6ED746;">
+							</c:when>
 							<c:otherwise>
-        						<a href="#" class="list-group-item" style="background: #E9967A;">
-    						</c:otherwise>
+								<a href="#" class="list-group-item" style="background: #E9967A;">
+							</c:otherwise>
 						</c:choose>
-						<i class="fa fa-refresh fa-fw"></i> MDVR MHD Status : ${MDVRMHDStatus.status} <span class="pull-right text-muted small"><em>Lastupdate &nbsp;&nbsp;${MDVRMHDStatus.size}   &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;   ${MDVRMHDStatus.timeUpdate}</em>
-						</span>
-						
+						<i class="fa fa-refresh fa-fw"></i> MDVR MHD Status :
+						${MDVRMHDStatus.status} <span class="pull-right text-muted small"><em>Lastupdate
+								&nbsp;&nbsp;${MDVRMHDStatus.size} &nbsp;&nbsp; :
+								&nbsp;&nbsp;&nbsp; ${MDVRMHDStatus.timeUpdate}</em> </span>
+
 						<c:choose>
 							<c:when test="${LTYStatus.status == 200}">
-      							<a href="#" class="list-group-item" style="background: #6ED746;">
-    						</c:when>
+								<a href="#" class="list-group-item" style="background: #6ED746;">
+							</c:when>
 							<c:otherwise>
-        						<a href="#" class="list-group-item" style="background: #E9967A;">
-    						</c:otherwise>
+								<a href="#" class="list-group-item" style="background: #E9967A;">
+							</c:otherwise>
 						</c:choose>
-						<i class="fa fa-refresh fa-fw"></i> BUS LTY Status : ${LTYStatus.status} <span class="pull-right text-muted small"><em>Lastupdate &nbsp;&nbsp;${LTYStatus.size}    &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;   ${LTYStatus.timeUpdate}</em> </span>
-						
-						
+						<i class="fa fa-refresh fa-fw"></i> BUS LTY Status :
+						${LTYStatus.status} <span class="pull-right text-muted small"><em>Lastupdate
+								&nbsp;&nbsp;${LTYStatus.size} &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;
+								${LTYStatus.timeUpdate}</em> </span>
+
+
 						<c:choose>
 							<c:when test="${MDVRSGWStatus.status == 200}">
-      							<a href="#" class="list-group-item" style="background: #6ED746;">
-    						</c:when>
+								<a href="#" class="list-group-item" style="background: #6ED746;">
+							</c:when>
 							<c:otherwise>
-        						<a href="#" class="list-group-item" style="background: #E9967A;">
-    						</c:otherwise>
+								<a href="#" class="list-group-item" style="background: #E9967A;">
+							</c:otherwise>
 						</c:choose>
-						<i class="fa fa-refresh fa-fw"></i> TG Status : ${MDVRSGWStatus.status} <span class="pull-right text-muted small"><em>Lastupdate &nbsp;&nbsp;${MDVRSGWStatus.size}    &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;   ${MDVRSGWStatus.timeUpdate}</em>
-						</span>
-						
-						
+						<i class="fa fa-refresh fa-fw"></i> TG Status :
+						${MDVRSGWStatus.status} <span class="pull-right text-muted small"><em>Lastupdate
+								&nbsp;&nbsp;${MDVRSGWStatus.size} &nbsp;&nbsp; :
+								&nbsp;&nbsp;&nbsp; ${MDVRSGWStatus.timeUpdate}</em> </span>
+
+
 						<c:choose>
 							<c:when test="${SCCC.status == 'S00'}">
-      							<a href="#" class="list-group-item" style="background: #6ED746;">
-    						</c:when>
+								<a href="#" class="list-group-item" style="background: #6ED746;">
+							</c:when>
 							<c:otherwise>
-        						<a href="#" class="list-group-item" style="background: #E9967A;">
-    						</c:otherwise>
+								<a href="#" class="list-group-item" style="background: #E9967A;">
+							</c:otherwise>
 						</c:choose>
-						<i class="fa fa-refresh fa-fw"></i> SCCC Status : ${SCCC.status} <span class="pull-right text-muted small"><em>Lastupdate &nbsp;&nbsp;${SCCC.size}    &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;   ${SCCC.timeUpdate}</em>
-						</span>
-						</a>
+						<i class="fa fa-refresh fa-fw"></i> SCCC Status : ${SCCC.status} <span
+							class="pull-right text-muted small"><em>Lastupdate
+								&nbsp;&nbsp;${SCCC.size} &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;
+								${SCCC.timeUpdate}</em> </span> </a>
 
 					</div>
 					<!-- /.list-group -->
@@ -232,7 +263,8 @@
 	<!-- footer content -->
 	<footer>
 		<div class="pull-right">
-			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech co.,LTD</a>
+			Distar Tracking Web Report by <a href="https://www.distartech.com">DistarTech
+				co.,LTD</a>
 		</div>
 		<div class="clearfix"></div>
 	</footer>
@@ -241,91 +273,146 @@
 	</div>
 
 	<!-- jQuery -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery/dist/jquery.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery/dist/jquery.min.js"></script>
 	<!-- Bootstrap -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 	<!-- FastClick -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/fastclick/lib/fastclick.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/fastclick/lib/fastclick.js"></script>
 	<!-- NProgress -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/nprogress/nprogress.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/nprogress/nprogress.js"></script>
 	<!-- bootstrap-progressbar -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 	<!-- iCheck -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/iCheck/icheck.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/iCheck/icheck.min.js"></script>
 	<!-- bootstrap-daterangepicker -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/production/js/moment/moment.min.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/production/js/datepicker/daterangepicker.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/production/js/moment/moment.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/production/js/datepicker/daterangepicker.js"></script>
 	<!-- bootstrap-wysiwyg -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/google-code-prettify/src/prettify.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/google-code-prettify/src/prettify.js"></script>
 	<!-- jQuery Tags Input -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
 	<!-- Switchery -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/switchery/dist/switchery.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/switchery/dist/switchery.min.js"></script>
 	<!-- Select2 -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/select2/dist/js/select2.full.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/select2/dist/js/select2.full.min.js"></script>
 	<!-- Parsley -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/parsleyjs/dist/parsley.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/parsleyjs/dist/parsley.min.js"></script>
 	<!-- Autosize -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/autosize/dist/autosize.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/autosize/dist/autosize.min.js"></script>
 	<!-- jQuery autocomplete -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
 	<!-- starrr -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/starrr/dist/starrr.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/starrr/dist/starrr.js"></script>
 
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 
 	<!-- Flot plugins -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot.curvedlines/curvedLines.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot.curvedlines/curvedLines.js"></script>
 
 	<!-- Flot -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.pie.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.time.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.stack.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.resize.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.pie.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.time.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.stack.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Flot/jquery.flot.resize.js"></script>
 
 	<!-- Custom Theme Scripts -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Chart.js/dist/Chart.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/Chart.js/dist/Chart.min.js"></script>
 	<!-- jQuery Sparklines -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 	<!-- morris.js -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/raphael/raphael.min.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/morris.js/morris.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/raphael/raphael.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/morris.js/morris.min.js"></script>
 	<!-- gauge.js -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/gauge.js/dist/gauge.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/gauge.js/dist/gauge.min.js"></script>
 	<!-- Flot plugins -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot.curvedlines/curvedLines.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/flot.curvedlines/curvedLines.js"></script>
 	<!-- DateJS -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/DateJS/build/date.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/build/js/custom.min.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/DateJS/build/date.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/build/js/custom.min.js"></script>
 
 	<!-- Datatables -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net/js/jquery.dataTables.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons/js/buttons.flash.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons/js/buttons.html5.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons/js/buttons.print.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-keytable/js/dataTables.keyTable.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-responsive/js/dataTables.responsive.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-scroller/js/datatables.scroller.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jszip/dist/jszip.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/pdfmake/build/pdfmake.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/pdfmake/build/vfs_fonts.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net/js/jquery.dataTables.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons/js/buttons.flash.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons/js/buttons.html5.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-buttons/js/buttons.print.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-keytable/js/dataTables.keyTable.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-responsive/js/dataTables.responsive.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/datatables.net-scroller/js/datatables.scroller.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jszip/dist/jszip.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/pdfmake/build/pdfmake.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/pdfmake/build/vfs_fonts.js"></script>
 
 	<!-- JQVMap -->
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jqvmap/dist/jquery.vmap.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-	<script src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jqvmap/dist/jquery.vmap.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+	<script
+		src="http://122.155.210.12:88/styles/dashboard_assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
 	<!-- Chart.js -->
 
 	<script>

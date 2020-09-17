@@ -1,41 +1,38 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="./esl.js"></script>
-        <script src="./config.js"></script>
-    </head>
-    <body>
-        <style>
-            html,
-            body,
-            #main,
-            #main2,
-            #main3 {
-                width: 90%;
-                height: 200px;
-                margin: 0;
-                padding: 0;
-            }
-            #main2 {
-                width: 75%;
-            }
-            #main3 {
-                width: 50%;
-            }
-            #middle {
-                text-align: center;
-                padding: 10px;
-                background: #d4e8f1;
-            }
-        </style>
-        <div id="main"></div>
-        <div id="middle">
-            上面是降水量，下面是流量。这是两个echarts实例。
-        </div>
-        <div id="main2"></div>
-        <div id="main3"></div>
+<head>
+<meta charset="utf-8">
+<script src="./esl.js"></script>
+<script src="./config.js"></script>
+</head>
+<body>
+	<style>
+html, body, #main, #main2, #main3 {
+	width: 90%;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+}
 
-        <script>
+#main2 {
+	width: 75%;
+}
+
+#main3 {
+	width: 50%;
+}
+
+#middle {
+	text-align: center;
+	padding: 10px;
+	background: #d4e8f1;
+}
+</style>
+	<div id="main"></div>
+	<div id="middle">上面是降水量，下面是流量。这是两个echarts实例。</div>
+	<div id="main2"></div>
+	<div id="main3"></div>
+
+	<script>
 
             require([
                 'data/rainfall.json',
@@ -307,5 +304,5 @@
             }
 
         </script>
-    </body>
+</body>
 </html>

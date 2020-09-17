@@ -1,16 +1,11 @@
 <!doctype html>
 <html>
-  <head>
-    {% include head.html %}
-  </head>
-  <body>
-    {% include navigation.html %}
+<head>{% include head.html %}
+</head>
+<body>
+	{% include navigation.html %} {{ content }} {% include footer.html %}
 
-    {{ content }}
-
-    {% include footer.html %}
-
-    <script>
+	<script>
       (function ($) {
         'use strict';
 
@@ -52,6 +47,6 @@
       })();
     </script>
 
-    {% include ga.html %}
-  </body>
+	{% include ga.html %}
+</body>
 </html>

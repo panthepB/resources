@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:sec="http://www.springframework.org/schema/security"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
-	<bean id="viewResolver" 
+	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.JstlView" />
@@ -13,7 +14,8 @@
 		<property name="order" value="2" />
 	</bean>
 
-	<bean id="jsonResolver" class="org.springframework.web.servlet.view.XmlViewResolver">
+	<bean id="jsonResolver"
+		class="org.springframework.web.servlet.view.XmlViewResolver">
 		<property name="order" value="1" />
 		<property name="location" value="/WEB-INF/config/view.xml" />
 	</bean>
@@ -41,7 +43,7 @@
 		<property name="serverIP" ref="serverIP"></property>
 		<property name="userDAO" ref="myUserDAO"></property>
 		<property name="companyDAO" ref="myCompanyDAO"></property>
-		
+
 	</bean>
 
 	<!-- <bean name="/*.htm" class="com.distar.dtwr.system.web.IndexController"> -->
@@ -52,80 +54,96 @@
 	<!-- <property name="companyDAO" ref="myCompanyDAO"></property> -->
 	<!-- </bean> -->
 
-	<bean name="/service/*.htm" class="distar.project.DLT.web.ServiceController">
+	<bean name="/service/*.htm"
+		class="distar.project.DLT.web.ServiceController">
 
 		<property name="ltyUnitIdDAO" ref="myLTYUnitIdDAO" />
 		<property name="maLogDAO" ref="myMALogDAO" />
 		<property name="serverIP" ref="serverIP"></property>
-		
+
 	</bean>
-	
-		<bean name="/masterfile/*.htm" class="distar.project.DLT.web.MasterfileController">
+
+	<bean name="/masterfile/*.htm"
+		class="distar.project.DLT.web.MasterfileController">
 
 		<property name="provinceDLTDAO" ref="myProvinceDLTDAO" />
-		<property name="vehicleRegisterTypeDAO" ref="myVehicleRegisterTypeDAO" />
+		<property name="vehicleRegisterTypeDAO"
+			ref="myVehicleRegisterTypeDAO" />
 		<property name="masterFileDAO" ref="myMasterFileDAO" />
 		<property name="excelImportDAO" ref="myExcelImportDAO" />
 		<property name="serverIP" ref="serverIP"></property>
-		
-		</bean>
-		
-		<bean name="/basicInfo/*.htm" class="distar.project.DLT.web.BasicInfoController">
+
+	</bean>
+
+	<bean name="/basicInfo/*.htm"
+		class="distar.project.DLT.web.BasicInfoController">
 
 		<property name="provinceDLTDAO" ref="myProvinceDLTDAO" />
-		<property name="vehicleRegisterTypeDAO" ref="myVehicleRegisterTypeDAO" />
+		<property name="vehicleRegisterTypeDAO"
+			ref="myVehicleRegisterTypeDAO" />
 		<property name="masterFileDAO" ref="myMasterFileDAO" />
 		<property name="excelImportDAO" ref="myExcelImportDAO" />
 		<property name="serverIP" ref="serverIP"></property>
-		
-		</bean>
-	
-		<bean name="/realtime/*.htm" class="distar.project.DLT.web.RealtimeController">
 
-			<property name="masterFileDAO" ref="myMasterFileDAO" />
-			<property name="excelImportDAO" ref="myExcelImportDAO" />
-			<property name="ltyUnitIdDAO" ref="myLTYUnitIdDAO" />
-			<property name="maLogDAO" ref="myMALogDAO" />
-			<property name="serverIP" ref="serverIP"></property>
-		
-		</bean>
-		
+	</bean>
 
-	
-	<bean name="/backend/*.htm" class="distar.project.DLT.web.BackEndController">
+	<bean name="/realtime/*.htm"
+		class="distar.project.DLT.web.RealtimeController">
+
+		<property name="masterFileDAO" ref="myMasterFileDAO" />
+		<property name="excelImportDAO" ref="myExcelImportDAO" />
+		<property name="ltyUnitIdDAO" ref="myLTYUnitIdDAO" />
+		<property name="maLogDAO" ref="myMALogDAO" />
+		<property name="serverIP" ref="serverIP"></property>
+
+	</bean>
+
+
+
+	<bean name="/backend/*.htm"
+		class="distar.project.DLT.web.BackEndController">
 		<property name="serverIP" ref="serverIP"></property>
 	</bean>
-	
-	<bean name="/thaipost/*.htm" class="distar.project.DLT.web.ThaiPOSTController">
+
+	<bean name="/thaipost/*.htm"
+		class="distar.project.DLT.web.ThaiPOSTController">
 		<property name="provinceDLTDAO" ref="myProvinceDLTDAO" />
-		<property name="vehicleRegisterTypeDAO" ref="myVehicleRegisterTypeDAO" />
-		<property name="apiMasterfileDAO" ref="myApiMasterfileDAO" />
-		<property name="serverIP" ref="serverIP"></property>
-	</bean>
-	
-		<bean name="/scg/*.htm" class="distar.project.DLT.web.SCGController">
-		<property name="provinceDLTDAO" ref="myProvinceDLTDAO" />
-		<property name="vehicleRegisterTypeDAO" ref="myVehicleRegisterTypeDAO" />
-		<property name="apiMasterfileDAO" ref="myApiMasterfileDAO" />
-		<property name="serverIP" ref="serverIP"></property>
-	</bean>
-	
-		<bean name="/device/*.htm" class="distar.project.DLT.web.SCGController">
-		<property name="provinceDLTDAO" ref="myProvinceDLTDAO" />
-		<property name="vehicleRegisterTypeDAO" ref="myVehicleRegisterTypeDAO" />
+		<property name="vehicleRegisterTypeDAO"
+			ref="myVehicleRegisterTypeDAO" />
 		<property name="apiMasterfileDAO" ref="myApiMasterfileDAO" />
 		<property name="serverIP" ref="serverIP"></property>
 	</bean>
 
-	<bean name="/upload/*.htm" class="distar.project.DLT.web.UploadServlet">
+	<bean name="/scg/*.htm"
+		class="distar.project.DLT.web.SCGController">
+		<property name="provinceDLTDAO" ref="myProvinceDLTDAO" />
+		<property name="vehicleRegisterTypeDAO"
+			ref="myVehicleRegisterTypeDAO" />
+		<property name="apiMasterfileDAO" ref="myApiMasterfileDAO" />
+		<property name="serverIP" ref="serverIP"></property>
+	</bean>
+
+	<bean name="/device/*.htm"
+		class="distar.project.DLT.web.SCGController">
+		<property name="provinceDLTDAO" ref="myProvinceDLTDAO" />
+		<property name="vehicleRegisterTypeDAO"
+			ref="myVehicleRegisterTypeDAO" />
+		<property name="apiMasterfileDAO" ref="myApiMasterfileDAO" />
+		<property name="serverIP" ref="serverIP"></property>
+	</bean>
+
+	<bean name="/upload/*.htm"
+		class="distar.project.DLT.web.UploadServlet">
 
 	</bean>
 
-	<bean name="/member/*.htm" class="com.distar.dtwr.system.web.MemberController">
+	<bean name="/member/*.htm"
+		class="com.distar.dtwr.system.web.MemberController">
 		<property name="userDAO" ref="myUserDAO"></property>
 	</bean>
 
-	<bean name="/image/*.htm" class="com.distar.dtwr.system.web.ImageController">
+	<bean name="/image/*.htm"
+		class="com.distar.dtwr.system.web.ImageController">
 		<property name="paramImage" ref="paramImage"></property>
 	</bean>
 

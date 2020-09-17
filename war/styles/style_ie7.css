@@ -1,9 +1,26 @@
-<style type="text/css">
-/* hack to compensate for IE and percentage widths rounding errors */
-#topbar {width:60.6%;}
-#outer3 {width:29.8%;}
-#outer5 {width:19.2%;}
+<
+style type ="text/css">
+	/* hack to compensate for IE and percentage widths rounding errors */
+	#topbar {
+	width: 60.6%;
+}
+
+#outer3 {
+	width: 29.8%;
+}
+
+#outer5 {
+	width: 19.2%;
+}
 /* for IE6 */
-* html #wrapper {display:inline-block;}
-* html #minMax {width: expression(document.body.clientWidth < 702? "700px" : document.body.clientWidth > 1102? "1100px" : "auto");}
-</style>
+* html #wrapper {
+	display: inline-block;
+}
+
+* html #minMax {
+	width: expression(document.body.clientWidth < 702 ? "700px" : 
+		document.body.clientWidth > 1102 ? "1100px" : "auto");
+}
+</
+style
+>

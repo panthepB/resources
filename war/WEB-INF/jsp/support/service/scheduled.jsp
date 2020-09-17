@@ -1,13 +1,19 @@
-<%@ include file="/WEB-INF/jsp/include.jsp" %>
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ include file="/WEB-INF/jsp/headerTop.jsp" %>
-	<title>ระบบจัดการการบริหารลูกค้า :: ตารางการบริการ</title>
-	<link rel='stylesheet' type='text/css' href='<c:url value="/static/styles/fullcalendar/fullcalendar.css"/>' />
-	<link rel='stylesheet' type='text/css' href='<c:url value="/static/styles/fullcalendar/fullcalendar.print.css"/>' media='print' />
-	<script type='text/javascript' src='<c:url value="/static/js/fullcalendar/jquery-1.5.2.min.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/static/js/fullcalendar/jquery-ui-1.8.11.custom.min.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/static/js/fullcalendar/fullcalendar.min.js"/>'></script>
-	<script type='text/javascript'>
+<%@ include file="/WEB-INF/jsp/include.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/headerTop.jsp"%>
+<title>ระบบจัดการการบริหารลูกค้า :: ตารางการบริการ</title>
+<link rel='stylesheet' type='text/css'
+	href='<c:url value="/static/styles/fullcalendar/fullcalendar.css"/>' />
+<link rel='stylesheet' type='text/css'
+	href='<c:url value="/static/styles/fullcalendar/fullcalendar.print.css"/>'
+	media='print' />
+<script type='text/javascript'
+	src='<c:url value="/static/js/fullcalendar/jquery-1.5.2.min.js"/>'></script>
+<script type='text/javascript'
+	src='<c:url value="/static/js/fullcalendar/jquery-ui-1.8.11.custom.min.js"/>'></script>
+<script type='text/javascript'
+	src='<c:url value="/static/js/fullcalendar/fullcalendar.min.js"/>'></script>
+<script type='text/javascript'>
 	
 		$(document).ready(function() {
 			
@@ -49,48 +55,47 @@
 		});
 	
 	</script>
-	<style type='text/css'>
+<style type='text/css'>
+body {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 14px;
+	font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+}
 
-	body {
-		margin-top: 40px;
-		text-align: center;
-		font-size: 14px;
-		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-		}
-
-	#calendar {
-		width: 725px;
-		margin: 0 auto;
-		}
-
+#calendar {
+	width: 725px;
+	margin: 0 auto;
+}
 </style>
-<%@ include file="/WEB-INF/jsp/headerBottom.jsp" %>
+<%@ include file="/WEB-INF/jsp/headerBottom.jsp"%>
 
-				<div class="content">
-					<div class="Post">
-						<div class="Post-body">
-							<div class="Post-inner">
-								<h2 class="PostHeaderIcon-wrapper"><span class="PostHeader">ตารางการบริการ</span></h2>
-								<div class="PostContent">
-									<p>
-										<div id='calendar'></div>
-									</p>
-									<p>
-										* คลิก วันที่ เพื่อแสดงรายละเอียด<br />
-										* สี แดง คือ การแจ้งงานติดตั้ง<br/>
-										* สี เขียว คือ การแจ้งงานบริการ<br/>
-									</p>
-								</div>
-								<div class="cleared"></div>
-							</div>
-						</div>
-					</div>				
+<div class="content">
+	<div class="Post">
+		<div class="Post-body">
+			<div class="Post-inner">
+				<h2 class="PostHeaderIcon-wrapper">
+					<span class="PostHeader">ตารางการบริการ</span>
+				</h2>
+				<div class="PostContent">
+					<p>
+					<div id='calendar'></div>
+					</p>
+					<p>
+						* คลิก วันที่ เพื่อแสดงรายละเอียด<br /> * สี แดง คือ
+						การแจ้งงานติดตั้ง<br /> * สี เขียว คือ การแจ้งงานบริการ<br />
+					</p>
 				</div>
-				
+				<div class="cleared"></div>
+			</div>
+		</div>
 	</div>
-	<div id="pageNumber" menu="m2" sub="m2s2" class="cleared"></div>
-	<%@ include file="/WEB-INF/jsp/footer.jsp" %>
 </div>
-<%@ include file="/WEB-INF/jsp/version.jsp" %>
+
+</div>
+<div id="pageNumber" menu="m2" sub="m2s2" class="cleared"></div>
+<%@ include file="/WEB-INF/jsp/footer.jsp"%>
+</div>
+<%@ include file="/WEB-INF/jsp/version.jsp"%>
 </body>
 </html>

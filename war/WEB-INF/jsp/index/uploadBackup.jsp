@@ -8,18 +8,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <link rel="stylesheet" href="../styles/styles.css">
-<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"
+	type="text/javascript"></script>
 <script src="js/script.js"></script>
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.validationEngine.js"></script>
-<link rel="stylesheet" href="styles/validationEngine.jquery.css" type="text/css" />
+<link rel="stylesheet" href="styles/validationEngine.jquery.css"
+	type="text/css" />
 
 <link href="styles/bootstrap.css" rel="stylesheet" />
 <link href="styles/font-awesome.css" rel="stylesheet" />
 <link href="styles/basic.css" rel="stylesheet" />
 <link href="styles/custom.css" rel="stylesheet" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans'
+	rel='stylesheet' type='text/css' />
 
 <%@ include file="/WEB-INF/jsp/index/sideBar.jsp"%>
 
@@ -35,7 +38,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h1 class="page-head-line">DLT Send data</h1>
-				<h1 class="page-subhead-line"><%@ include file="/WEB-INF/jsp/version.jsp"%>
+				<h1 class="page-subhead-line"><%@ include
+						file="/WEB-INF/jsp/version.jsp"%>
 				</h1>
 
 
@@ -47,31 +51,37 @@
 		<div class="panel-body">
 			<c:if test="${status == 200}">
 				<div class="alert alert-success alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					บันทึกสำเร็จ
 				</div>
 			</c:if>
 			<c:if test="${status == 400}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					รูปแบบข้อมูลไม่ถูกต้อง ไม่สามารถบันทึกได้
 				</div>
 			</c:if>
 			<c:if test="${status == 500}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					บันทึกไม่สำเร็จ (เกิดจากปัญหาภายในระบบ)
 				</div>
 			</c:if>
 			<c:if test="${status == 403}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					ไม่อนุญาตให้เพิ่ม/แก้ไขข้อมูลดังกล่าว เนื่องจากเป็นข้อมูลของผู้ประกอบการท่านอื่น
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
+					ไม่อนุญาตให้เพิ่ม/แก้ไขข้อมูลดังกล่าว
+					เนื่องจากเป็นข้อมูลของผู้ประกอบการท่านอื่น
 				</div>
 			</c:if>
 			<c:if test="${status == 401}">
 				<div class="alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					<button type="button" class="close" data-dismiss="alert"
+						aria-hidden="true">×</button>
 					ล็อกอินไม่ถูกต้อง
 				</div>
 			</c:if>
@@ -79,8 +89,10 @@
 
 		</div>
 
-		<form action="UploadServlet" method="post" enctype="multipart/form-data">
-			<input type="file" name="file" size="50" /> <br /> <input type="submit" value="Upload File" />
+		<form action="UploadServlet" method="post"
+			enctype="multipart/form-data">
+			<input type="file" name="file" size="50" /> <br /> <input
+				type="submit" value="Upload File" />
 		</form>
 		<!-- 		</div> -->
 

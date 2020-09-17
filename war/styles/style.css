@@ -1,135 +1,439 @@
-body {font-size:80%; margin-top:0px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;  background-color: #252C32;  background-image: url('images/Page-BgTexture.jpg');  background-repeat: repeat-x;   background-attachment: fixed;   background-position: top left;font-style: normal; font-weight: normal;  color: #23292F;}
-
-#wrapper {margin:0 auto; position: relative; text-align: left; width:1000px;  background-color:#252C32;}
-* html #wrapper {overflow:visible; z-index:500;}
-#pad {height:100px;}
-#header { height: 140px; background-image: url(../../image/header.htm); background-repeat:no-repeat; background-position:top center; background-color: LightSteelBlue;}
-#header p {color:#fff;}
-#contentLayout {width:100%; margin:0 ; overflow:hidden;  border-top: 4px solid #4fa27c;  background-color:#fffff0;}
-
-.sidebar1 {width:25%; float:left;background-color:#fffff0; padding-top:35px; margin:0 auto;}
-
-.content {width:75%; float:right; background-color:#fffff0; padding-top:35px; margin:0 auto;}
-.content ul {padding:0; margin:0; list-style:none;}
-.content ul li {width:270px; padding: 0 0 0 30px; background:url(site.gif) no-repeat 10px center; margin-bottom:5px;}
-.content ul li a {color:#00d; font-size:12px;}
-
-.Post {overflow: hidden; margin: 0 auto; clear:both; }
-.Post-body{ position: relative;  margin: 10px;}
-
-
-.Post h2 {color: #1D4A62; font-size:20px; margin: 0.2em 0;}
-
-.Post h4 {color: #1D4A62; font-size:15px; margin: 10px 0;}
-
-h1 {font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size:20px; margin:0; padding:10px 0; color:#23292F;}
-h3 {font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size:18px; margin:0; padding:8px 0; color:#23292F}
-
-p {font-size:12px; line-height:18px; margin:5px 0; padding: 0;}
-
-.Footer {clear:both;background-image: url(images/Footer.png); background-color:#fffff0;  bottom:0; left:0;}
-.Footer p, #footer a {color:#fff; margin: 0 0; }
-.Footer a:hover {text-decoration:none;}
-.Footer .Footer-inner{ position: relative;  z-index: 0;  padding: 4px;  text-align: center;}
-
-/* begin PageFooter */
-.page-footer { margin:1em; text-align:center; text-decoration:none; color:#485561;}
-.page-footer a, .page-footer a:link, .page-footer a:visited, .page-footer a:hover
-{ font-family:Arial; font-size:10px; letter-spacing:normal;  word-spacing:normal;  font-style:normal; font-weight:normal; text-decoration:underline; color:#276282;
+body {
+	font-size: 80%;
+	margin-top: 0px;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	background-color: #252C32;
+	background-image: url('images/Page-BgTexture.jpg');
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	background-position: top left;
+	font-style: normal;
+	font-weight: normal;
+	color: #23292F;
 }
 
+#wrapper {
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+	width: 1000px;
+	background-color: #252C32;
+}
+
+* html #wrapper {
+	overflow: visible;
+	z-index: 500;
+}
+
+#pad {
+	height: 100px;
+}
+
+#header {
+	height: 140px;
+	background-image: url(../../image/header.htm);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-color: LightSteelBlue;
+}
+
+#header p {
+	color: #fff;
+}
+
+#contentLayout {
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	border-top: 4px solid #4fa27c;
+	background-color: #fffff0;
+}
+
+.sidebar1 {
+	width: 25%;
+	float: left;
+	background-color: #fffff0;
+	padding-top: 35px;
+	margin: 0 auto;
+}
+
+.content {
+	width: 75%;
+	float: right;
+	background-color: #fffff0;
+	padding-top: 35px;
+	margin: 0 auto;
+}
+
+.content ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.content ul li {
+	width: 270px;
+	padding: 0 0 0 30px;
+	background: url(site.gif) no-repeat 10px center;
+	margin-bottom: 5px;
+}
+
+.content ul li a {
+	color: #00d;
+	font-size: 12px;
+}
+
+.Post {
+	overflow: hidden;
+	margin: 0 auto;
+	clear: both;
+}
+
+.Post-body {
+	position: relative;
+	margin: 10px;
+}
+
+.Post h2 {
+	color: #1D4A62;
+	font-size: 20px;
+	margin: 0.2em 0;
+}
+
+.Post h4 {
+	color: #1D4A62;
+	font-size: 15px;
+	margin: 10px 0;
+}
+
+h1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+	font-size: 20px;
+	margin: 0;
+	padding: 10px 0;
+	color: #23292F;
+}
+
+h3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+	font-size: 18px;
+	margin: 0;
+	padding: 8px 0;
+	color: #23292F
+}
+
+p {
+	font-size: 12px;
+	line-height: 18px;
+	margin: 5px 0;
+	padding: 0;
+}
+
+.Footer {
+	clear: both;
+	background-image: url(images/Footer.png);
+	background-color: #fffff0;
+	bottom: 0;
+	left: 0;
+}
+
+.Footer p, #footer a {
+	color: #fff;
+	margin: 0 0;
+}
+
+.Footer a:hover {
+	text-decoration: none;
+}
+
+.Footer .Footer-inner {
+	position: relative;
+	z-index: 0;
+	padding: 4px;
+	text-align: center;
+}
+
+/* begin PageFooter */
+.page-footer {
+	margin: 1em;
+	text-align: center;
+	text-decoration: none;
+	color: #485561;
+}
+
+.page-footer a, .page-footer a:link, .page-footer a:visited,
+	.page-footer a:hover {
+	font-family: Arial;
+	font-size: 10px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: underline;
+	color: #276282;
+}
 
 /* end PageFooter */
-.cleared{float: none; clear: both; margin: 0; padding: 0; border: none; font-size:1px;}
+.cleared {
+	float: none;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 1px;
+}
 /* curved corner */
-dl.curved {background:#d6dfe7 url(images/c_tl.gif) top left no-repeat; margin:5px auto 25px auto; padding:0; width:90%;}
-dl.curved dt {background:transparent url(images/c_tr.gif) top right no-repeat; padding:10px; text-align:center;font-weight: bold; color:#183452;}
-dl.curved dd {background:#eee url(images/c_bl.gif) bottom left no-repeat; padding:0; margin:0;}
-dl.curved dd p ,dl.curved dd form {margin:0; padding:10px; line-height:1.3em;}
-dl.curved dd p.last {background:transparent url(images/c_br.gif) bottom right no-repeat; }
+dl.curved {
+	background: #d6dfe7 url(images/c_tl.gif) top left no-repeat;
+	margin: 5px auto 25px auto;
+	padding: 0;
+	width: 90%;
+}
+
+dl.curved dt {
+	background: transparent url(images/c_tr.gif) top right no-repeat;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	color: #183452;
+}
+
+dl.curved dd {
+	background: #eee url(images/c_bl.gif) bottom left no-repeat;
+	padding: 0;
+	margin: 0;
+}
+
+dl.curved dd p, dl.curved dd form {
+	margin: 0;
+	padding: 10px;
+	line-height: 1.3em;
+}
+
+dl.curved dd p.last {
+	background: transparent url(images/c_br.gif) bottom right no-repeat;
+}
 
 /* Menu Container */
 /* if we put overflow:hidden on this style , it will hide dropline */
 /* set z-index on this level to let dropline and dropdown over the content */
-#menuPositioner {width:100%; z-index:50; position:relative; float:left; top:0px; margin-bottom:-40px; } 
-#menuHolder {position:relative; float:center; margin-right:20px;}
+#menuPositioner {
+	width: 100%;
+	z-index: 50;
+	position: relative;
+	float: left;
+	top: 0px;
+	margin-bottom: -40px;
+}
+
+#menuHolder {
+	position: relative;
+	float: center;
+	margin-right: 20px;
+}
 
 /* Menu style */
 /* this is the style for ul that id is menu , the menu item is tag li under this ul */
-#menu {padding:0 0 0 30px; margin:0 0 0 10px; list-style:none; height:40px; background:url(images/ulback.gif) repeat-x; position:relative;}
+#menu {
+	padding: 0 0 0 30px;
+	margin: 0 0 0 10px;
+	list-style: none;
+	height: 40px;
+	background: url(images/ulback.gif) repeat-x;
+	position: relative;
+}
 /* for ie */
-#menu table {border-collapse:collapse: width:0; height:0; margin:-3px -10px;}
+#menu table {
+	border-collapse: collapse: width:0;
+	height: 0;
+	margin: -3px -10px;
+}
 
-#menu li {float:left;} /* this effect all li under menu */
+#menu li {
+	float: left;
+} /* this effect all li under menu */
 /* Two lines below, if we remove float:left the ul list under this li a will be new line , when not formated . */
 /* Major effect is on IE, it will put next li on new line*/
 /* Has remove z-index , used inherited style from #menu*/
-#menu li a {display:block; height:40px; line-height:40px; padding:0 20px 0 0;  color:#fff; text-decoration:none; } 
-#menu li a b {display:block; height:40px; padding:0 0 0 20px; cursor:pointer;}
+#menu li a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px 0 0;
+	color: #fff;
+	text-decoration: none;
+}
+
+#menu li a b {
+	display: block;
+	height: 40px;
+	padding: 0 0 0 20px;
+	cursor: pointer;
+}
 
 /* decoration when hover on menu , b will draw on left side of button -> it occupy most region of li , a will draw on right side of button*/
-#menu li a:hover , #menu li.current a  {background:url(images/tab_a.gif) no-repeat right top; line-height:36px; height:44px}
-#menu li a:hover b , #menu li.current a b {background:url(images/tab_b.gif) no-repeat left top; line-height:36px;}
+#menu li a:hover, #menu li.current a {
+	background: url(images/tab_a.gif) no-repeat right top;
+	line-height: 36px;
+	height: 44px
+}
+
+#menu li a:hover b, #menu li.current a b {
+	background: url(images/tab_b.gif) no-repeat left top;
+	line-height: 36px;
+}
 /* this is redundant now, it is no need */
-#menu li:hover > a {background:url(images/tab_a.gif) no-repeat right top; line-height:36px; height:44px}
-#menu li:hover > a b {background:url(images/tab_b.gif) no-repeat left top; line-height:36px;}
+#menu li:hover>a {
+	background: url(images/tab_a.gif) no-repeat right top;
+	line-height: 36px;
+	height: 44px
+}
 
-
+#menu li:hover>a b {
+	background: url(images/tab_b.gif) no-repeat left top;
+	line-height: 36px;
+}
 
 /* Dropline style */
 /* all style that did not has li.current will take effect when uncomment  line 83 -> #menu :hover ul   */
 /* this line make the drop line to hide away , look at left is -9999px , Set background to transparent so will not interfere contentLayout*/
-#menu ul {width:960px; height:28px;line-height:28px; padding:0; margin:0;  list-style:none; position:absolute; background:url(images/dlback.png) repeat-x; left:-9999px; top:44px;  border-bottom:1px solid #fff;}
-#menu ul.right li {float:right;}
+#menu ul {
+	width: 960px;
+	height: 28px;
+	line-height: 28px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	background: url(images/dlback.png) repeat-x;
+	left: -9999px;
+	top: 44px;
+	border-bottom: 1px solid #fff;
+}
+
+#menu ul.right li {
+	float: right;
+}
 /* these two lines adjust the left value to show dropline of  current , and hovered menu */
 /* #menu :hover ul {left:0;} */
-#menu li.current ul {left:0;} /* remove z-index , because inherit from #menuPositioner style*/
+#menu li.current ul {
+	left: 0;
+} /* remove z-index , because inherit from #menuPositioner style*/
 
 /* decoration when hover on dropline item*/
-#menu ul li a {height:28px; padding:0 10px 0 10px;line-height:28px; color:#000; background: #E3E9EF none no-repeat right center;font-weight:bold; }
+#menu ul li a {
+	height: 28px;
+	padding: 0 10px 0 10px;
+	line-height: 28px;
+	color: #000;
+	background: #E3E9EF none no-repeat right center;
+	font-weight: bold;
+}
 /* still question on position:relative of line below*/
-#menu ul li a:hover {position:relative;  height:28px; line-height:28px; background: #1959C2; color:#FBF8F8; } 
+#menu ul li a:hover {
+	position: relative;
+	height: 28px;
+	line-height: 28px;
+	background: #1959C2;
+	color: #FBF8F8;
+}
 /* set background to the new one, or set to transparent to override inherited style , also remove z-index*/
-#menu li.current ul li a {color:#000; padding:0 10px 0 10px; height:28px; line-height:28px; background: #E3E9EF none no-repeat right center; }
-#menu li.current ul li a.current_sub {color:#fff;}
+#menu li.current ul li a {
+	color: #000;
+	padding: 0 10px 0 10px;
+	height: 28px;
+	line-height: 28px;
+	background: #E3E9EF none no-repeat right center;
+}
+
+#menu li.current ul li a.current_sub {
+	color: #fff;
+}
 /* fist line style for IE7 and non-IE browsers and the second line for IE5.5 and IE6 */
-#menu li.current ul li:hover > a, 
-#menu li.current ul li a:hover {color:#fff; background: #1959C2;}
+#menu li.current ul li:hover>a, #menu li.current ul li a:hover {
+	color: #fff;
+	background: #1959C2;
+}
 
 /* change style of dropline item when dropdown hovered */
-#menu ul li:hover > a {color:#FBF8F8; background: #345987; height:28px; line-height:28px;} /* must set height and line-height for Firefox render correctly */
-
+#menu ul li:hover>a {
+	color: #FBF8F8;
+	background: #345987;
+	height: 28px;
+	line-height: 28px;
+} /* must set height and line-height for Firefox render correctly */
 
 /* Dropdown menu style */
 /*                     */
 /* keep the 'dropdown menu' level invisible by placing it off screen. */
-#menuz ul li ul {position:absolute; left:-9999px; top:-9999px; width:0; height:0; margin:0; padding:0; list-style:none;}
+#menuz ul li ul {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 #menu ul li ul {
-	visibility:hidden; position:absolute; width:0; height:0; top:0; left:0; height:0; margin:0; padding:0; 
+	visibility: hidden;
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 0;
+	left: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* move 'dropdown menu' to show on screen when dropline has been hoverd*/
-#menux ul :hover ul {position:relative; left:0; top:0px; background:#444; z-index:200;}
-#menu ul :hover ul li {margin:0; float:left; } /* set float:left to correct position of dropdown menu when it under the ul.right effect on firefox not IE*/
+#menux ul :hover ul {
+	position: relative;
+	left: 0;
+	top: 0px;
+	background: #444;
+	z-index: 200;
+}
 
-#menu ul li:hover ul,
-#menu ul li a:hover ul {
-	visibility:visible;  position:relative ; line-height:28px; height: auto;  
-	
+#menu ul :hover ul li {
+	margin: 0;
+	float: left;
+}
+	/* set float:left to correct position of dropdown menu when it under the ul.right effect on firefox not IE*/
+#menu ul li:hover ul, #menu ul li a:hover ul {
+	visibility: visible;
+	position: relative;
+	line-height: 28px;
+	height: auto;
 }
 
 /* set style for dropdown menu . if we not set browser will use style from '#menu ul li a', which the width is not enought 
 *  So we base all style on '#menu ul li a', and adjust only style that we need.
 */
-#menu ul :hover ul li  a , 
-#menu ul li a:hover ul li a {
-	display:block; line-height: 28px; width:200px; height:auto;   border-left: 1px thin #999;border-right: 1px thin #999; border-bottom: 1px dashed #999;
+#menu ul :hover ul li  a, #menu ul li a:hover ul li a {
+	display: block;
+	line-height: 28px;
+	width: 200px;
+	height: auto;
+	border-left: 1px thin #999;
+	border-right: 1px thin #999;
+	border-bottom: 1px dashed #999;
 }
 
-#menu ul :hover ul li a:hover { background:#486FAD; color:#FBF8F8;}
-#menu ul :hover ul li.last a:hover  { background:#486FAD; color:#FBF8F8;}
+#menu ul :hover ul li a:hover {
+	background: #486FAD;
+	color: #FBF8F8;
+}
 
-/* end */ 
+#menu ul :hover ul li.last a:hover {
+	background: #486FAD;
+	color: #FBF8F8;
+}
+
+/* end */
 
 /*
 .menu4 ul li:hover ul li a,

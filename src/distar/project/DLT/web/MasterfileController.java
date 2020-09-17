@@ -1994,18 +1994,18 @@ public class MasterfileController extends UsableController {
 			while (rs.next()) {
 				String update = "update `distar_dlt`.`lty_unitid` set  `unit_id` = '" + rs.getString("unit_id")
 						+ "' where `vehicle_id` = '" + rs.getString("imei") + "' ;";
-				System.out.println("update " + update);
+				System.out.println("update2 : " + update);
 				stmt2.executeUpdate(update);
 
-//				String  masterfileUpdate = "INSERT INTO `distar_dlt`.`master_file` (" + 
-//						"  `card_reader`, `gps_model`, `imei`, `province_code`, `unit_id`, `vehicle_chassis_no`, `vehicle_id`, `vehicle_register_type`, `vehicle_type`, `customer_name`, `sale_name`, `dlt_status`" + 
-//						")" + 
-//						"VALUES" + 
-//						"  (" + 
-//						"    '1', '"+rs.getString("gps_model")+"', '"+rs.getString("imei")+"', '"+rs.getString("province_code")+"', '"+rs.getString("unit_id")+"', '"+rs.getString("vehicle_chassis_no")+"', '"+rs.getString("vehicle_id")+"', '"+rs.getString("vehicle_register_type")+"', '"+rs.getString("vehicle_type")+"', 'BMTA', 'Zulex', '1'" + 
-//						"  );";
-//				System.out.println("masterfileUpdate " + masterfileUpdate);
-//				stmt2.executeUpdate(masterfileUpdate);
+				String  masterfileUpdate = "INSERT INTO `distar_dlt`.`master_file` (" + 
+						"  `card_reader`, `gps_model`, `imei`, `province_code`, `unit_id`, `vehicle_chassis_no`, `vehicle_id`, `vehicle_register_type`, `vehicle_type`, `customer_name`, `sale_name`, `dlt_status`" + 
+						")" + 
+						"VALUES" + 
+						"  (" + 
+						"    '1', '"+rs.getString("gps_model")+"', '"+rs.getString("imei")+"', '"+rs.getString("province_code")+"', '"+rs.getString("unit_id")+"', '"+rs.getString("vehicle_chassis_no")+"', '"+rs.getString("vehicle_id")+"', '"+rs.getString("vehicle_register_type")+"', '"+rs.getString("vehicle_type")+"', 'BMTA', 'Zulex', '1'" + 
+						"  );";
+				System.out.println("masterfileUpdate " + masterfileUpdate);
+				stmt2.executeUpdate(masterfileUpdate);
 
 				// Remove
 //				String  masterfileRemove = "DELETE FROM   `distar_dlt`.`master_file` WHERE `unit_id` = '"+rs.getString("unit_id")+"';";
@@ -2048,44 +2048,44 @@ public class MasterfileController extends UsableController {
 //				System.out.println("StatusCode : " + res.getStatusLine().getStatusCode());
 
 				// Import Masterfiel
-//				String json = "{\"vender_id\": 43,\"unit_id\": \"" + rs.getString("unit_id") + "\",\"vehicle_id\": \"" + rs.getString("vehicle_id") + "\",\"vehicle_type\": \"" + rs.getString("vehicle_type")
-//						+ "\",\"vehicle_chassis_no\": \"" + rs.getString("vehicle_chassis_no") + "\",\"vehicle_register_type\": " + rs.getString("vehicle_register_type") + ",\"card_reader\": " + rs.getInt("card_reader") + ",\"province_code\": "
-//						+ rs.getInt("province_code") + "}";
-//				byte[] encodedBytes = Base64.encodeBase64((byte[]) serverIP.getUserPassMaster().getBytes());
-//				String mfUrl = String.valueOf(serverIP.getUrlMesterFile()) + "/masterfile/add";
-//				System.out.println("Json : "+json);
-//				DefaultHttpClient httpClient = new DefaultHttpClient();
-//				HttpPost post = new HttpPost(mfUrl);
-//				StringEntity postingString = new StringEntity(json);
-//
-//				final X509Certificate[] _AcceptedIssuers = new X509Certificate[]{};
-//				SSLContext ctx = SSLContext.getInstance("TLS");
-//				X509TrustManager tm = new X509TrustManager() {
-//					@Override
-//					public X509Certificate[] getAcceptedIssuers() {
-//						return _AcceptedIssuers;
-//					}
-//
-//					@Override
-//					public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-//					}
-//
-//					@Override
-//					public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-//					}
-//				};
-//				ctx.init(null, new TrustManager[]{tm}, new SecureRandom());
-//				SSLSocketFactory ssf = new SSLSocketFactory(ctx, SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
-//				ClientConnectionManager ccm = httpClient.getConnectionManager();
-//				SchemeRegistry sr = ccm.getSchemeRegistry();
-//				sr.register(new Scheme("https", 443, (SchemeSocketFactory) ssf));
-//				post.setHeader("Authorization", "basic " + new String(encodedBytes));
-//				post.addHeader("Content-Type", "application/json");
-//				post.setEntity((HttpEntity) postingString);
-//				HttpResponse res = null;
-////				int test = 200;
-//				res = httpClient.execute((HttpUriRequest) post);
-//				System.out.println("Response " + res);
+				String json = "{\"vender_id\": 43,\"unit_id\": \"" + rs.getString("unit_id") + "\",\"vehicle_id\": \"" + rs.getString("vehicle_id") + "\",\"vehicle_type\": \"" + rs.getString("vehicle_type")
+						+ "\",\"vehicle_chassis_no\": \"" + rs.getString("vehicle_chassis_no") + "\",\"vehicle_register_type\": " + rs.getString("vehicle_register_type") + ",\"card_reader\": " + rs.getInt("card_reader") + ",\"province_code\": "
+						+ rs.getInt("province_code") + "}";
+				byte[] encodedBytes = Base64.encodeBase64((byte[]) serverIP.getUserPassMaster().getBytes());
+				String mfUrl = String.valueOf(serverIP.getUrlMesterFile()) + "/masterfile/add";
+				System.out.println("Json : "+json);
+				DefaultHttpClient httpClient = new DefaultHttpClient();
+				HttpPost post = new HttpPost(mfUrl);
+				StringEntity postingString = new StringEntity(json);
+
+				final X509Certificate[] _AcceptedIssuers = new X509Certificate[]{};
+				SSLContext ctx = SSLContext.getInstance("TLS");
+				X509TrustManager tm = new X509TrustManager() {
+					@Override
+					public X509Certificate[] getAcceptedIssuers() {
+						return _AcceptedIssuers;
+					}
+
+					@Override
+					public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+					}
+
+					@Override
+					public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+					}
+				};
+				ctx.init(null, new TrustManager[]{tm}, new SecureRandom());
+				SSLSocketFactory ssf = new SSLSocketFactory(ctx, SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+				ClientConnectionManager ccm = httpClient.getConnectionManager();
+				SchemeRegistry sr = ccm.getSchemeRegistry();
+				sr.register(new Scheme("https", 443, (SchemeSocketFactory) ssf));
+				post.setHeader("Authorization", "basic " + new String(encodedBytes));
+				post.addHeader("Content-Type", "application/json");
+				post.setEntity((HttpEntity) postingString);
+				HttpResponse res = null;
+//				int test = 200;
+				res = httpClient.execute((HttpUriRequest) post);
+				System.out.println("Response " + res);
 			}
 
 			return new ModelAndView("redirect:/member.htm", "status", 200);
